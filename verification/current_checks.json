@@ -1,0 +1,249 @@
+{
+  "finite_checks_only": true,
+  "all_assertions_passed": true,
+  "syntax": [
+    {
+      "N": 1,
+      "gates": 4,
+      "output_degree": 0,
+      "maximum_register_degree": 1
+    },
+    {
+      "N": 2,
+      "gates": 99,
+      "output_degree": 4,
+      "maximum_register_degree": 4
+    },
+    {
+      "N": 3,
+      "gates": 171,
+      "output_degree": 7,
+      "maximum_register_degree": 7
+    },
+    {
+      "N": 4,
+      "gates": 277,
+      "output_degree": 10,
+      "maximum_register_degree": 10
+    },
+    {
+      "N": 5,
+      "gates": 407,
+      "output_degree": 13,
+      "maximum_register_degree": 13
+    },
+    {
+      "N": 6,
+      "gates": 561,
+      "output_degree": 16,
+      "maximum_register_degree": 16
+    },
+    {
+      "N": 7,
+      "gates": 739,
+      "output_degree": 19,
+      "maximum_register_degree": 19
+    },
+    {
+      "N": 8,
+      "gates": 941,
+      "output_degree": 22,
+      "maximum_register_degree": 22
+    },
+    {
+      "N": 9,
+      "gates": 1167,
+      "output_degree": 25,
+      "maximum_register_degree": 25
+    },
+    {
+      "N": 10,
+      "gates": 1417,
+      "output_degree": 28,
+      "maximum_register_degree": 28
+    },
+    {
+      "N": 11,
+      "gates": 1691,
+      "output_degree": 31,
+      "maximum_register_degree": 31
+    },
+    {
+      "N": 12,
+      "gates": 1989,
+      "output_degree": 34,
+      "maximum_register_degree": 34
+    },
+    {
+      "N": 13,
+      "gates": 2311,
+      "output_degree": 37,
+      "maximum_register_degree": 37
+    },
+    {
+      "N": 14,
+      "gates": 2657,
+      "output_degree": 40,
+      "maximum_register_degree": 40
+    },
+    {
+      "N": 15,
+      "gates": 3027,
+      "output_degree": 43,
+      "maximum_register_degree": 43
+    }
+  ],
+  "common_tree_bound": 6,
+  "trees": [
+    {
+      "order": 1,
+      "bound": 6,
+      "module_rank": 1,
+      "trace_sha256": "250f3f80ac737674083f6e72357f3fae7f6e9ac095e073464a452ec5ee72ffc8",
+      "trace_bits": 2,
+      "peak_entry_bits": 87820
+    },
+    {
+      "order": 2,
+      "bound": 6,
+      "module_rank": 1,
+      "trace_sha256": "24778e7bf7413d2ab1b8bdc9442bc05ecfcde91fc20ec8b85b1f6fe0344a2da6",
+      "trace_bits": 131684,
+      "peak_entry_bits": 131683
+    },
+    {
+      "order": 3,
+      "bound": 6,
+      "module_rank": 2,
+      "trace_sha256": "fda34551a21514b459924dda27adf5076ab72d3d0568eb04d97e9f24e86f50a8",
+      "trace_bits": 131690,
+      "peak_entry_bits": 131689
+    },
+    {
+      "order": 4,
+      "bound": 6,
+      "module_rank": 2,
+      "trace_sha256": "f183a125a917f4f19e730979c906dca6a287249ef03951c9f6de1df090a09fff",
+      "trace_bits": 131692,
+      "peak_entry_bits": 131691
+    },
+    {
+      "order": 4,
+      "bound": 6,
+      "module_rank": 2,
+      "trace_sha256": "f9a821faa8a3d5af1d29021be6f6ba9cdbafe73617a2d9e0e40fefe01adf52a1",
+      "trace_bits": 131694,
+      "peak_entry_bits": 131692
+    },
+    {
+      "order": 5,
+      "bound": 6,
+      "module_rank": 3,
+      "trace_sha256": "50861425e6e727989cb58690d50535561a089d3319b882dd24317aa50b1c75ba",
+      "trace_bits": 131694,
+      "peak_entry_bits": 131692
+    },
+    {
+      "order": 5,
+      "bound": 6,
+      "module_rank": 4,
+      "trace_sha256": "119ea5f604407bd39b18801694ece736b30a6cbd6aa63a193747b538a81ef0be",
+      "trace_bits": 131695,
+      "peak_entry_bits": 131693
+    },
+    {
+      "order": 5,
+      "bound": 6,
+      "module_rank": 2,
+      "trace_sha256": "7b414ed525831e8144b510e077c5c506d5152aa3cdad1ecf1c8e32c6dae19ede",
+      "trace_bits": 131697,
+      "peak_entry_bits": 131695
+    },
+    {
+      "order": 6,
+      "bound": 6,
+      "module_rank": 3,
+      "trace_sha256": "0125901b4ffe6965e103ac9e776adeb549c5ff6f1458cb9a2e0c278103a72ca9",
+      "trace_bits": 131695,
+      "peak_entry_bits": 131692
+    },
+    {
+      "order": 6,
+      "bound": 6,
+      "module_rank": 5,
+      "trace_sha256": "f83d67ebedbd22de4f76b32e558892bd7ce21c417850d759c15ca76eedb9c0af",
+      "trace_bits": 131696,
+      "peak_entry_bits": 131694
+    },
+    {
+      "order": 6,
+      "bound": 6,
+      "module_rank": 2,
+      "trace_sha256": "48db414a8c880685643d6468788898598af4029a7af7c702d521eb58c9ec3460",
+      "trace_bits": 131696,
+      "peak_entry_bits": 131694
+    },
+    {
+      "order": 6,
+      "bound": 6,
+      "module_rank": 4,
+      "trace_sha256": "1e50723d637c782299b7da06ca9fd633de8d5a3c75f9bd71cc17d3883f81b36d",
+      "trace_bits": 131696,
+      "peak_entry_bits": 131694
+    },
+    {
+      "order": 6,
+      "bound": 6,
+      "module_rank": 4,
+      "trace_sha256": "c947c50e377f0abaa9a59f948a2b71a6f4dfe6888956b50b50818f9f19ab4924",
+      "trace_bits": 131697,
+      "peak_entry_bits": 131695
+    },
+    {
+      "order": 6,
+      "bound": 6,
+      "module_rank": 2,
+      "trace_sha256": "c0fba2f9c62767b1834cdb9b96e575b8b306280412e7014b400f1ae48cd49385",
+      "trace_bits": 131699,
+      "peak_entry_bits": 131697
+    }
+  ],
+  "boundary": [
+    {
+      "order": 1,
+      "bound": 1,
+      "module_rank": 1,
+      "trace_sha256": "26eab3ff86cd372176af888295f9a99aa62e92ae233a741c5e26aeed365ad5b3",
+      "trace_bits": 1,
+      "peak_entry_bits": 1
+    },
+    {
+      "order": 1,
+      "bound": 2,
+      "module_rank": 1,
+      "trace_sha256": "250f3f80ac737674083f6e72357f3fae7f6e9ac095e073464a452ec5ee72ffc8",
+      "trace_bits": 2,
+      "peak_entry_bits": 220
+    },
+    {
+      "order": 2,
+      "bound": 2,
+      "module_rank": 1,
+      "trace_sha256": "a1ce69e47a555ab3bae27cbccc047c0b0a1d38026227556718d2bb062e39c665",
+      "trace_bits": 323,
+      "peak_entry_bits": 322
+    }
+  ],
+  "symmetric_pair_cases": 42,
+  "versions": {
+    "networkx": "3.6.1",
+    "numpy": "2.4.4",
+    "sympy": "1.14.0"
+  },
+  "source_sha256": {
+    "verify_current.py": "d042333e5d52997f2fb0fdccc3dbccd979a387d9e40d9eaee392f9ee119ebb32",
+    "ad_circuit.py": "66163a5c4fd7781212fc2b233dcb0219bbe7d425c64db27c7ffba758c274f2f7",
+    "quadratic_ad_circuit.py": "67dff3288efa1fa3874108919f84757941a58de3a551771ad96bf349a70a5234"
+  },
+  "elapsed_seconds": 13.524
+}

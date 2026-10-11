@@ -1,0 +1,230 @@
+{
+  "all_assertions_passed": true,
+  "finite_checks_only": true,
+  "linear_instruction_matches": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "psd_graph_cases": [
+    {
+      "N": 1,
+      "n": 1,
+      "edges": [],
+      "rank": 1,
+      "gates": 1,
+      "peak_entry_bits": 1
+    },
+    {
+      "N": 2,
+      "n": 1,
+      "edges": [],
+      "rank": 1,
+      "gates": 104,
+      "peak_entry_bits": 7
+    },
+    {
+      "N": 2,
+      "n": 2,
+      "edges": [
+        [
+          1,
+          0
+        ]
+      ],
+      "rank": 1,
+      "gates": 104,
+      "peak_entry_bits": 19
+    },
+    {
+      "N": 3,
+      "n": 1,
+      "edges": [],
+      "rank": 1,
+      "gates": 367,
+      "peak_entry_bits": 42
+    },
+    {
+      "N": 3,
+      "n": 2,
+      "edges": [
+        [
+          1,
+          0
+        ]
+      ],
+      "rank": 1,
+      "gates": 367,
+      "peak_entry_bits": 518
+    },
+    {
+      "N": 3,
+      "n": 3,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "rank": 2,
+      "gates": 367,
+      "peak_entry_bits": 522
+    },
+    {
+      "N": 4,
+      "n": 1,
+      "edges": [],
+      "rank": 1,
+      "gates": 1587,
+      "peak_entry_bits": 133
+    },
+    {
+      "N": 4,
+      "n": 2,
+      "edges": [
+        [
+          1,
+          0
+        ]
+      ],
+      "rank": 1,
+      "gates": 1587,
+      "peak_entry_bits": 4263
+    },
+    {
+      "N": 4,
+      "n": 3,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "rank": 2,
+      "gates": 1587,
+      "peak_entry_bits": 5200
+    },
+    {
+      "N": 4,
+      "n": 4,
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "rank": 2,
+      "gates": 1587,
+      "peak_entry_bits": 5201
+    },
+    {
+      "N": 4,
+      "n": 4,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "rank": 2,
+      "gates": 1587,
+      "peak_entry_bits": 5208
+    }
+  ],
+  "psd_symmetric_pair_cases": [
+    {
+      "N": 1,
+      "peak_entry_bits": 1
+    },
+    {
+      "N": 1,
+      "peak_entry_bits": 1
+    },
+    {
+      "N": 1,
+      "peak_entry_bits": 1
+    },
+    {
+      "N": 2,
+      "peak_entry_bits": 19
+    },
+    {
+      "N": 2,
+      "peak_entry_bits": 25
+    },
+    {
+      "N": 2,
+      "peak_entry_bits": 7
+    },
+    {
+      "N": 3,
+      "peak_entry_bits": 860
+    },
+    {
+      "N": 3,
+      "peak_entry_bits": 542
+    },
+    {
+      "N": 3,
+      "peak_entry_bits": 272
+    },
+    {
+      "N": 4,
+      "peak_entry_bits": 10675
+    },
+    {
+      "N": 4,
+      "peak_entry_bits": 4306
+    },
+    {
+      "N": 4,
+      "peak_entry_bits": 2685
+    }
+  ],
+  "export_log_sha256": "12d32386fe32c4b80eee10af584a3910d2ab0ccf068c9544cb661d400cec999c",
+  "source_sha256": {
+    "verify_exports.py": "aaf376ff2a3e1e21976cf71de8d8070e3bf6cd10da3efff3d6f973981c7e4a13",
+    "verify_current.py": "d042333e5d52997f2fb0fdccc3dbccd979a387d9e40d9eaee392f9ee119ebb32",
+    "quadratic_ad_circuit.py": "67dff3288efa1fa3874108919f84757941a58de3a551771ad96bf349a70a5234",
+    "ad_circuit.py": "66163a5c4fd7781212fc2b233dcb0219bbe7d425c64db27c7ffba758c274f2f7"
+  },
+  "reference_sha256": "12d32386fe32c4b80eee10af584a3910d2ab0ccf068c9544cb661d400cec999c",
+  "sympy_version": "1.14.0",
+  "elapsed_seconds": 0.641
+}

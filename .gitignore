@@ -1,0 +1,13 @@
+**/.lake/
+**/rebuild_logs/
+**/__pycache__/
+*.py[cod]
+.venv/
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.synctex.gz
+verification/lean_circuit_reference.jsonl
+verification/p1.quadratic.circuit.json.gz

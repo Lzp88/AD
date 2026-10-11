@@ -15,8 +15,8 @@ audit is reused; proof-source changes consist only of consistent public module
 identities, verified against the audited source. The provenance distinguishes
 the audited source hashes from the distributed source hashes. Public module names
 are consistent throughout the proof sources and Python reference metadata.
-The paper's `ad_complete_lean_audit.zip` refers to the project distributed here
-as `lean/`; the repository stores one source copy rather than a duplicate archive.
+The manuscript links directly to this repository for the Lean audit and
+reproduction materials. The proof project is distributed as `lean/`.
 
 ## Verify the distributed snapshot
 

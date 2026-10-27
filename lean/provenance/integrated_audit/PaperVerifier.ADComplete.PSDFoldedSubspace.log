@@ -1,0 +1,3 @@
+'ADComplete.PSDFoldedSubspace.scaling_invariant_subspace_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

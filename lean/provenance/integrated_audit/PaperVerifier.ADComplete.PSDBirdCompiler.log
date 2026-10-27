@@ -1,0 +1,2 @@
+'ADComplete.PSDBird.stage_corner' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PSDBird.compiler_gate_bound' depends on axioms: [propext, Quot.sound]

@@ -1,0 +1,2 @@
+'ADComplete.PSDBird.residual_adjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PSDBird.residual_safe_grade' depends on axioms: [propext, Classical.choice, Quot.sound]

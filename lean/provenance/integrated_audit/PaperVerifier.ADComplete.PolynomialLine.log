@@ -1,0 +1,1 @@
+'ADComplete.Rigidity.affine_polynomial_line_degree_zero' depends on axioms: [propext, Classical.choice, Quot.sound]

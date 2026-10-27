@@ -1,0 +1,3 @@
+'ADComplete.PSDFactory.H0_binary_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PSDFactory.tau_binary_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PSDFactory.folded_scalar_binary_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

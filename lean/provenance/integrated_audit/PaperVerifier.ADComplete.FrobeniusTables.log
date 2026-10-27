@@ -1,0 +1,3 @@
+'ADComplete.Frobenius.full_three_trace_tables_determine_word_traces' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

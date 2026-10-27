@@ -1,0 +1,2 @@
+'ADComplete.PSDFactory.actual_tree_compiled_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PSDFactory.public_psd_factory_on_trees' depends on axioms: [propext, Classical.choice, Quot.sound]

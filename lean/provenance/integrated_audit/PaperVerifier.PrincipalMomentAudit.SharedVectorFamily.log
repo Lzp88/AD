@@ -1,0 +1,14 @@
+'PrincipalMomentAudit.SharedVectorFamily.selected_leaf_orbit_vector' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.SharedVectorFamily.reverse_seedVector' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.SharedVectorFamily.stage_active_orbit_invariant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.SharedVectorFamily.terminal_at_order' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.SharedVectorFamily.vector_family_sound_expression' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.SharedVectorFamily.vector_family_cover_expression' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

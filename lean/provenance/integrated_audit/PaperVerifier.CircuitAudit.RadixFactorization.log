@@ -1,0 +1,3 @@
+'CircuitAudit.RadixFactorization.integer_polynomial_exact_factorization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

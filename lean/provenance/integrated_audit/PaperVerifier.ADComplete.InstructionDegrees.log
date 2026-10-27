@@ -1,0 +1,4 @@
+'ADComplete.InstructionDegrees.probe_build_grade' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.InstructionDegrees.compiled_safe' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.InstructionDegrees.compiled_one_degrees' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.InstructionDegrees.legacy_one_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]

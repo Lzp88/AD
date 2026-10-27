@@ -1,0 +1,1 @@
+'MultiSymmetric.Spanning.rank_sensitive_spanning' depends on axioms: [propext, Classical.choice, Quot.sound]

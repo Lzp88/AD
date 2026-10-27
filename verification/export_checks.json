@@ -217,7 +217,7 @@
       "peak_entry_bits": 2685
     }
   ],
-  "export_log_sha256": "12d32386fe32c4b80eee10af584a3910d2ab0ccf068c9544cb661d400cec999c",
+  "export_log_sha256": "780742ced3def442c1c792c973ca31f33cc5c37064e9dfd9120133603d79479e",
   "source_sha256": {
     "verify_exports.py": "aaf376ff2a3e1e21976cf71de8d8070e3bf6cd10da3efff3d6f973981c7e4a13",
     "verify_current.py": "d042333e5d52997f2fb0fdccc3dbccd979a387d9e40d9eaee392f9ee119ebb32",
@@ -226,5 +226,5 @@
   },
   "reference_sha256": "12d32386fe32c4b80eee10af584a3910d2ab0ccf068c9544cb661d400cec999c",
   "sympy_version": "1.14.0",
-  "elapsed_seconds": 0.641
+  "elapsed_seconds": 0.297
 }

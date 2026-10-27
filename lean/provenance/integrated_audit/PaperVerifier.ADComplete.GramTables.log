@@ -1,0 +1,2 @@
+'ADComplete.GramTables.frameIsometry_intertwines' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.GramTables.frame_three_tables_determine_moments' depends on axioms: [propext, Classical.choice, Quot.sound]

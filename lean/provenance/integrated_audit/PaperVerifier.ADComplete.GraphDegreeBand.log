@@ -1,0 +1,2 @@
+'ADComplete.GraphDegreeBand.actual_degree_band' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.GraphDegreeBand.actual_degree_gap' depends on axioms: [propext, Classical.choice, Quot.sound]

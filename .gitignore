@@ -11,3 +11,5 @@ paper/*.fdb_latexmk
 paper/*.synctex.gz
 verification/lean_circuit_reference.jsonl
 verification/p1.quadratic.circuit.json.gz
+lean/rebuild_checkpoint.json
+lean/prior_reports/

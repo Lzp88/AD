@@ -1,0 +1,6 @@
+'PrincipalMomentAudit.IntrinsicRecovery.positiveExpression_coordinate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.IntrinsicRecovery.reverseExpression_coordinate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

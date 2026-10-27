@@ -1,0 +1,2 @@
+'ADComplete.Rigidity.tensorMatrix_symmetric' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.Rigidity.tensorMatrix_interval' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,7 @@
+'ADComplete.MainResourceEndpoints.main_scalar_label_bits' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.MainResourceEndpoints.probe_prefix_scalar_label_bits' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ADComplete.MainResourceEndpoints.actual_tree_final_trace_bits' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

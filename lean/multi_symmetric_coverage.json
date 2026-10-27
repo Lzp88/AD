@@ -1,0 +1,26 @@
+{
+  "scope": "The direct real-symmetric multiple-pole extension, s >= 1 and 1 <= n <= N",
+  "claims": [
+    {"claim": "The rational invariant subspace has a constant normalized real frame, including rank zero", "endpoint": "MultiSymmetric.Rigidity.invariant_subspace_constant_rank"},
+    {"claim": "Invariant rational subspace descends to a real subspace preserved by each generator", "endpoint": "MultiSymmetric.Rigidity.constant_and_invariant_rank"},
+    {"claim": "The literal polynomial recurrence equals the cleared differential Krylov iterates", "endpoint": "MultiSymmetric.Krylov.polynomialVector_rationalKrylov"},
+    {"claim": "The actual rank-sensitive coefficient span equals the actual joint word module", "endpoint": "MultiSymmetric.Spanning.rank_sensitive_spanning"},
+    {"claim": "The rank prefix follows from the stated real symmetry and spectral-diameter hypotheses", "endpoint": "MultiSymmetric.Public.spectral_rank_prefix"},
+    {"claim": "The full N-row family spans from every seed, including zero", "endpoint": "MultiSymmetric.Public.spectral_full_family"},
+    {"claim": "The indexed family has N+s*N*(N-1)/2 entries", "endpoint": "MultiSymmetric.Recurrence.index_card"},
+    {"claim": "The integer free-algebra coefficients lie in the span of words of length at most N-1", "endpoint": "MultiSymmetric.Recurrence.probe_mem_wordSpan"},
+    {"claim": "Free-algebra evaluation produces the stated ring-valued recurrence", "endpoint": "MultiSymmetric.Recurrence.universalRow_evaluate"},
+    {"claim": "Matrix coefficient responses agree with the coordinate polynomial-vector recurrence", "endpoint": "MultiSymmetric.Recurrence.row_coeff_mulVec"},
+    {"claim": "Every indexed free-algebra probe response equals the corresponding coordinate polynomial vector", "endpoint": "MultiSymmetric.Recurrence.universal_probe_response"},
+    {"claim": "The s=1 coefficients equal the original audited two-generator recurrence", "endpoint": "MultiSymmetric.Recurrence.row_one_eq_original"},
+    {"claim": "One actual shared circuit simultaneously computes all indexed outputs with the gate and actual-used-scalar bit bounds", "endpoint": "MultiSymmetric.Circuit.complete_family_circuit"},
+    {"claim": "Every scalar actually used by the complete shared run meets the explicit magnitude budget", "endpoint": "MultiSymmetric.Circuit.familyRun_scalars_bound"},
+    {"claim": "The explicit magnitude budget implies the claimed binary length bound", "endpoint": "MultiSymmetric.Circuit.scalar_bit_bound"}
+  ],
+  "excluded": [
+    "Optional unbounded-spectrum homogenization",
+    "Substituting s=0 into kappa=s*N^2",
+    "Uniform evaluated-entry bit bounds for arbitrary real inputs",
+    "Automatic proof that English prose is equivalent to Lean; this is checked separately by source-to-statement review"
+  ]
+}

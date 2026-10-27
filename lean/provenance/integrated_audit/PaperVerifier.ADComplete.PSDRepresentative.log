@@ -1,0 +1,3 @@
+'ADComplete.PSDCyclic.residual_full_span' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PSDCyclic.scaled_residual_image' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PSDCyclic.residual_principal_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]

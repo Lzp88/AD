@@ -1,0 +1,13 @@
+'ADComplete.PolynomialPrimitivity.rational_factor_is_polynomial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ADComplete.PolynomialPrimitivity.primitive_has_nonzero_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ADComplete.PolynomialPrimitivity.extract_primitive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PolynomialPrimitivity.multiplier_natDegree_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ADComplete.PolynomialPrimitivity.rational_factor_degree_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

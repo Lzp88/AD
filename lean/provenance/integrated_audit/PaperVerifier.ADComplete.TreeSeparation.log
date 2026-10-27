@@ -1,0 +1,5 @@
+'ADComplete.TreeSeparation.trace_ones_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.TreeSeparation.sourceCode_trace_recovers_digits' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.TreeSeparation.sourcePolynomial_trace_recovers_tables' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

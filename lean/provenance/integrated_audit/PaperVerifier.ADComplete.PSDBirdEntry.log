@@ -1,0 +1,2 @@
+'ADComplete.PSDBird.entry_corner' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PSDBird.entry_length_bound' depends on axioms: [propext, Quot.sound]

@@ -1,0 +1,7 @@
+'PrincipalMomentAudit.OrbitQuotient.orbitNeighbors_card_eq_of_same_orbit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.OrbitQuotient.quotient_recovery' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.OrbitQuotient.principal_le_orbitConstantModule' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

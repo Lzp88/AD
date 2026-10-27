@@ -1,0 +1,4 @@
+'ADComplete.PSDPairStar.compiled_sum_of_squares' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PSDPairStar.integerPolynomial_self_adjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PSDPairStar.compiled_posSemidef' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PSDPairStar.integerPolynomial_evaluation' depends on axioms: [propext, Classical.choice, Quot.sound]

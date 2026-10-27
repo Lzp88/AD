@@ -1,0 +1,2 @@
+'ADComplete.PSDCyclic.square_action' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PSDCyclic.square_next_mod_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]

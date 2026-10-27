@@ -1,0 +1,4 @@
+'ADComplete.Frobenius.graphIso_preserves_full_three_tables' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.Frobenius.public_full_three_tables_classify_trees' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

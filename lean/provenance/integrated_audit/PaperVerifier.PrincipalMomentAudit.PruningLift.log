@@ -1,0 +1,3 @@
+'PrincipalMomentAudit.PruningLift.peeled_unique_parent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.PruningLift.childFiber_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.PruningLift.label_iso_lift' depends on axioms: [propext, Classical.choice, Quot.sound]

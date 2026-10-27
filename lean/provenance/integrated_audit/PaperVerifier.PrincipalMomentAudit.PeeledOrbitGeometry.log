@@ -1,0 +1,9 @@
+'PrincipalMomentAudit.PeeledOrbitGeometry.stage_label_orbit_invariant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.PeeledOrbitGeometry.originalStageAut_color' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.PeeledOrbitGeometry.peeled_same_type_parent_class' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

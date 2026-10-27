@@ -1,0 +1,6 @@
+'PrincipalMomentAudit.Transport.PruningState.next_state_transport' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.Transport.PruningState.reverse_quotient_transport' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

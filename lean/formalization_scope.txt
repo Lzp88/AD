@@ -1,0 +1,98 @@
+Formalization scope and statement correspondence
+
+The combined project checks the original adjacency-degree constructions and
+the direct extension to several real symmetric generators. Its original 189
+proof sources and the extension's 25 proof sources are preserved byte for byte
+from their separately checked versions. CombinedAudit.lean imports both audit
+roots and scans their full project declaration environment, including private
+helpers. It does not replace either mathematical proof with an assumption.
+
+The table source-to-statement.tsv identifies the original endpoints and the
+extension endpoints. multi_symmetric_coverage.json lists the 15 required
+extension theorems. The successful build prints their explicit Lean types.
+Checking these types against the written mathematics is a separate review
+task; kernel acceptance alone does not establish fidelity to English prose.
+
+Several-generator hypotheses
+
+The parameters satisfy s >= 1 and 1 <= n <= N. H,A_1,...,A_s are real
+symmetric n by n matrices. Each A_i has spectral diameter at most N-1;
+this is not a norm bound or a bound on the location of its spectrum.
+There is no spectral bound on H. The prescribed seed is arbitrary, including
+zero. No assumption of full cyclicity or independence of Krylov iterates is
+made. The cyclic space is the actual span of all generator words applied to
+the seed, and the prefix length is its actual finite dimension r.
+
+The finite Lean index type for coordinates is nonempty and has cardinality
+at most N. The s generators are indexed by Fin s. The variables of the
+integer free associative algebra are indexed by Fin (s+1), with H at index
+zero. The polynomial variable is central. These choices implement the same
+matrix and noncommutative-polynomial objects as the manuscript.
+
+Rigidity and descent
+
+For distinct real poles a_i, a rational subspace invariant under
+partial_t + H + sum_i B_i/(t-a_i) descends to a real subspace preserved
+separately by H and all B_i when r*sum_i diam Spec(B_i) < 1.
+The audit derives a constant normalized frame from actual invariance; it
+does not assume constancy, a descended frame, or the desired spanning result.
+The proof includes the primitive exterior-vector construction, residue
+identities, comparison of the highest coefficients, self-adjoint cancellation,
+the exterior spectral bound, and real descent. Rank zero is included.
+
+Recurrence, evaluation, and spanning
+
+kappa = s*N^2, a_i = i-1, D = product_i(t-a_i), and
+Q_i = product_{j != i}(t-a_j). The literal recurrence is
+
+F_0 = 1,
+F_(k+1) = kappa*D*F_k' + kappa*D*x_0*F_k
+          + sum_i Q_i*x_i*F_k - k*kappa*D'*F_k.
+
+The formalization connects its integer free-algebra coefficients to matrix
+evaluation, coefficient vectors, and the cleared differential Krylov iterates.
+The first r rows span exactly the actual joint cyclic space. If r=0 this is
+the empty family. All N rows therefore suffice. No rank or spanning witness
+is supplied as an additional hypothesis to the public spectral theorems.
+
+The family has N+s*N*(N-1)/2 indexed outputs; zeros and repeated polynomials
+still count as indexed outputs. Its coefficients lie in the integer span of
+noncommutative words of length at most k in row k, hence at most N-1 overall.
+This is a semantic word-degree assertion, not only a syntactic cost counter.
+For s=1 every coefficient equals the original two-generator recurrence.
+
+Circuit resources
+
+The audited implementation is a finite staged shared arithmetic circuit.
+Its operations and outputs compute the recurrence over any ring, and hence
+over matrices of the original input order. It uses no division and shares
+intermediate coefficients. Synthetic division is by monic linear factors.
+The executed stages, stored outputs, counted gates, and used integer scalars
+are tied to the same implementation. The shared zero and identity registers
+are counted. It is not a certified exporter of a separate flat bytecode format.
+
+The gate bound, including inputs and the two shared constant registers, is
+s+3+30*(s+1)^2*N^2. Every used scalar c satisfies
+abs(c) <= 2*(s+1)*(N+1)^3 and
+natAbs(c).size+1 <= 3+size(s+1)+3*size(N+1).
+This implies the weaker constant-bit bound stated in the manuscript.
+These are bounds on prescribed integer constants, not on arbitrary evaluated
+real matrix entries.
+
+Limits and other proof inputs
+
+The optional unbounded-spectrum homogenization is not included. Substituting
+s=0 into kappa=s*N^2 is not claimed; the ordinary one-generator Krylov family
+is a separate observation. The elementary fixed-word lower bound in Remark
+1.4 is proved in the paper and is not part of this Lean formalization.
+
+The original tree classification uses the formalized principal-moment
+reconstruction theorem of Lu and Li, Theorem 5.4, through PrincipalMomentAudit.
+The formal full-representation appendix reconstructs via that theorem and the
+all-one polynomial; the written appendix uses McKay and Newton identities.
+The original source-to-statement mapping records these proof dependencies.
+
+The only permitted transitive axioms are propext, Classical.choice, and
+Quot.sound. Project-local axioms and sorryAx are rejected. Finite exact tests
+supplement these universal proofs and do not substitute for them or prove
+universal equality between separately implemented emitters.

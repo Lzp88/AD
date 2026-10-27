@@ -1,0 +1,4 @@
+'ADComplete.IntegerBounds.probe_norm_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.IntegerBounds.probe_norm_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.IntegerBounds.matrix_word_digit_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.IntegerBounds.actual_probe_digit_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

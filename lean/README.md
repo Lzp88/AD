@@ -1,52 +1,101 @@
-# Lean proof audit
+# Complete Lean proof package
 
-This directory contains exactly the local import closure of
-`PaperVerifier.ADComplete.PaperAxiomAudit`.
-`source-to-statement.tsv` records the manuscript statements, their formal
-endpoints, hypotheses, and proof scope. The source files use consistent public
-module names; module identities were standardized for this distribution and the
-completed original kernel audit is reused. Preparation verified that all proof
-sources differ only in these identifiers. The artifact does not claim a new
-complete compilation after name standardization.
+This directory is the complete local import closure of `CombinedAudit`:
+189 original proof modules, 25 several-generator modules, and the combined
+audit entry point. It does not depend on a separate local project.
 
-`PrincipalMomentAudit` reuses the audited finite-tree principal-moment
-reconstruction theorem from Zhipeng Lu and Pengxiang Li,
-*Adjacency-degree algebras and spectral determination of graphs*,
-[arXiv:2607.21494v1, Theorem 5.4](https://arxiv.org/abs/2607.21494v1).
-The complete declaration audit checks its transitive axiom dependencies together
-with the new results. The formal full-representation reconstruction uses the
-actual all-one polynomial and this pointed reconstruction input. The mapping
-explains its relation to the written classical reconstruction argument.
+`source-to-statement.tsv` maps the manuscript claims to formal endpoints and
+records their hypotheses and proof scope. `multi_symmetric_coverage.json`
+identifies all 15 required extension theorems. `formalization_scope.txt`
+explains the source-to-statement review, the actual-rank and zero-seed cases,
+the staged shared circuit, and the limits of the formalization.
 
-Requirements: Python 3.10 or later, Lean **4.33.0**, Lake, and the dependencies
-pinned by `lake-manifest.json`. From this directory run:
+## Verification and reproduction
+
+Requirements: Python 3.11 or later, Lean **4.33.0**, Lake, and the dependencies
+pinned by `lake-manifest.json`. To check the distributed source and saved audit
+evidence without installing Lean or its dependencies:
+
+```text
+python -B run_audit.py --verify-only
+```
+
+This mode can also check inputs before the first build. An empty
+`verified_audit_reports` list then means that no completed evidence was checked;
+source integrity alone is not proof-audit success. The published snapshot must
+list `provenance/integrated_audit/rebuild_report.json`. The repository-root
+manifest additionally requires this report and all of its module logs.
+
+To freshly compile every local module:
 
 ```text
 lake exe cache get
-python -B run_audit.py
+python -B run_audit.py --jobs 2
 ```
 
-The runner checks the distributed file hashes and freshly compiles all local
-modules in dependency order. It requires successful kernel checks without
-warnings and the final declaration-audit success marker. The transitive axiom
-allowlist is `propext`, `Classical.choice`, and `Quot.sound`.
-It also checks that every dependency has its pinned Git revision and no tracked
-source modifications.
-Use `--lean /path/to/lean` to select a native executable, or `--verify-only`
-to check package integrity without compiling.
-Independent modules can be checked concurrently with `--jobs 3`; dependents
-wait for all their imports to pass. The default uses one process.
+`--jobs` controls the number of dependency-ready compiler processes and defaults
+to one. `--lean /path/to/lean` selects a native compiler explicitly. The runner
+verifies the required compiler version and each dependency's clean pinned Git
+revision. It uses only this project's source tree and downloaded dependencies.
 
-`provenance/frozen_audit.json` records the completed original audit with separate
-audited-source and distributed-source hashes. Its module names are standardized;
-original compiled artifact hashes describe that earlier audit only.
-`provenance/axiom_audit.log` is the original complete declaration scan with a
-header identifying its standardized names. `provenance/circuit_exports.log`
-preserves the original instruction exports unchanged. Rebuilds write a new
-report and these two logs to `rebuild_logs/`.
-Compiled local artifacts and downloaded dependencies are excluded from Git.
+By default every local module is freshly compiled. An interrupted build may be
+continued with `--resume`. A checkpoint is reusable only if the compiler,
+complete input manifest, source closure, prior successful logs, compiled
+artifacts, and their local dependency hashes still match. A changed source or
+configuration requires a fresh build. Historical compiled artifacts are never
+required for a clean rebuild.
 
-`artifact_manifest.json` hashes every distributed file in this directory except
-itself. Compiled artifact hashes record the observed build provenance; another
-platform need not reproduce byte-identical `.olean` files. Reproduction requires
-the frozen sources and pinned dependencies to pass the kernel checks again.
+The three audit entries check the original environment, the extension
+environment, and their union. The final scan includes private helpers and
+rejects project-local axioms and all transitive axioms other than `propext`,
+`Classical.choice`, and `Quot.sound`. It also requires every extension endpoint
+to be a theorem. The extension source disables automatic implicit variables.
+All compiler warnings are rejected. Every source, compiled artifact, and log is
+hashed again before a successful report is finalized.
+
+## Evidence files
+
+- `provenance/integrated_audit/rebuild_report.json`: the complete integrated
+  build, source and dependency snapshots, per-module results, and measured
+  declaration counts. Its per-module logs are in the same directory.
+- `provenance/rebuild_20261025/`: the earlier fresh build of all 189 distributed
+  original modules, with 4,704 declarations and 4,639 bodies checked.
+- `provenance/frozen_audit.json`, `axiom_audit.log`, and `circuit_exports.log`:
+  historical original audit evidence. The original identifiers were
+  standardized for distribution; the frozen record distinguishes audited and
+  distributed source hashes. The later complete builds check the distributed
+  sources directly.
+- `audit_manifest.json`: frozen proof inputs and compiler configuration used by
+  the runner. `freeze_audit_manifest.py` is a maintainer helper, not a required
+  reproduction step. Regenerating this manifest is not itself verification.
+- `artifact_manifest.json`: all distributed files in this directory, except
+  the manifest itself. The repository-root manifest also covers these files.
+
+New build records go to `rebuild_logs/`; they do not overwrite the distributed
+evidence. A source-and-evidence integrity check is distinct from recompiling
+the proofs. Cross-platform reproduction requires renewed kernel acceptance,
+not byte-identical `.olean` files.
+
+## Scope
+
+The original package formalizes differential spanning, the matrix-circuit
+compiler and resource bounds, the PSD construction, and the trace-degree
+lower bound. It uses the formalized finite-tree principal-moment reconstruction
+theorem of Zhipeng Lu and Pengxiang Li, *Adjacency-degree algebras and spectral
+determination of graphs*, Theorem 5.4. The full-representation formal proof
+uses the all-one polynomial and that reconstruction theorem; the written
+appendix uses McKay's theorem and Newton identities. The mapping records this
+difference in proof routes.
+
+The extension proves multiple-pole rigidity and real descent, the literal
+integer recurrence and its matrix evaluation, spanning of the actual cyclic
+space by its rank prefix, the indexed count and word-degree bound, exact
+specialization to the original recurrence, and the finite shared circuit's
+outputs, gates, and actually used scalar constants. It imposes no spectral
+bound on H and includes zero seeds and proper cyclic spaces.
+
+It does not claim a bit bound on evaluated entries for arbitrary real input,
+does not include an unbounded-spectrum homogenization, and does not substitute
+s=0 into kappa=s*N^2. The fixed-word lower bound in manuscript Remark 1.4 is
+proved in the text and is not part of this formalization. The additional exact
+tests supplement these proofs and are not substitutes for universal theorems.

@@ -1,0 +1,1 @@
+'ADComplete.PointedCoordinateDegree.bound_scalarTable' depends on axioms: [propext, Classical.choice, Quot.sound]

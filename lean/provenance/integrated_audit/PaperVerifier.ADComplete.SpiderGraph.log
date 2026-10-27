@@ -1,0 +1,3 @@
+'ADComplete.SpiderGraph.isTree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.SpiderGraph.witness_card_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.SpiderGraph.witness_card_right' depends on axioms: [propext, Classical.choice, Quot.sound]

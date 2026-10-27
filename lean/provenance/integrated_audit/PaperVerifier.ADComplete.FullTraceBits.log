@@ -1,0 +1,3 @@
+'ADComplete.FullRepresentationCompiler.actual_final_trace_bits' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

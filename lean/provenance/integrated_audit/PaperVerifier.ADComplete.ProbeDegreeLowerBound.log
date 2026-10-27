@@ -1,0 +1,7 @@
+'ADComplete.ProbeDegreeLowerBound.diagonal_jointModule_top' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.ProbeDegreeLowerBound.polynomial_frame_degree_lower_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ADComplete.ProbeDegreeLowerBound.explicit_diagonal_degree_lower_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,7 @@
+'CircuitAudit.FullCompression.full_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CircuitAudit.FullCompression.full_output_expr_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CircuitAudit.FullCompression.full_output_source' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CircuitAudit.FullCompression.full_output_integer_polynomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CircuitAudit.FullCompression.full_gate_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CircuitAudit.FullCompression.full_safe' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CircuitAudit.FullCompression.full_constants' depends on axioms: [propext, Quot.sound]

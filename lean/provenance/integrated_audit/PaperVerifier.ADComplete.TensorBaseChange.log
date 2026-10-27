@@ -1,0 +1,2 @@
+'ADComplete.TensorBaseChange.tensorMatrix_map_action' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.TensorBaseChange.tensor_rational_connection' depends on axioms: [propext, Classical.choice, Quot.sound]

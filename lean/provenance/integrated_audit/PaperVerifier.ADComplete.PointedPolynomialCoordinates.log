@@ -1,0 +1,9 @@
+'ADComplete.PointedPolynomialCoordinates.tablePolynomial_bidegree' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ADComplete.PointedPolynomialCoordinates.tablePolynomial_evaluation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ADComplete.PointedPolynomialCoordinates.actual_three_tables_have_bidegree' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

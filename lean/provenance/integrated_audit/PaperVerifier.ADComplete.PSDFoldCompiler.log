@@ -1,0 +1,3 @@
+'ADComplete.PSDFoldCompiler.stage_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PSDFoldCompiler.foldOne_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PSDFoldCompiler.scan_safe_grade' depends on axioms: [propext, Classical.choice, Quot.sound]

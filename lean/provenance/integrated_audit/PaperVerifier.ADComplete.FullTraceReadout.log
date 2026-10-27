@@ -1,0 +1,6 @@
+'ADComplete.FullRepresentationCompiler.actual_trace_digit_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ADComplete.FullRepresentationCompiler.actual_trace_recovers_tables' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

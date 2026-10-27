@@ -1,0 +1,3 @@
+'PrincipalMomentAudit.TreeReconstruction.colored_tree_rigidity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

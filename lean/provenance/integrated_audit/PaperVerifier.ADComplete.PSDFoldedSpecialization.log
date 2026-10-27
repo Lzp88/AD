@@ -1,0 +1,5 @@
+'ADComplete.PSDFoldedFrame.folded_prefix_independent_of_minor_eval' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ADComplete.PSDFoldedFrame.folded_prefix_span' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PSDFoldedFrame.folded_prefix_not_mem' depends on axioms: [propext, Classical.choice, Quot.sound]

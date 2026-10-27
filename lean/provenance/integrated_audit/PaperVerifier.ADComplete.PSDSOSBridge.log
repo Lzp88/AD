@@ -1,0 +1,1 @@
+'ADComplete.PSDFactory.sosValue_foldedPrincipalMatrix' depends on axioms: [propext, Classical.choice, Quot.sound]

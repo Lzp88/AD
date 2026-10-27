@@ -1,0 +1,2 @@
+'ADComplete.PSDCyclic.powers_span_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PSDCyclic.finite_cyclic_square' depends on axioms: [propext, Classical.choice, Quot.sound]

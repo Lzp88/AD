@@ -1,0 +1,5 @@
+'ADComplete.ADClosedWalks.trace_word_as_weighted_closed_walks' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ADComplete.ADClosedWalks.toWalk_length' depends on axioms: [propext]
+'ADComplete.ADClosedWalks.positions_mem_support' depends on axioms: [propext, Classical.choice, Quot.sound]

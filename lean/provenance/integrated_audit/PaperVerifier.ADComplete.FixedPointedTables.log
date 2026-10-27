@@ -1,0 +1,3 @@
+'ADComplete.FixedPointedTables.public_fixed_three_tables_iff_pointed_isometry' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

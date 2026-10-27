@@ -1,0 +1,4 @@
+'MultiSymmetric.Circuit.merge_constant_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MultiSymmetric.Circuit.derivative_constant_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MultiSymmetric.Circuit.factor_constant_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MultiSymmetric.Circuit.scalar_bit_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

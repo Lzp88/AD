@@ -1,0 +1,10 @@
+'PrincipalMomentAudit.RootedOrbit.branch_parent_neighbor_unique' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.RootedOrbit.branch_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.RootedOrbit.sibling_branches_disjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.RootedOrbit.exists_child_branch' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.RootedOrbit.child_branch_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.RootedOrbit.sibling_branch_iso_gives_automorphism' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

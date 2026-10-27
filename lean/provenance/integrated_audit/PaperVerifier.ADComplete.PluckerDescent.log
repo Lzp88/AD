@@ -1,0 +1,5 @@
+'ADComplete.PluckerConnection.constant_plucker_factorization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PluckerConnection.constant_plucker_column_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PluckerConnection.constantFrame_selected_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

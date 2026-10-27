@@ -1,0 +1,3 @@
+'ADComplete.DifferentialKrylov.exists_independent_stable_prefix' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

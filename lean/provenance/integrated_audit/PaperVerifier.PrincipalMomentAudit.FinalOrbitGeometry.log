@@ -1,0 +1,16 @@
+'PrincipalMomentAudit.FinalOrbitGeometry.terminal_vertex_classification' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.FinalOrbitGeometry.terminal_edge_classification' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.FinalOrbitGeometry.child_fiber_invariant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.FinalOrbitGeometry.actual_orbit_geometry' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.FinalOrbitGeometry.forest_family_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.FinalOrbitGeometry.forest_family_covers' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

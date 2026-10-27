@@ -1,0 +1,2 @@
+'ADComplete.PSDPairStar.frame_star' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PSDPairStar.compiled_star' depends on axioms: [propext, Classical.choice, Quot.sound]

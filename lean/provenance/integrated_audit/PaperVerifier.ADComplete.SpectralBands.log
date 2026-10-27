@@ -1,0 +1,2 @@
+'ADComplete.SpectralBands.eigenvalue_quadratic_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.SpectralBands.spectral_quadratic_interval' depends on axioms: [propext, Classical.choice, Quot.sound]

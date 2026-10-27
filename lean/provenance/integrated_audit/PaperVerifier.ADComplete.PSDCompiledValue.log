@@ -1,0 +1,3 @@
+'ADComplete.PSDFactory.compiled_adjoint_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PSDFactory.compiled_value_folded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PSDFactory.compiled_one_value' depends on axioms: [propext, Classical.choice, Quot.sound]

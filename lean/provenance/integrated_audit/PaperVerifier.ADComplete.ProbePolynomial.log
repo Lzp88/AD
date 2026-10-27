@@ -1,0 +1,2 @@
+'ADComplete.Spanning.probePolynomial_coeff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.Spanning.probePolynomial_step' depends on axioms: [propext, Classical.choice, Quot.sound]

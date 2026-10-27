@@ -1,0 +1,9 @@
+'PrincipalMomentAudit.SharedFamilyMomentRigidity.seeded_expression_gram_equal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.SharedFamilyMomentRigidity.common_family_orbit_data' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.SharedFamilyMomentRigidity.trees_isomorphic_of_equal_moments_and_common_family' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -29,9 +29,9 @@ Shenzhen 518172, Guangdong, China\\
 \maketitle
 \begin{abstract}
 \normalsize
-We construct a fixed triangular family of noncommutative polynomials that spans the joint cyclic module of a real symmetric pair from any prescribed vector. In dimension at most $N$, when the second matrix has spectral diameter at most $N-1$, the family has $N(N+1)/2$ members, degree at most $N-1$, and a shared arithmetic circuit of size $O(N^2)$. No rank-dependent choice of coefficients is made. The proof uses a rational differential connection with a small self-adjoint residue: a primitive polynomial exterior vector for an invariant subspace must have an integer degree smaller than one.
+We construct a single trace invariant that separates all connected trees of order at most $N$. The invariant is the trace of an explicit self-adjoint polynomial $p_N\in\Z\langle x,y\rangle$, where $x,y$ are noncommuting variables evaluated at the adjacency and degree matrices. Its arithmetic circuit has $O(N^2)$ gates, formal degree at most $3N-2$, and polynomial bit complexity. The circuit is determined by $N$ alone and operates on matrices of the original input order. A linear lower bound shows that the trace degree has the correct asymptotic scale.
 
-For connected trees, the probes and the pointed adjacency--degree reconstruction theorem give one explicit self-adjoint polynomial $p_N\in\Z\langle a,d\rangle$ whose trace separates all trees of order at most $N$. Its circuit has $O(N^2)$ gates, formal degree at most $3N-2$, and polynomial bit complexity. Only the original adjacency and degree matrices, the identity, and ordinary matrix arithmetic are used. A separate integer sum-of-squares construction gives a fixed positive semidefinite representative on which the all-one vector is cyclic; its degree is $O(N^2)$. A linear trace-degree lower bound shows that the first construction has the correct asymptotic degree scale.
+The main ingredient is a fixed spanning family for the joint cyclic module of a real symmetric matrix pair from any prescribed vector. In dimension at most $N$, when the second matrix has spectral diameter at most $N-1$, a triangular recurrence gives $N(N+1)/2$ integer noncommutative polynomials of degree at most $N-1$, computed by a shared $O(N^2)$ circuit. This replaces the exponentially large family of all short words without increasing the spanning degree. The proof uses a rational differential connection with a small self-adjoint residue: a primitive polynomial exterior vector representing an invariant subspace must have an integer degree smaller than one. For trees, pointed adjacency--degree reconstruction, McKay's distance polynomials, and a factored integer encoding turn this spanning family into the single trace invariant.
 \end{abstract}
 \thispagestyle{empty}
 \end{titlepage}
@@ -39,89 +39,39 @@ For connected trees, the probes and the pointed adjacency--degree reconstruction
 \hypersetup{pageanchor=true}
 
 \section{Introduction}
-Finite-dimensionality tells us that a cyclic module has a small basis. It does not tell
-us which vectors to choose before its generators are given. For matrices $H,K$ and a
-vector $v$, consider the span of all word responses $w(H,K)v$. If its dimension is
-$r>0$, words of length at most $r-1$ already span it. Listing them gives exponentially
-many candidates; selecting a basis after evaluation makes the choice depend on the
-input. Can a small family of fixed polynomial expressions replace both the full word
-list and the input-dependent selection?
+How much spectral information is needed to determine a tree? The adjacency spectrum alone is insufficient: almost all trees have a nonisomorphic cospectral mate \cite{Schwenk}. Even the spectra of $A_T-tD_T$ for every real $t$ can agree for nonisomorphic trees \cite{GodsilSun,FanEtAl}. McKay showed that the spectra of all adjacency--degree polynomials determine a tree \cite[Theorem 5.3]{McKay}. We ask for a quantitative form of this determination: for each order bound $N$, can one prescribe a single adjacency--degree polynomial whose trace distinguishes all trees of order at most $N$, with low degree, a small arithmetic circuit, and polynomial bit complexity? Such an expression evaluates by the same sequence of matrix operations on every input and respects vertex relabelling through simultaneous conjugation. Controlling all three resources makes the passage from complete spectral data to a finite algebraic invariant explicit.
 
-For real symmetric pairs, we give such a family under a bound on the spectral diameter
-of $K$. In dimension at most $N$, with $\lambda_{\max}(K)-\lambda_{\min}(K)\le N-1$, an
-integer triangular recurrence produces $N(N+1)/2$ polynomials of degree at most $N-1$,
-computed by a shared $O(N^2)$ arithmetic circuit. Their responses span the joint cyclic
-module from every prescribed vector, including when the module is proper. The first
-$r$ rows already suffice when that module has dimension $r$. The degree $N-1$ is optimal
-in the worst case: replacing basis selection by a fixed frame requires no increase in degree.
+McKay's algebraic pruning procedure reconstructs the tree by successive trace tests \cite[Algorithm 5.4]{McKay}. These tests select rooted types and the multiplicities of adjacent leaves, and the procedure updates the residual adjacency and degree operators. Its choices therefore depend on the input trace data. The procedure by itself does not specify a single circuit fixed by $N$ with the simultaneous resource bounds sought here. Our construction uses a fixed family of polynomials to determine a representation before applying tree reconstruction; the spanning argument applies to general symmetric matrix pairs and uses no tree pruning.
 
-The key observation is that a suitable rational differential subspace cannot move. Set
-$B=K/N^2$ and introduce the connection $\nabla=\partial_x+B/x+H$. For a nonzero seed
-$v$, the rational span of $v,\nabla v,\nabla^2v,\ldots$ stabilizes after at most $N$
-vectors and is invariant under $\nabla$. A primitive polynomial exterior vector
-represents this subspace. If the subspace were nonconstant, that vector would have
-positive integer degree. Self-adjointness bounds this degree by at most $N$ times the spectral diameter of $B$,
-which is strictly smaller than one after scaling $K$. The subspace is
-therefore constant. Invariance under the connection now forces invariance under both
-matrices, so its constant part is the full joint cyclic module.
+The pointed reconstruction theorem of Lu and Li continues this spectral approach: the moments $\one^{\mathsf T}w(A_T,D_T)\one$, over all words $w$ in the adjacency matrix $A_T$ and degree matrix $D_T$, already determine the tree \cite[Theorem 5.4]{LuLi}. The present work makes this description uniformly finite with explicit arithmetic resources. The vectors $w(A_T,D_T)\one$ span its principal module, of dimension at most $N$. The responses of words of length at most $N-1$ already span this module, but there are $2^N-1$ such words. Selecting a basis after evaluation reduces their number while making the selection depend on the tree \cite[Proposition 6.1 and Remark 6.2]{LuLi}. We replace this exponential word family by a fixed quadratic-size polynomial spanning family, preserving the spanning degree and obtaining the following resource bounds.
 
-The algorithm follows by taking coefficients. Multiplying the $i$th iterate by
-$N^{2i}x^i$ makes it a polynomial vector. The coefficients of the first $N$ such vectors
-form our fixed frame. Differentiation supplies the lower-degree terms that distinguish
-multiplication orders, but the resulting circuit uses only ordinary integer-coefficient
-matrix arithmetic.
+Throughout, $\Z\langle x,y\rangle$ is the free associative algebra in the two \emph{noncommuting} variables $x,y$. The involution $p\mapsto p^*$ fixes $x,y$ and reverses each word. Our circuits have the identity and the two input matrices as inputs, and use addition, ordinary matrix multiplication, and multiplication by prescribed integer constants. The involution is compiled by reversing products. Circuit size counts stored instructions, including inputs.
 
-A fixed frame also gives polynomial coordinates for pointed self-adjoint
-representations. Its Gram table and the two tables obtained by inserting $H$ or $K$
-determine every word moment, and hence the representation on the cyclic module up to a
-seed-preserving isometry. The same coordinates remain valid as the module's dimension
-changes, without selecting a new basis.
-
-Input-dependent basis exploration appears in equivalence algorithms for probabilistic
-automata \cite{Tzeng}, and fixed word families span full matrix algebras on generic inputs
-\cite{KlepSpenko,JiaCapel}. Here a single polynomial frame gives complete pointed
-coordinates for every seed throughout the stated self-adjoint class. The degree-integrality
-mechanism has precedents in small-exponent differential systems \cite{GV,BG};
-Section~8 gives the detailed comparisons.
-
-Trees give a concrete application. Adjacency spectra alone are insufficient: almost all
-trees have a nonisomorphic cospectral mate \cite{Schwenk}. McKay showed that the full
-adjacency--degree representation determines a tree \cite{McKay}, and the pointed
-reconstruction theorem shows that the moments $\one^T w(A_T,D_T)\one$ suffice
-\cite{LuLi}. Our frame replaces these moments by three finite tables. McKay's distance
-polynomials convert the entries into traces; a factored balanced-radix encoding then
-combines them into one self-adjoint polynomial $p_N\in\Z\langle a,d\rangle$. Its trace
-separates all connected trees of order at most $N$, with $O(N^2)$ gates, degree at most
-$3N-2$, and polynomial bit complexity. Every gate acts on the original matrix space, and
-only the final trace is read. The factorization preserves the quadratic gate bound even
-though the tables have $O(N^4)$ entries.
-
-The question here is the cost of an algebraic representation, rather than unrestricted
-tree canonization, which already has logarithmic-space algorithms \cite{Lindell,ADFK}.
-Explicit pairs of nonisomorphic spiders show that any separating trace polynomial needs
-degree $\Omega(N)$, matching the order of our upper bound. A second construction turns
-the frame into an integer sum-of-squares matrix polynomial of degree $O(N^2)$, with
-polynomial size and bit complexity. On each tree, its image is the principal module, and
-powers of this single positive semidefinite operator applied to $\one$ generate that
-module.
-
-AI assistance with supporting theory, proof checking, the literature review, drafting
-and editing, and Lean formalization is described in the methodology statement.
-
-\section{The fixed construction}
-For real symmetric matrices $H,K\in M_n(\R)$ and $v\in\R^n$, put
+\begin{theorem}[A uniform linear-degree tree invariant]\label{thm:tree}
+For every $N\ge1$, a deterministic algorithm running in time polynomial in $N$ constructs a self-adjoint polynomial $p_N\in\Z\langle x,y\rangle$, represented by an arithmetic circuit, such that
 \[
-\M(H,K;v)=\spanop_{\R}\{w(H,K)v:w\in\{h,k\}^{*}\}.
+T\cong T'
+\quad\Longleftrightarrow\quad
+\tr p_N(A_T,D_T)=\tr p_N(A_{T'},D_{T'})
 \]
-The empty word is included. We work with straight-line matrix circuits: the inputs are $I,H,K$, and the gates are addition, ordinary matrix multiplication and multiplication by prescribed scalar constants. Reversing the order of the factors compiles the formal involution $p\mapsto p^*$; it is not an additional operation on the input.
+for all connected trees $T,T'$ of orders at most $N$. The circuit has $O(N^2)$ gates and formal degree at most $3N-2$. Its scalar constants have $O(N\log(N+1))$ bits. For every such tree, the bit length of each stored matrix entry and of the final trace is $O(N^5\log(N+1))$.
+\end{theorem}
 
-Fix $N\ge1$ and set $\kappa=N^2$. Define polynomials $U_{k,j}\in\Z\langle h,k_0\rangle$ by
+Every gate operates on matrices of the original input order using the operations specified above. The circuit and its constants are determined by $N$ alone, and the only scalar readout is the trace of its final output. The simultaneous resource bounds matter. The same reconstruction and integer encoding applied to all $2^N-1$ short words already gives a single trace polynomial of degree at most $3N-2$: two words contribute at most $2N-2$, an inserted generator at most one, and McKay's expression for $\one\one^{\mathsf T}$ at most $N-1$. The direct encoding of the resulting Gram data, however, has exponentially many digit positions and exponential bit length. The smaller spanning family reduces the number of encoded entries to $O(N^4)$, giving polynomial bit length. Factoring their weights then gives the $O(N^2)$ gate bound.
+
+Tree canonization itself admits logarithmic-space algorithms \cite{Lindell}, including a construction of a polynomial canon \cite{ADFK}. Other degree-based spectral refinements use multivariate spectra with auxiliary rank-one matrices built from degree-class indicators \cite{WangZhao}. Our question concerns the resources of a fixed expression in the adjacency and degree matrices alone. Nonisomorphic spiders give a trace-degree lower bound of $2\lfloor(N-3)/3\rfloor$ for $N\ge9$ (Section~\ref{sec:lower}), so our invariant has the correct asymptotic degree scale.
+
+The spanning construction applies to general real symmetric pairs. It provides a fixed finite description of the joint cyclic module from any prescribed vector, including when that module is a proper subspace. Together with Gram data, this gives explicit finite invariants for pointed self-adjoint representations (Corollary~\ref{cor:pointed}), so the algebraic construction extends beyond tree reconstruction. For $H,K\in M_n(\R)$ and $v\in\R^n$, define
+\[
+\M(H,K;v)=\spanop_{\R}\{w(H,K)v:w\in\{x,y\}^{*}\},
+\]
+including the empty word. For a tree, write $\M_T=\M(A_T,D_T;\one)$ for its principal module. Fix $N\ge1$ and define $U_{i,j}\in\Z\langle x,y\rangle$ by
 \begin{equation}\label{eq:triangle}
 U_{0,0}=1,\qquad
-U_{k+1,j}=\bigl(k_0+\kappa(j-k)\bigr)U_{k,j}
-                 +\kappa hU_{k,j-1},
+U_{i+1,j}=\bigl(y+N^2(j-i)\bigr)U_{i,j}
+                 +N^2xU_{i,j-1},
 \end{equation}
-where an index outside $0\le j\le k$ denotes zero. We generate rows $0,\ldots,N-1$. The symbol $k_0$ denotes the second noncommuting generator, not the row index.
+with $U_{i,j}=0$ whenever $j\notin\{0,\ldots,i\}$.
 
 \begin{theorem}[Uniform spanning probes]\label{thm:probes}
 Let $1\le n\le N$, let $H,K\in M_n(\R)$ be symmetric, and suppose
@@ -130,257 +80,516 @@ Let $1\le n\le N$, let $H,K\in M_n(\R)$ be symmetric, and suppose
 \]
 Then, for every $v\in\R^n$,
 \begin{equation}\label{eq:span}
-\spanop\{U_{k,j}(H,K)v:0\le j\le k<N\}=\M(H,K;v).
+\spanop_{\R}\{U_{i,j}(H,K)v:0\le j\le i<N\}=\M(H,K;v).
 \end{equation}
 The family in \eqref{eq:triangle} is constructed from $N$ alone. It has $N(N+1)/2$ members, shared circuit size $O(N^2)$, and formal degree at most $N-1$. Its scalar constants have $O(\log(N+1))$ bits.
 \end{theorem}
 
 \begin{corollary}[Rank-sensitive prefix]\label{cor:rankprefix}
-Under the hypotheses of Theorem~\ref{thm:probes}, if $r=\dim\M(H,K;v)$, then the rows $0\le k<r$ already span $\M(H,K;v)$. For $r=0$ this is the empty span. The circuit still generates all $N$ rows and makes no rank test.
+Under the hypotheses of Theorem~\ref{thm:probes}, if $r=\dim\M(H,K;v)$, then
+\[
+\spanop_{\R}\{U_{i,j}(H,K)v:0\le j\le i<r\}
+=\M(H,K;v).
+\]
+For $r=0$ this is the empty span. The construction evaluates the full family indexed by $0\le j\le i<N$ and does not need to determine $r$.
 \end{corollary}
 
-The use of polynomial circuits, rather than a small list of individual words, matters. For example, the first mixed probes are
+Either generator may play the bounded role; the ordered statement places it in the second slot. Interchanging the generators gives the corresponding spanning statement for $U_{i,j}(K,H)v$ when $\diam\Spec(H)\le N-1$. For trees, we use $H=A_T$, $K=D_T$. The family may be redundant, and the same formulas apply to arbitrary seeds and proper cyclic modules. Its degree $N-1$ is necessary in the worst case (Proposition~\ref{prop:probedegree}). For example, the mixed probes include
 \[
-U_{2,1}=\kappa(k_0h+hk_0),
+\begin{aligned}
+U_{2,1}&=N^2(yx+xy),\\
+U_{3,1}&=N^2\bigl(y^2x+yxy+xy^2-N^2yx-2N^2xy\bigr).
+\end{aligned}
 \]
+The lower-degree coefficients depend on multiplication order. The circuit bound concerns the shared recurrence; its monomial expansion need not have polynomial size.
+
+For the proof, set $B=K/N^2$ and introduce an auxiliary variable $t$. The differential Krylov sequence $q_0=v$, $q_{i+1}=\nabla q_i$, for $\nabla=\partial_t+B/t+H$, spans an invariant rational subspace. Self-adjointness bounds the degree of a primitive polynomial exterior vector representing this subspace by $N\,\diam\Spec(B)<1$. This degree is a nonnegative integer, so the exterior vector is constant. The subspace is therefore constant, and connection invariance makes its constant part invariant under both $H$ and $K$. It contains $v$, and every iterate already lies in the rational extension of the joint cyclic module; hence the two constant spaces coincide. Taking coefficients of $N^{2i}t^iq_i$ now gives \eqref{eq:triangle}. Only the residue needs a spectral-diameter bound; symmetry of $H$ supplies the inner-product cancellation. Section~\ref{sec:spanning} compares this argument with degree-integrality arguments for small-exponent differential systems \cite{GV,BG}.
+
+The same self-adjoint argument extends to several symmetric generators.
+For symmetric $H,A_1,\ldots,A_s\in M_n(\R)$ with $s\ge1$, $1\le n\le N$, and
+$\diam\Spec(A_i)\le N-1$, a fixed family of
+$N+sN(N-1)/2$ integer noncommutative polynomial probes spans the joint cyclic module
+from every seed, with the same degree bound $N-1$ and rank-sensitive prefix.
+A shared circuit uses $O(s^2N^2)$ gates at the original matrix order.
+There is still no spectral bound on $H$. We outline the extension after
+the proof of Theorem~\ref{thm:probes}; Appendix~\ref{sec:multi} gives its
+recurrence and proof.
+
+
+\begin{remark}[Fixed words versus polynomial probes]\label{rem:wordlower}
+For $N\ge5$, any fixed family of words of length at most $N-1$ whose responses span $\M(H,K;v)$ for every input in Theorem~\ref{thm:probes} must contain at least $2^{N-1}$ words. To see this, colour the edges of an $N$-vertex path arbitrarily with $x,y$, let $H,K$ be the adjacency matrices of the two colour classes, and take $v=e_1$ at one endpoint. The matrix $K$ is a disjoint union of path adjacency matrices, so $\diam\Spec(K)<4\le N-1$. Among all words of length at most $N-1$, exactly one has a nonzero $e_N$ coordinate when applied to $e_1$: the word following the edge colours from one endpoint to the other, read in the order of matrix action. Its $e_N$ coordinate is one. Thus every spanning word family must contain that word. Varying the colouring forces all $2^{N-1}$ words of length $N-1$. In the general symmetric-pair setting, Theorem~\ref{thm:probes} therefore gives an exponential reduction from fixed words to polynomial probes at the same optimal degree.
+\end{remark}
+
+To obtain the tree invariant, enumerate the family as $U_0,\ldots,U_{M-1}$ and put $z_i=U_i(H,K)v$. The three matrices
 \[
-U_{3,1}=\kappa\bigl(k_0^2h+k_0hk_0+hk_0^2
-                    -\kappa k_0h-2\kappa hk_0\bigr).
+G_{ij}=z_i^{\mathsf T}z_j,\qquad
+G^H_{ij}=z_i^{\mathsf T}Hz_j,\qquad
+G^K_{ij}=z_i^{\mathsf T}Kz_j
 \]
-Their lower-degree terms distinguish multiplication orders. There is no assertion that the polynomials have polynomially many monomials after expansion.
+determine the pointed representation: $G$ determines linear relations and inner products, and $G^H,G^K$ determine the actions of $H,K$. Hence they determine every pointed moment. For trees, use $(H,K,v)=(A_T,D_T,\one)$ and apply pointed reconstruction. McKay's distance polynomials express $\one\one^{\mathsf T}$ as a polynomial of degree at most $N-1$ \cite[Lemma 5.1 and Corollary 5.2]{McKay}, converting these entries into traces. Bounded integer entries can then be packed into one trace. Factoring this encoding permits $O(N^2)$ gates despite the $O(N^4)$ entries.
 
-For a connected tree $T$, let $A_T,D_T$ be its adjacency and degree matrices. The following is the principal application.
+\paragraph{Related work.}
+Pointed moments also form a series represented by a weighted automaton. Tzeng's equivalence algorithm and later refinements construct input-dependent reachable bases; polynomial identity testing also gives randomized equivalence tests \cite{Tzeng,KMOWW}. Our self-adjoint setting admits fixed exact polynomial probes. Fixed short word families span the full matrix algebra on generic tuples \cite{KlepSpenko,JiaCapel}, whereas our polynomial family works throughout the stated self-adjoint class. Matrix-algebra length bounds control the span of all short words \cite{Paz,Pappacena,Shitov,Sprung}; the full algebra may have dimension $n^2$, while the cyclic module used here has dimension at most $n$.
 
-\begin{theorem}[A uniform linear-degree tree invariant]\label{thm:tree}
-For every $N\ge1$, a deterministic algorithm running in time polynomial in $N$ constructs a self-adjoint polynomial $p_N\in\Z\langle a,d\rangle$, represented by an arithmetic circuit, such that
-\[
-T\cong T'
-\quad\Longleftrightarrow\quad
-\tr p_N(A_T,D_T)=\tr p_N(A_{T'},D_{T'})
-\]
-for all connected trees $T,T'$ of orders at most $N$. The circuit has $O(N^2)$ gates and formal degree at most $3N-2$. Its scalar constants have $O(N\log(N+1))$ bits. All intermediate integers and the final trace have $O(N^5\log(N+1))$ bits on these inputs.
+Trace-generation theorems \cite{Procesi} and trace identities \cite{Razmyslov} provide the classical invariant-theoretic setting. Trace criteria also classify systems of maps between real inner-product spaces \cite[Corollary 1]{FHS}, and finite Gram criteria for unitary similarity were developed by Al'pin and Ikramov \cite[Proposition 10 and Theorem 5]{AlpinIkramov}. Derksen and Makam construct input-dependent pivot-word bases and separating words \cite[Algorithm 4.8 and Section 5]{DM}; Forbes and Shpilka obtain explicit quasipolynomial-size separating families through polynomial identity testing (full version, \cite[Theorem 1.13]{FS}). Our contribution is the fixed low-degree spanning recurrence for self-adjoint pairs and its use to achieve the simultaneous circuit and bit bounds.
 
-The circuit operates on matrices of the original input order. It uses no internal trace, rank query, matrix inverse, entry query, Hadamard product, or input-dependent choice. Only the trace of its final output is read.
-\end{theorem}
+\paragraph{Outline.}
+The proof of Theorem~\ref{thm:tree} proceeds from a fixed spanning family to complete finite data and then to a single trace circuit. Section~\ref{sec:spanning} establishes the spanning family for general symmetric pairs: differential rigidity identifies the span of the iterates with the joint cyclic module, and coefficient extraction gives the fixed probes. Section~\ref{sec:reconstruction} uses their Gram data to recover the pointed representation and hence every principal moment. Principal-moment reconstruction then makes these finite data a complete tree invariant.
 
-The graph-theoretic input in Theorem~\ref{thm:tree} is the pointed adjacency--degree reconstruction theorem for trees, stated explicitly in Section~\ref{sec:reconstruction}. The new spanning argument below does not assume a tree, an orbit partition, a simple spectrum, or a cyclic Gram matrix.
+The remaining task is to realize this invariant within the stated circuit model. McKay's distance polynomials turn the Gram entries into traces, and uniform integer bounds allow all entries to be encoded injectively in one trace. Factoring the encoding gives the quadratic gate bound; the degrees of its factors and the number of encoded entries give the degree and bit bounds. The circuit evaluates this factored expression directly. Section~\ref{sec:lower} then shows that linear trace degree is necessary up to a constant factor.
 
-\section{A rational differential subspace cannot move}
-We first prove the linear-algebraic statement responsible for uniformity. The differential language is used in the proof only; the circuit \eqref{eq:triangle} performs no differentiation or differential-equation solving.
+The appendices branch from the spanning theorem. Appendix~\ref{sec:cyclic} uses the probes to construct a single positive semidefinite operator with the prescribed principal module and a cyclic all-ones vector. Appendix~\ref{sec:fulltrace} recovers the full adjacency--degree representation in the Frobenius matrix space, allowing reconstruction directly from McKay's theorem at higher resource cost. Appendix~\ref{sec:verification} records the computational checks and the scope of formal verification. Appendix~\ref{sec:multi} extends the same rigidity argument to several symmetric generators while preserving the degree bound and rank-sensitive prefix.
 
-For a linear map $B$ on $\R^n$, denote its additive action on the $r$th exterior power by
+\section{Uniform spanning via differential rigidity}\label{sec:spanning}
+To prove Theorem~\ref{thm:probes}, we must show that the fixed recurrence
+\eqref{eq:triangle} spans the entire joint cyclic module on every admissible
+input. We first identify the rational span of a differential Krylov sequence
+from $v$ with $\M(H,K;v)\otimes_\R\R(t)$. The rigidity lemma below forces
+this rational span to be constant and jointly invariant under the two matrices.
+Taking coefficients of the iterates then gives the prescribed probes.
+Throughout, $t$ is a commuting auxiliary variable; the polynomials $U_{i,j}$
+remain elements of $\Z\langle x,y\rangle$.
+
+For a linear map $B$ on $\R^n$, its additive action on the $r$th exterior power is
 \[
 B^{[r]}(u_1\wedge\cdots\wedge u_r)
-=\sum_{i=1}^r u_1\wedge\cdots\wedge Bu_i\wedge\cdots\wedge u_r.
+=\sum_{j=1}^r u_1\wedge\cdots\wedge Bu_j\wedge\cdots\wedge u_r.
 \]
-This is not the multiplicative exterior power of $B$. If $B$ is symmetric, then $B^{[r]}$ is symmetric and its eigenvalues are sums of $r$ eigenvalues of $B$ with distinct indices. In particular,
+If $B$ is symmetric, then $B^{[r]}$ is symmetric for the induced inner product,
+and its eigenvalues are sums of $r$ eigenvalues of $B$ with distinct indices.
+Consequently,
 \begin{equation}\label{eq:diam}
 \diam\Spec(B^{[r]})\le r\,\diam\Spec(B).
 \end{equation}
 
 \begin{lemma}[Small-residue rigidity]\label{lem:rigidity}
-Let $B,H\in M_n(\R)$ be symmetric. Let $V\subseteq\R(x)^n$ be a subspace of dimension $r$ invariant under
+Let $B,H\in M_n(\R)$ be symmetric, and let $V\subseteq\R(t)^n$ be an
+$r$-dimensional subspace invariant under the connection
 \[
-\nabla f=f'+(B/x+H)f.
+\nabla f=f'+(B/t+H)f.
 \]
-If $r\,\diam\Spec(B)<1$, then $V=W\otimes_{\R}\R(x)$ for a constant real subspace $W\subseteq\R^n$. Moreover, $W$ is invariant under both $B$ and $H$.
+If $r\,\diam\Spec(B)<1$, then
+$V=W\otimes_{\R}\R(t)$ for a real subspace $W\subseteq\R^n$ invariant under
+both $B$ and $H$.
 \end{lemma}
 \begin{proof}
-The cases $r=0$ and $r=n$ are immediate, although the argument also covers the latter. Choose a rational basis of $V$ and take its exterior product. Clearing denominators and dividing the coordinates by their polynomial gcd gives a nonzero polynomial vector
+The cases $r=0$ and $r=n$ are immediate, so assume $0<r<n$.
+Take the exterior product of a rational basis of $V$. Clear its denominators
+and divide its coordinates by their polynomial gcd to obtain
 \[
-w(x)=w_0+w_1x+\cdots+w_\ell x^\ell
-       \in\bigwedge^r\R^n[x]
+w(t)=w_0+w_1t+\cdots+w_\ell t^\ell
+\in \bigl(\textstyle\bigwedge^r\R^n\bigr)[t].
 \]
-whose coordinates have gcd one. Consequently $w_0\ne0$ and $w_\ell\ne0$.
+This vector is nonzero and its coordinates are coprime. In particular,
+$w_0\ne0$, since otherwise all coordinates would be divisible by $t$; also
+$w_\ell\ne0$ by the choice of $\ell$.
 
-The line spanned by $w$ is invariant under the induced connection. Thus, for some $c(x)\in\R(x)$,
+Invariance of $V$ makes the rational line spanned by $w$ invariant under the
+induced connection. Hence there is $c(t)\in\R(t)$ such that
 \[
-xw'+(B^{[r]}+xH^{[r]})w=c(x)w.
+tw'+(B^{[r]}+tH^{[r]})w=c(t)w.
 \]
-The left side is polynomial. Since the coordinates of $w$ are coprime, a polynomial Bezout identity shows that $c(x)$ is polynomial. Comparing degrees gives $\deg c\le1$. Write $c(x)=\alpha+\beta x$.
-
-The constant and highest coefficients give
+The left side is polynomial. A polynomial Bezout identity for the coprime
+coordinates of $w$ therefore shows that $c(t)$ is polynomial. Comparing
+degrees gives $\deg c\le1$, so write $c(t)=\alpha+\beta t$.
+The constant coefficient and the coefficient of $t^{\ell+1}$ give
 \begin{equation}\label{eq:endcoeff}
 B^{[r]}w_0=\alpha w_0,
 \qquad H^{[r]}w_\ell=\beta w_\ell.
 \end{equation}
-If $\ell>0$, the coefficient of $x^\ell$ is
+If $\ell>0$, the coefficient of $t^\ell$ gives
 \[
 \ell w_\ell+B^{[r]}w_\ell+H^{[r]}w_{\ell-1}
 =\alpha w_\ell+\beta w_{\ell-1}.
 \]
-Take its inner product with $w_\ell$. The last terms cancel by symmetry and \eqref{eq:endcoeff}, so
+Take the inner product with $w_\ell$. Symmetry of $H^{[r]}$ and
+\eqref{eq:endcoeff} cancel the terms containing $w_{\ell-1}$. Since
+$\alpha\in\Spec(B^{[r]})$, the Rayleigh quotient of $B^{[r]}$ then yields
 \begin{equation}\label{eq:integergap}
 \ell=\alpha-
 \frac{\langle w_\ell,B^{[r]}w_\ell\rangle}{\|w_\ell\|^2}
-\le\diam\Spec(B^{[r]})<1.
+\le\diam\Spec(B^{[r]})
+\le r\,\diam\Spec(B)<1.
 \end{equation}
-This contradicts the positive integer $\ell$. Hence $\ell=0$.
+This is impossible for the positive integer $\ell$. Thus $\ell=0$.
 
-A constant nonzero decomposable exterior vector determines a constant subspace. Explicitly, $V$ is the set of rational vectors $u$ satisfying $u\wedge w_0=0$, and these are the rational extension of a real subspace $W$. For $u\in W$, invariance gives $(B/x+H)u\in W\otimes\R(x)$. Passing to $\R^n/W$ and equating the coefficients of $1,x$ shows $Bu,Hu\in W$.
+The constant exterior vector $w_0$ determines a constant subspace: explicitly,
+$V$ consists of the rational vectors $u$ satisfying $u\wedge w_0=0$.
+This equation has constant real coefficients, so its solution space is
+$W\otimes_\R\R(t)$ for a real subspace $W\subseteq\R^n$.
+For $u\in W$, invariance gives $(B/t+H)u\in W\otimes_\R\R(t)$.
+Multiply by $t$ and pass to $\R^n/W$. The constant and linear coefficients
+of $Bu+tHu$ vanish separately, proving $Bu,Hu\in W$.
 \end{proof}
 
-\begin{remark}
-The strict inequality is meaningful. With $B=\operatorname{diag}(0,-1)$ and $H=0$, the nonconstant rational line spanned by $(1,x)^{\mathsf T}$ is horizontal for $\partial_x+B/x$. Its primitive polynomial degree is one, equal to the spectral diameter. The proof is a small-exponent argument in the elementary language of polynomial exterior vectors; related constant-reduction phenomena occur in the differential-equation literature \cite{vdPS,GV}. No exterior-power matrix is formed by our algorithm.
-\end{remark}
+The strict bound in the lemma is necessary: for
+$B=\operatorname{diag}(0,-1)$ and $H=0$, the nonconstant rational line
+spanned by $(1,t)^{\mathsf T}$ is horizontal for $\partial_t+B/t$.
+Its primitive polynomial degree and the spectral diameter of $B$ both equal one.
 
-\section{From the connection to the triangular recurrence}
-\begin{proof}[Proof of Theorem~\ref{thm:probes}]
-If $v=0$, both sides of \eqref{eq:span} vanish. Otherwise put $B=K/\kappa$ and
+We apply the lemma to the rational span of the differential iterates from $v$.
+The goal is to identify this span with $\M(H,K;v)\otimes_\R\R(t)$; the number
+of iterates required will then equal $\dim_\R\M(H,K;v)$.
+
+\begin{proof}[Proof of Theorem~\ref{thm:probes} and Corollary~\ref{cor:rankprefix}]
+If $v=0$, both sides of the spanning identities are the zero subspace. Assume $v\ne0$,
+put $B=K/N^2$, and define
 \[
 q_0=v,\qquad q_{i+1}=\nabla q_i,
-\qquad \nabla=\partial_x+B/x+H.
+\qquad \nabla=\partial_t+B/t+H.
 \]
-Let $V$ be the $\R(x)$-span of all $q_i$. A differential Krylov chain stabilizes as soon as its next vector is dependent: differentiating a rational linear relation introduces only derivatives of its rational coefficients and the next Krylov vectors. Thus $V$ is invariant under $\nabla$, and it is spanned by $q_0,\ldots,q_{n-1}$.
-
-Every coefficient of every $q_i$ lies in the constant joint cyclic module $\M=\M(H,K;v)$. Thus $V\subseteq\M\otimes\R(x)$. Conversely, if $r=\dim_{\R(x)}V$, then
+Let $s\ge1$ be the first index for which $q_s$ belongs to the
+$\R(t)$-span of $q_0,\ldots,q_{s-1}$. Such an index exists with $s\le n$.
+Write $q_s=\sum_{i=0}^{s-1}a_i(t)q_i$. The Leibniz rule gives
 \[
-r\,\diam\Spec(B)\le\frac{N(N-1)}{N^2}<1.
+q_{s+1}
+=\sum_{i=0}^{s-1}a_i'(t)q_i
+ +\sum_{i=0}^{s-1}a_i(t)q_{i+1}.
 \]
-Lemma~\ref{lem:rigidity} makes $V$ a constant subspace invariant under $H,K$ and containing $v$. Hence
+Every term on the right lies in the same span. More generally, that span is
+invariant under $\nabla$, because $\nabla q_i=q_{i+1}$ and differentiating
+a rational coefficient preserves $\R(t)$. Thus all later iterates lie in it,
+and
+\[
+V:=\spanop_{\R(t)}\{q_i:i\ge0\}
+=\spanop_{\R(t)}\{q_0,\ldots,q_{s-1}\},
+\qquad \dim_{\R(t)}V=s.
+\]
+
+Let $\M=\M(H,K;v)$. It is invariant under $H$ and $K$, so the recurrence
+for $q_i$ gives $V\subseteq\M\otimes_\R\R(t)$. Also,
+\[
+s\,\diam\Spec(B)\le\frac{N(N-1)}{N^2}<1.
+\]
+Lemma~\ref{lem:rigidity} therefore gives $V=W\otimes_\R\R(t)$ with
+$W$ invariant under $H,K$ and containing $v$. The definition of $\M$ implies
+$\M\subseteq W$, and hence
 \begin{equation}\label{eq:diffspan}
-V=\M\otimes\R(x).
+V=\M\otimes_\R\R(t).
 \end{equation}
+In particular, $s=r:=\dim_\R\M$.
+This is where the spectral-diameter bound on $K$ enters: $K/N^2$ is the
+residue in the connection, while symmetry of $H$ supplies the cancellation
+in \eqref{eq:integergap}.
 
-Set $f_i=x^i q_i$. The recurrence becomes
+To extract fixed polynomial expressions from these iterates, put $f_i=t^iq_i$.
+Their recurrence is
 \[
-f_{i+1}=xf_i'+(B-iI+xH)f_i.
+f_0=v,\qquad
+f_{i+1}=tf_i'+(B-iI+tH)f_i.
 \]
-Induction shows that $f_i$ is polynomial of degree at most $i$. Writing
+Induction shows that $f_i$ is a polynomial vector of degree at most $i$.
+Write
 \[
-f_i(x)=\kappa^{-i}\sum_{j=0}^i U_{i,j}(H,K)v\,x^j
+f_i(t)=N^{-2i}\sum_{j=0}^i c_{i,j}t^j.
 \]
-gives exactly \eqref{eq:triangle}. Let $S$ be the real span of the coefficients of $f_0,\ldots,f_{N-1}$. Then $S\subseteq\M$, while \eqref{eq:diffspan} gives $\M\otimes\R(x)\subseteq S\otimes\R(x)$. Therefore $S=\M$.
+Comparison of coefficients gives
+\[
+c_{0,0}=v,\qquad
+c_{i+1,j}=\bigl(K+N^2(j-i)I\bigr)c_{i,j}
+             +N^2Hc_{i,j-1},
+\]
+with coefficients outside the indicated range taken to be zero. This is
+exactly \eqref{eq:triangle}, so $c_{i,j}=U_{i,j}(H,K)v$.
 
-The same argument proves Corollary~\ref{cor:rankprefix}: the first dependent differential Krylov vector occurs at the dimension of $V$, which by \eqref{eq:diffspan} equals $r$. Thus $q_0,\ldots,q_{r-1}$ suffice, and so do the coefficients of $f_0,\ldots,f_{r-1}$.
+Let $S$ be the real span of the coefficients of $f_0,\ldots,f_{r-1}$.
+The coefficient recurrence gives $S\subseteq\M$. Conversely,
+$q_i=t^{-i}f_i\in S\otimes_\R\R(t)$ for $i<r$, and these $q_i$ span $V$.
+Equation~\eqref{eq:diffspan} therefore gives
+$\M\otimes_\R\R(t)\subseteq S\otimes_\R\R(t)$.
+Taking dimensions yields $S=\M$. Consequently,
+\[
+\spanop_\R\{U_{i,j}(H,K)v:0\le j\le i<r\}=\M.
+\]
+Since $r\le N$, this proves both spanning assertions. The circuit evaluates
+the full family with $0\le j\le i<N$, independently of $r$.
 
-Each row of \eqref{eq:triangle} has one more entry than the preceding row and uses a constant number of gates per entry. Each step increases formal degree by at most one. The stated size, degree and scalar bounds follow.
+It remains to bound the resources. There are
+$\sum_{i=0}^{N-1}(i+1)=N(N+1)/2$ polynomials, and each new entry of
+\eqref{eq:triangle} uses a constant number of gates from the preceding
+entries. The shared circuit therefore has $O(N^2)$ gates. Induction in
+\eqref{eq:triangle} gives $\deg U_{i,j}\le i$, so the formal degree is at most
+$N-1$. The prescribed integer scalars have absolute value at most $N^3$,
+and thus $O(\log(N+1))$ bits. All choices in this recurrence depend only on $N$.
 \end{proof}
 
-\begin{remark}[What was made explicit]
-A generic linear combination of a known spanning family is not being chosen. The entire family is prescribed by \eqref{eq:triangle}, and its spanning property follows before any evaluation. In particular there is no hidden hitting-set assumption and no need to certify a particular parameter sequence by inspecting the input.
-\end{remark}
+\paragraph{Several symmetric generators.}
+The mechanism extends by placing the additional generators at distinct
+real poles. For
+$\nabla=\partial_t+H+\sum_{i=1}^sB_i/(t-a_i)$, the primitive exterior-vector
+argument bounds its degree $\ell$ by
+$\ell\le r\sum_i\diam\Spec(B_i)$. Each pole supplies an eigenvalue of
+$B_i^{[r]}$, and the highest two coefficients supply a sum of Rayleigh
+quotients; the self-adjointness of $H$ gives the same cancellation as above.
+Thus $r\sum_i\diam\Spec(B_i)<1$ again forces constancy. Taking
+$a_i=i-1$ and $B_i=A_i/(sN^2)$ meets this condition uniformly. Clearing
+denominators in the differential iterates then yields a fixed integer
+recurrence, whose first $r$ rows already span the joint cyclic module.
+The polynomial coefficients in row $k$ still have noncommutative degree
+at most $k$. Appendix~\ref{sec:multi} provides the details, including
+the shared circuit bound. This extension uses the same self-adjoint
+rigidity argument without a block enlargement.
+
+The differential-module framework is standard \cite[Chapter~2]{vdPS}.
+Classical cyclic-vector constructions, such as Katz's algorithm \cite{Katz},
+select a vector whose differential iterates form a basis. Here the seed is
+prescribed: Lemma~\ref{lem:rigidity} identifies its differential cyclic module
+with the joint invariant module of the two matrices. The use of degree
+integrality also has precedents in constant-reduction arguments.
+Gontsov and Vyugin bound a nonpositive subbundle degree strictly above $-1$
+and hence force it to vanish \cite[Lemma~2]{GV}.
+Barkatou and Gontsov give a Liouvillian-solvability criterion using differences
+of the real parts of formal exponents \cite[Theorem~2.3]{BG}. Their criterion
+also requires distinct leading eigenvalues at irregular singularities and
+exponent differences outside $\Q\setminus\Z$ at Fuchsian singularities.
+The latter condition already fails for our horizontal tree system
+$f'=-(D_T/(N^2t)+A_T)f$ whenever $T$ has distinct vertex degrees: the residue
+then has nonzero rational eigenvalue differences of absolute value less than
+one. Lemma~\ref{lem:rigidity} instead gives the required conclusion directly
+for every rational invariant subspace of the stated self-adjoint connection,
+including when $H$ has repeated eigenvalues.
+
+The degree bound on the spanning family cannot be improved in general.
+This concerns the degree needed to generate the cyclic module; the trace
+degree needed to distinguish trees is considered in Section~\ref{sec:lower}.
 
 \begin{proposition}[The probe degree is necessary]\label{prop:probedegree}
-For every $N\ge1$, there is a symmetric pair satisfying Theorem~\ref{thm:probes} for which every polynomial family spanning the cyclic module has a member of degree at least $N-1$.
+For every $N\ge1$, there is a symmetric pair satisfying
+Theorem~\ref{thm:probes} for which every polynomial family spanning the cyclic
+module has a member of degree at least $N-1$.
 \end{proposition}
 \begin{proof}
-Take $K=0$, $H=\operatorname{diag}(\lambda_1,\ldots,\lambda_N)$ with distinct real $\lambda_i$, and $v=\one$. The Vandermonde matrix shows that $v,Hv,\ldots,H^{N-1}v$ are independent. Every polynomial of total degree at most $d$ evaluated at $(H,0)$ sends $v$ into $\spanop\{v,Hv,\ldots,H^dv\}$, which has dimension at most $d+1$. Therefore $d\ge N-1$ is necessary to span this $N$-dimensional module. This is a degree bound; it makes no optimality claim about the number of probes or gates.
+Take $K=0$, $H=\operatorname{diag}(\lambda_1,\ldots,\lambda_N)$ with distinct
+real $\lambda_i$, and $v=\one$. The Vandermonde matrix shows that
+$v,Hv,\ldots,H^{N-1}v$ are independent. Every polynomial of total degree at
+most $d$ evaluated at $(H,0)$ sends $v$ into
+$\spanop\{v,Hv,\ldots,H^dv\}$, whose dimension is at most $d+1$.
+Spanning this $N$-dimensional module therefore requires $d\ge N-1$.
 \end{proof}
 
-\section{Pointed reconstruction and a single trace}\label{sec:reconstruction}
-We use the following graph-theoretic theorem, in its pointed formulation.
+\section{A single trace invariant for trees}\label{sec:reconstruction}
+The fixed spanning family lets us replace all principal moments by three
+finite Gram matrices recording the inner product and both generator actions
+on the principal module. We first identify these complete data, then give
+their trace encoding and its circuit factorization. The proof of
+Theorem~\ref{thm:tree} verifies the encoding and its resource bounds together.
+The graph-theoretic input is the following reconstruction theorem.
 
 \begin{theorem}[Principal-moment reconstruction; {\cite[Theorem 5.4]{LuLi}}]\label{thm:input}
 If two trees $T,T'$ satisfy
 \[
 \one^{\mathsf T}w(A_T,D_T)\one
 =\one^{\mathsf T}w(A_{T'},D_{T'})\one
-\quad\text{for every word }w,
+\quad\text{for every word }w\in\{x,y\}^{*},
 \]
 then $T\cong T'$.
 \end{theorem}
 
-This input is stronger than merely saying that orbit indicators belong to the principal module. The identification of abstract pointed representations must not be replaced by an unjustified assertion that an orthogonal map is a permutation. Theorem~\ref{thm:input} supplies exactly that graph-reconstruction step. McKay's constructive theorem \cite{McKay} concerns the full adjacency--degree representation; the principal-module statement and its proof are explicitly given in \cite{LuLi}. For completeness, Section~\ref{sec:fulltrace} gives a polynomial-resource fallback using only the full-representation version of McKay.
+To recover every pointed moment, it suffices to recover the inner product,
+the seed, and the action of both generators on its cyclic module. The correspondence is
+standard; for the all-ones seed, see \cite[Lemma 3.4]{GRS}. Finite word-Gram
+reconstruction also underlies the unitary-similarity criteria of Al'pin and
+Ikramov \cite[Proposition 10 and Theorem 5]{AlpinIkramov}. The following
+pointed real-symmetric form shows that a prescribed spanning family and its
+three Gram matrices recover precisely this information.
 
-\begin{lemma}[An overcomplete Gram table]\label{lem:gram}
-Suppose $z_i=U_i(H,K)v$ span $\M(H,K;v)$ and $U_0=1$. The three tables
-\[
+\begin{lemma}[Recovering a pointed representation]\label{lem:gram}
+Let $H,K$ be real symmetric matrices, let $v$ be a vector, and suppose the vectors
+$z_i=U_i(H,K)v$, $0\le i<M$, span $\M(H,K;v)$, where $U_0=1$.
+The three matrices $G,G^H,G^K$ with entries
+\begin{equation}\label{eq:gram}
 G_{ij}=z_i^{\mathsf T}z_j,\qquad
 G^H_{ij}=z_i^{\mathsf T}Hz_j,\qquad
 G^K_{ij}=z_i^{\mathsf T}Kz_j
-\]
-determine the pointed simultaneous representation on $\M$ up to an isometry fixing its seed.
+\end{equation}
+determine this pointed representation up to a seed-preserving isometry.
 \end{lemma}
 \begin{proof}
-If two tables agree, send $\sum_i c_i z_i$ to $\sum_i c_i z_i'$. Equality of $G$ makes this map well defined and isometric, and the spanning hypothesis makes it onto. The other two tables imply that it intertwines $H$ and $K$: pair each desired equality with the spanning vectors $z_i'$. Since $z_0=v$, the seed is preserved.
+Suppose two pointed pairs give the same three matrices. Define
+$\sum_i c_i z_i\mapsto\sum_i c_i z_i'$.
+Equality of $G$ makes this map well defined and isometric, and the spanning
+hypothesis makes it onto. Equality of $G^H$ implies that the map intertwines
+the restrictions of $H$ and $H'$: pair the desired identity with each spanning
+vector $z_i'$. Equality of $G^K$ gives the same conclusion for $K,K'$.
+Finally, $z_0=v$ and $z_0'=v'$, so the seed is preserved.
 \end{proof}
 
 \begin{corollary}[Finite invariants for pointed representations]\label{cor:pointed}
-For real symmetric pairs of dimension at most $N$ satisfying the spectral-diameter hypothesis, the three tables formed from the fixed probes in Theorem~\ref{thm:probes} are complete invariants of the pointed cyclic representation. Their entries are polynomial functions of $(H,K,v)$, of degree at most $2N-1$ in the matrix entries and degree two in the seed. Equality is equivalent to a seed-preserving isometry intertwining both generators on the cyclic modules.
+For real symmetric pairs of dimension at most $N$ satisfying the hypothesis
+of Theorem~\ref{thm:probes}, the matrices in \eqref{eq:gram} formed from its
+fixed polynomials are complete invariants of the pointed cyclic representation.
+Their entries are polynomial functions of $(H,K,v)$, of degree at most $2N-1$
+in the matrix entries and degree two in the seed. Equality of the three matrices
+is equivalent to a seed-preserving isometry intertwining both restricted generators.
 \end{corollary}
 \begin{proof}
-The forward implication is Lemma~\ref{lem:gram}. An intertwining isometry preserves every probe vector and hence all three tables. The degree bound follows from $\deg U_i\le N-1$. Integer radix packing below uses the additional integrality and height bounds of the tree inputs.
+One direction is Lemma~\ref{lem:gram}. For the other, an intertwining isometry
+preserves every vector $U_i(H,K)v$ and hence all three matrices.
+The degree bound follows from $\deg U_i\le N-1$.
 \end{proof}
 
-For trees, define the standard distance polynomials
-\begin{equation}\label{eq:J}
+\paragraph{From Gram data to a trace expression.}
+For trees, the resulting isometry preserves every principal moment, so
+Theorem~\ref{thm:input} gives a graph isomorphism. To express each of these
+integer matrix entries as a trace, we use McKay's distance polynomials
+\cite[Lemma 5.1 and Corollary 5.2]{McKay}:
+\begin{equation}\label{eq:distance}
 \begin{aligned}
-P_0&=1,\qquad P_1=a,\qquad P_2=a^2-d,\\
-P_k&=aP_{k-1}-(d-1)P_{k-2}\quad(k\ge3),\qquad
+P_0&=1,\qquad P_1=x,\qquad P_2=x^2-y,\\
+P_k&=xP_{k-1}-(y-1)P_{k-2}\quad(k\ge3),\qquad
 J_N=\sum_{k=0}^{N-1}P_k.
 \end{aligned}
 \end{equation}
-On a tree $T$, let $F_k(u,v)$ be the indicator of $\operatorname{dist}(u,v)=k$. Then $F_0=I$ and $F_1=A_T$. For $k=2$, the diagonal of $A_T^2$ is $D_T$, and two distinct vertices have one common neighbour exactly when their distance is two, so $F_2=A_T^2-D_T$. For $k\ge3$, count neighbours $w$ of $u$ with $\operatorname{dist}(w,v)=k-1$. The unique path from $u$ to $v$ gives one such neighbour when $\operatorname{dist}(u,v)=k$, and $\deg(u)-1$ when $\operatorname{dist}(u,v)=k-2$; otherwise the count is zero. Thus $A_TF_{k-1}=F_k+(D_T-I)F_{k-2}$. Induction proves $P_k(A_T,D_T)=F_k$. Every distance is at most $n-1\le N-1$, hence
-\begin{equation}\label{eq:Jval}
+All these expressions belong to $\Z\langle x,y\rangle$.
+On a tree $T$, let $F_k(u,v)$ be the indicator of $\operatorname{dist}(u,v)=k$.
+Then $F_0=I$ and $F_1=A_T$. The diagonal of $A_T^2$ is $D_T$, and two distinct
+vertices have one common neighbour exactly when their distance is two; hence
+$F_2=A_T^2-D_T$. For $k\ge3$, count neighbours $w$ of $u$ with
+$\operatorname{dist}(w,v)=k-1$. The unique path from $u$ to $v$ gives one such
+neighbour when $\operatorname{dist}(u,v)=k$, and $\deg(u)-1$ when
+$\operatorname{dist}(u,v)=k-2$; otherwise the count is zero. Thus
+$A_TF_{k-1}=F_k+(D_T-I)F_{k-2}$, proving $P_k(A_T,D_T)=F_k$ by induction.
+Every distance is at most $n-1\le N-1$, so
+\begin{equation}\label{eq:J}
 J_N(A_T,D_T)=\one\one^{\mathsf T}.
 \end{equation}
-These are classical identities from McKay's argument \cite[Lemma 5.1 and Corollary 5.2]{McKay}. The expression $J_N$ has degree at most $N-1$. The construction retains $J_N^*$ throughout and needs no additional self-adjointness premise for this expression.
+In particular, $\tr(J_N(A_T,D_T)X)=\one^{\mathsf T}X\one$ for every matrix $X$.
+The expression $J_N$ has degree at most $N-1$; we keep its formal adjoint
+$J_N^*$ in the construction below.
 
-\subsection{All coefficients and all digits}
-Order the $M=N(N+1)/2$ polynomials $U_i$ row by row, with $U_0=1$. List
+It remains to encode the entries of $G,G^A,G^D$ in a single trace and to compute
+that trace with $O(N^2)$ gates. Enumerate the $M=N(N+1)/2$ polynomials
+in \eqref{eq:triangle} in lexicographic order of the index pair, as
+$U_0,\ldots,U_{M-1}$, with $U_0=1$. Set
 \[
-X_\nu=U_i^*SU_j,
-\qquad S\in\{1,a,d\},\quad 0\le i,j<M,
+X_\nu=U_i^*SU_j,\qquad S\in\{1,x,y\},\quad 0\le i,j<M,
 \]
-first by $S$ in the displayed order, then by $i,j$: the exact index is $\nu=sM^2+iM+j$, with $s=0,1,2$ for $S=1,a,d$. There are $Q=3M^2$ entries. Put
+where $\nu=sM^2+iM+j$ and $s=0,1,2$ corresponds to $S=1,x,y$, respectively.
+There are $Q=3M^2$ entries to encode. Define
 \begin{equation}\label{eq:radix}
-L=3N^3,\qquad R=L^{N-1},\qquad H_N=N^2R^2,
-\qquad b_N=2H_N+1.
+L=3N^3,\qquad R=L^{N-1},\qquad H_N=N^2R^2,\qquad b_N=2H_N+1.
 \end{equation}
-For $N=1$ take $p_1=1$ and return the identity register directly. There is only one nonempty tree of order at most one. For $N\ge2$ our final polynomial is
+For $N=1$ take $p_1=1$; there is only one nonempty tree of order at most one.
+For $N\ge2$, define
 \begin{equation}\label{eq:final}
 p_N=\sum_{\nu=0}^{Q-1}b_N^\nu
-           \bigl(J_NX_\nu+X_\nu^*J_N^*\bigr).
+             \bigl(J_NX_\nu+X_\nu^*J_N^*\bigr).
 \end{equation}
-We compile this sum by factoring its radix weights. Put
+This expression is formally self-adjoint. The bounds in \eqref{eq:radix} will
+ensure that its trace uniquely encodes all $Q$ integer entries.
+
+The sum in \eqref{eq:final} has $O(N^4)$ terms. The exponent $sM^2+iM+j$
+separates the generator index from the two probe indices, allowing the
+circuit to share two probe combinations and one generator combination. Put
 \[
 \begin{aligned}
 Y_N&=\sum_{j=0}^{M-1}b_N^jU_j,&
 Z_N&=\sum_{i=0}^{M-1}b_N^{iM}U_i,\\
-W_N&=1+b_N^{M^2}a+b_N^{2M^2}d.
+W_N&=1+b_N^{M^2}x+b_N^{2M^2}y.
 \end{aligned}
 \]
-Expanding in the order $S,i,j$ gives the exact polynomial identity
+Expanding the product and using $W_N^*=W_N$ gives
 \begin{equation}\label{eq:factored}
 p_N=J_NZ_N^*W_NY_N+Y_N^*W_NZ_NJ_N^*.
 \end{equation}
-Here $W_N^*=W_N$, since the three slots are $1,a,d$. Thus \eqref{eq:factored} is precisely \eqref{eq:final}, with the same digits and their same order.
+The coefficient of $J_NU_i^*SU_j$ is exactly $b_N^{sM^2+iM+j}$, as in
+\eqref{eq:final}. The circuit evaluates \eqref{eq:factored} directly from
+the original-order probe matrices and $J_N$; the Gram entries are recovered
+only from the final trace in the correctness argument.
 
-Its only large scalar input is $b_N$. Starting from $B=b_NI$, $M$ ordinary multiplications construct $B^M=b_N^MI$, and another $M$ construct $(B^M)^M=b_N^{M^2}I$. Squaring the latter gives $b_N^{2M^2}I$. Horner's rule with bases $B$ and $B^M$ constructs $Y_N$ and $Z_N$ in $O(M)$ further gates. The scalar powers are computed registers, rather than additional prescribed constants. Unused registers may be discarded without increasing the size; in particular no $P_2$ register is needed when $N=1$.
+The only large prescribed scalar is $b_N$. Starting from $B=b_NI$, at most
+$M$ multiplications construct $B^M=b_N^MI$, and at most another $M$ construct
+$(B^M)^M=b_N^{M^2}I$. Squaring the latter gives $b_N^{2M^2}I$.
+Horner's rule with bases $B$ and $B^M$ constructs $Y_N$ and $Z_N$ in $O(M)$
+further gates. Thus these large scalar powers are computed by the circuit.
+
+\paragraph{Correctness and resource bounds.}
+The construction is now fixed. Its correctness rests on the completeness of
+the Gram data and the injectivity of their bounded-integer encoding; the
+factorization then supplies the circuit bounds.
 
 \begin{proof}[Proof of Theorem~\ref{thm:tree}]
-The case $N=1$ was settled by the identity branch. Assume $N\ge2$. The matrices $A_T,D_T$ are symmetric, with $\Spec(D_T)\subseteq[0,N-1]$. Thus Theorem~\ref{thm:probes} applies. Lemma~\ref{lem:gram} and Theorem~\ref{thm:input} show that the three tables encoded by the $X_\nu$ form a complete tree invariant.
+The case $N=1$ follows from the identity output. Assume $N\ge2$.
+For every permitted tree, $A_T,D_T$ are symmetric and
+$\Spec(D_T)\subseteq[0,N-1]$. Theorem~\ref{thm:probes} therefore applies.
+Lemma~\ref{lem:gram} and Theorem~\ref{thm:input} show that $G,G^A,G^D$ together
+form a complete tree invariant.
 
-Every entry of these tables is an integer. The induced row-sum norms of $A_T,D_T$ are at most $N-1$. Applied to vectors with maximum norm, \eqref{eq:triangle} gives
+Their entries are integers. Since the induced row-sum norms of $A_T,D_T$ are
+at most $N-1$, induction in \eqref{eq:triangle} gives
 \[
-\|U_{k,j}(A_T,D_T)\one\|_\infty\le L^k.
+\|U_{i,j}(A_T,D_T)\one\|_\infty\le L^i.
 \]
-The same bound holds for the induced matrix norms of $U_{k,j}$. Consequently, for $S=I,A_T,D_T$,
+The same bound holds for the induced matrix norms of $U_{i,j}$.
+Consequently, for $S=I,A_T,D_T$,
 \[
-|\one^{\mathsf T}U_i^*SU_j\one|\le N^2 R^2=H_N.
+|\one^{\mathsf T}U_i^*SU_j\one|\le N^2R^2=H_N.
 \]
-By \eqref{eq:Jval},
+Equation~\eqref{eq:J} now gives
 \[
-\tr p_N(A_T,D_T)
-=2\sum_{\nu=0}^{Q-1}b_N^\nu h_\nu(T),
+\tr p_N(A_T,D_T)=2\sum_{\nu=0}^{Q-1}b_N^\nu h_\nu(T),
 \qquad h_\nu(T)=\one^{\mathsf T}X_\nu(A_T,D_T)\one.
 \]
-Balanced radix is injective for digits in $[-H_N,H_N]$: at the least index where two digit strings differ, their nonzero difference has absolute value at most $2H_N<b_N$ and cannot be divisible by $b_N$. Hence equality of final traces is equivalent to equality of all table entries. In particular $h_0=n$ records the order.
+This integer encoding is injective for entries in $[-H_N,H_N]$.
+Indeed, at the least index where two sequences differ, the nonzero difference
+has absolute value at most $2H_N<b_N$ and cannot be divisible by $b_N$.
+Equality of final traces is therefore equivalent to equality of all entries
+of $G,G^A,G^D$, and hence to tree isomorphism. In particular, $h_0(T)=n$
+records the order.
 
-The shared probe circuit has $O(N^2)$ gates, and \eqref{eq:J} constructs $J_N$ in $O(N)$ gates. The factored compilation above uses $O(M)=O(N^2)$ more gates. All operations are fixed before seeing $T$. Formal adjoints are implemented by reversing the multiplication gates. Scalar-power registers have formal degree zero, so $Y_N,Z_N$ have degree at most $N-1$ and $W_N$ has degree at most one. Equivalently, since
-\[
-\deg X_\nu\le2(N-1)+1=2N-1,
-\]
-\eqref{eq:final} has degree at most $3N-2$ and is formally self-adjoint. The coefficients in \eqref{eq:triangle}, \eqref{eq:J} and the Horner circuit are integers.
+For the gate count, the shared probe circuit uses $O(N^2)$ gates, the distance
+recurrence constructs $J_N$ in $O(N)$ gates, and the factored expression
+\eqref{eq:factored} uses $O(M)=O(N^2)$ further gates. Reversing multiplication
+gates computes formal adjoints at a constant-factor increase in size.
+Every operation is prescribed by $N$.
 
-Finally $\log_2 b_N=O(N\log(N+1))$. The same row-norm bound $R$ holds for $U_i^*$ by the reversed-product recurrence. Every scalar-power register has exponent at most $2M^2$, and the partial Horner sums for $Y_N,Z_N$ have exponents at most $M-1$ and $M(M-1)$, respectively. On trees, $\|J_N\|_\infty\le N$; the intermediate products in \eqref{eq:J} also have polynomially bounded entries. Every new register is therefore bounded by polynomial factors in $N$ times $R^2b_N^{3M^2}$. This gives the stated $O(N^5\log(N+1))$ entry and trace bound. The same estimates show polynomial time for constructing and evaluating the circuit, including bit operations.
+For the degree bound, scalar-power registers have degree zero,
+$Y_N,Z_N$ have degree at most $N-1$, and $W_N$ has degree at most one.
+Together with $\deg J_N\le N-1$, this gives degree at most $3N-2$.
+All scalar coefficients are integers, and \eqref{eq:factored} is self-adjoint.
+
+For the bit bounds, $\log_2 b_N=O(N\log(N+1))$. The reversed-product recurrence
+gives the same matrix norm bound $R$ for $U_i^*$. Scalar-power registers have
+exponent at most $2M^2$, and the partial Horner sums for $Y_N,Z_N$ have
+exponents at most $M-1$ and $M(M-1)$, respectively. On trees,
+$\|J_N\|_\infty\le N$, and intermediate products in the distance recurrence
+have polynomially bounded entries. Every register is consequently bounded by
+polynomial factors in $N$ times $R^2b_N^{3M^2}$. Since $M=O(N^2)$, all stored
+integer entries and the final trace have $O(N^5\log(N+1))$ bits.
+These bounds also give polynomial time for constructing and evaluating the
+circuit in the bit model.
 \end{proof}
 
-\section{A fixed cyclic representative, without an adaptive schedule}\label{sec:cyclic}
-The single-trace construction already proves Theorem~\ref{thm:tree}. A second application of the fixed frame gives an integer sum-of-squares AD expression whose image is the principal module and on which $\one$ is cyclic.
+\section{A linear trace-degree lower bound}\label{sec:lower}
+We now prove that the linear degree in Theorem~\ref{thm:tree} is necessary up to a constant factor. The obstruction comes from two spiders whose short degree-weighted closed walks have identical counts. This is a bound on polynomial degree; gate counts and bit complexity are separate resources.
 
-\subsection{One fixed rank condensation}
+\begin{proposition}\label{prop:lower}
+For $m\ge2$, let $T_m$ and $T'_m$ be the spiders with arm lengths
+\[
+(m,m,m+2)\quad\text{and}\quad(m,m+1,m+1),
+\]
+respectively. Both have $3m+3$ vertices and maximum degree three. Every word $w\in\{x,y\}^{*}$ containing fewer than $2m$ occurrences of $x$ satisfies $\tr w(A_{T_m},D_{T_m})=\tr w(A_{T'_m},D_{T'_m})$. Consequently, any polynomial in $\R\langle x,y\rangle$ whose trace separates all trees of order at most $N$ has degree at least $2\lfloor(N-3)/3\rfloor$ for $N\ge9$.
+\end{proposition}
+\begin{proof}
+A trace word with $s$ adjacency factors is a sum over closed walks of length $s$, with products of vertex degrees attached at prescribed positions. On a tree, such a walk traverses every edge of its image at least twice. Its image therefore has at most $s/2<m$ edges.
+
+Call the center and the three leaves special. The image cannot contain two special vertices. If it contains the center, its degree-labelled embeddings are the same in both spiders, since every arm has length at least $m$. If it contains a leaf but not the center, its image is a short path and the three leaf neighbourhoods agree. If it contains no special vertex, it is a path of length $\ell<m$ inside the degree-two portion of an arm. An arm of length $L_a$ has $L_a-1-\ell$ such undirected placements, so their total is $\sum_a L_a-3(\ell+1)$, equal for the two spiders. Orientations, choices of starting position, and repeated-walk patterns contribute the same multiplicities to each placement. Hence every degree-labelled walk count, and therefore every trace word in question, agrees. The case $s=0$ follows directly from the common degree multiset.
+
+A polynomial of total degree less than $2m$ is a linear combination of such words. The unique degree-three center has two leaves at distance $m$ in $T_m$ and one in $T'_m$, so the spiders are nonisomorphic. Taking $m=\lfloor(N-3)/3\rfloor$ proves the stated bound.
+\end{proof}
+
+Together with Theorem~\ref{thm:tree}, this gives degree $\Theta(N)$ for a single-trace separator. The constants in the upper and lower bounds need not agree.
+
+\appendix
+\section{A fixed cyclic representative}\label{sec:cyclic}
+We give a further construction from the fixed spanning family: a polynomial $C_N\in\Z\langle x,y\rangle$ that is a sum of Hermitian squares and whose value on each tree has image $\M_T$ and is cyclic from $\one$ on that module. This construction is independent of the trace encoding in Theorem~\ref{thm:tree}. In vector formulas in this appendix, polynomial expressions are evaluated at $(A_T,D_T)$.
+
+\subsection{Fixed rank condensation}
+The probes span $\M_T$, but a fixed initial segment need not be a basis.
+We need fixed linear combinations whose first $r$ responses are independent
+whenever $r=\dim\M_T$. This prefix property will make the orthogonal residuals
+vanish exactly after the rank, without choosing pivots from the input.
+
 Assume $N\ge2$. Let $U_0=1,U_1,\ldots,U_{M-1}$ be the probes. With $L,R$ as in \eqref{eq:radix}, set
 \[
 H_0=(M-1)R\,2^{(N-2)(M-2)},\qquad
@@ -391,7 +600,7 @@ Define $Z_0=1$ and
 Z_{j+1}=\sum_{i=1}^{M-1}(2^j\tau)^{i-1}U_i,
 \qquad 0\le j\le N-2.
 \end{equation}
-These sums again use Horner's rule. Their degree is at most $N-1$, their shared size is polynomial, and their coefficient and evaluation lengths are polynomial. More explicitly, $\log\tau=O(N^4)$ and the evaluated vector entries have $O(N^6)$ bits.
+These sums again use Horner's rule. Their degree is at most $N-1$, their shared size is polynomial, and their coefficients and evaluated entries have polynomial bit length. More explicitly, $\log\tau=O(N^4)$ and the evaluated vector entries have $O(N^6)$ bits.
 
 \begin{lemma}[A basis in the first positions]\label{lem:prefix}
 On every tree of order at most $N$, if $r=\dim\M_T$, then
@@ -401,27 +610,37 @@ z_0=\one,\ z_1=Z_1\one,\ldots,z_{r-1}=Z_{r-1}\one
 are independent. All $N$ vectors $z_i$ belong to $\M_T$.
 \end{lemma}
 \begin{proof}
-Work first with a variable $x$ in place of $\tau$, and pass to the quotient of $\M_T$ by $\R\one$. The coefficient vectors of
+If $r=1$, the assertion follows from $z_0=\one\ne0$. Assume $r\ge2$. Work first with a commuting variable $t$ in place of $\tau$, and pass to the quotient of $\M_T$ by $\R\one$. The coefficient vectors of
 \[
-F(x)=\sum_{i=1}^{M-1}U_i\one\,x^{i-1}
+F(t)=\sum_{i=1}^{M-1}U_i\one\,t^{i-1}
 \]
 span this quotient. Choose linear coordinates on the quotient, and by constant row operations put the resulting $r-1$ independent coordinate polynomials in a basis of distinct degrees $d_1,\ldots,d_{r-1}$. The leading coefficient of the determinant of their evaluations at
 \[
-x,2x,\ldots,2^{r-2}x
+t,2t,\ldots,2^{r-2}t
 \]
 is the product of their nonzero leading coefficients times
 \[
 \det\bigl[(2^{d_i})^j\bigr]_{1\le i\le r-1,\,0\le j\le r-2}\ne0.
 \]
-Independence in the quotient gives full column rank over $\R(x)$ in the original vertex coordinates. Thus some $r\times r$ coordinate minor of
-$[\one,F(x),F(2x),\ldots,F(2^{r-2}x)]$ is a nonzero integer polynomial.
+Independence in the quotient gives full column rank over $\R(t)$ in the original vertex coordinates. Thus some $r\times r$ coordinate minor of
+$[\one,F(t),F(2t),\ldots,F(2^{r-2}t)]$ is a nonzero integer polynomial.
 
-Each polynomial entry outside the first column has coefficient $\ell_1$ norm at most $H_0$. Every such minor has coefficient $\ell_1$ norm at most $N!H_0^{N-1}=H_1$. A nonzero integer polynomial with this bound has no real root greater than $H_1+1$: its leading coefficient has absolute value at least one and dominates the lower coefficients there. Therefore the same minor is nonzero at $x=\tau$.
+Each polynomial entry outside the first column has coefficient $\ell_1$ norm at most $H_0$. Every such minor has coefficient $\ell_1$ norm at most $N!H_0^{N-1}=H_1$. A nonzero integer polynomial with this bound has no real root greater than $H_1+1$: its leading coefficient has absolute value at least one and dominates the lower coefficients there. Therefore the same minor is nonzero at $t=\tau$.
 \end{proof}
 
-The map $f(x)\mapsto(f(x),f(2x),\ldots)$ is a folded-Wronskian rank condenser \cite{FS12,GK,FG}. We use this established rank-preservation mechanism after constructing the uniform polynomial frame. The integer height bound then supplies one prescribed specialization that works for every permitted input.
+The evaluations $f(t)\mapsto(f(t),f(2t),\ldots)$ use the folded-Wronskian
+rank-preservation construction of Forbes and Shpilka (full version,
+\cite[Theorem 4.1 and Corollary 4.3]{FS12}), building on the method of Gabizon
+and Raz (earlier ECCC version, \cite[Lemma 6.1]{GabizonRaz}). See also its use in subspace designs
+\cite{GK} and the full version of \cite[Construction 2.7]{FG}.
+This construction gives a nonzero minor
+polynomial. The coefficient bound above then supplies a single integer
+specialization $\tau$ valid for all the bounded integer inputs considered here.
 
 \subsection{Fraction-free orthogonal residuals}
+The prefix property permits one orthogonalization formula for every rank.
+Multiplying each residual by the preceding Gram determinant removes division
+and keeps the expression polynomial.
 For $0\le k<N$, let $K_k=[z_0\ \cdots\ z_{k-1}]$ and $G_k=K_k^{\mathsf T}K_k$. Define
 \begin{equation}\label{eq:residual}
 u_0=\one,\qquad
@@ -433,6 +652,9 @@ K_k\adj(G_k)=0.
 \]
 Indeed $G_k\adj(G_k)=0$, and $\ker(K_k^{\mathsf T}K_k)=\ker K_k$.
 
+To make the first vector cyclic, we couple consecutive residuals through
+outer products of their adjacent sums.
+
 Set
 \begin{equation}\label{eq:jacobi}
 C^{\mathrm{aux}}=u_0u_0^{\mathsf T}
@@ -440,8 +662,15 @@ C^{\mathrm{aux}}=u_0u_0^{\mathsf T}
 \end{equation}
 In the orthonormal basis $u_i/\|u_i\|$, its restriction to $\M_T$ is tridiagonal with strictly positive off-diagonal entries. Powers of this matrix applied to the first basis vector successively have nonzero coordinates in positions $1,2,\ldots,r$. Thus it is cyclic from $u_0=\one$. Moreover, $u_0$ together with the adjacent sums $u_k+u_{k+1}$ spans $\M_T$. The kernel of their positive-semidefinite outer-product sum is exactly $\M_T^\perp$, so its image is $\M_T$.
 
+The vector construction gives the required image and cyclicity. To realize
+these properties by a polynomial in $x,y$, we must express the Gram
+determinants using matrices of the original input order. On a tree of order $n$,
+multiples of $J_N$ carry the scalar expressions through $J_N^2=nJ_N$; the resulting positive
+rescalings of the residuals preserve both properties. This yields the
+following circuit construction.
+
 \begin{theorem}[Uniform cyclic principal matrix]\label{thm:uniformcyclic}
-There is a deterministic polynomial-time construction, from $N$ alone, of an integer AD circuit $C_N$, formally a sum of Hermitian squares, with degree at most $2(4N-3)(N-1)$ for $N\ge2$ and polynomial size and bit complexity such that, on every tree of order at most $N$,
+There is a deterministic polynomial-time construction, from $N$ alone, of a polynomial $C_N\in\Z\langle x,y\rangle$, represented by an integer matrix circuit and formally a sum of Hermitian squares, with degree at most $2(4N-3)(N-1)$ for $N\ge2$ and polynomial size and bit complexity such that, on every tree of order at most $N$,
 \[
 C_N\succeq0,\qquad \im C_N=\M_T,
 \qquad \spanop\{\one,C_N\one,\ldots,C_N^{N-1}\one\}=\M_T.
@@ -459,7 +688,7 @@ On a tree of order $n$, these satisfy $B_{ij}=g_{ij}J$, where $g_{ij}=z_i^{\math
 \end{equation}
 Indeed, addition of equal degrees preserves this identity, while multiplication of positive degrees $p,q$ gives the factor $n^{p+q-1}$ by $J^2=nJ$. Degree-zero constants act by prescribed integer scaling; they are never represented by a putative multiplicative identity $J$.
 
-Division-free determinant circuits are classical \cite{Soltys,Bird}. We use Bird's homogeneous recurrence: for a $k\times k$ scalar matrix $G$, put $F_1=G$ and $F_{q+1}=\mu(F_q)G$, where $\mu(F)$ keeps the strictly upper-triangular entries, has zero entries below the diagonal, and has diagonal entries $-\sum_{\ell>i}F_{\ell\ell}$. Then $(-1)^{k-1}(F_k)_{00}=\det G$. Each stage has homogeneous degree $q$; shared ordinary matrix multiplication implements the scalar recurrence with $O(k^4)$ arithmetic gates. Thus \eqref{eq:homogeneous-lift} applies directly, with all integer coefficients implemented as scaling gates. The auxiliary $k\times k$ arrays index original-order matrix registers. Let $b_k=(g_{ik})_{i<k}$ and let $G_k^{(i)}$ be $G_k$ with column $i$ replaced by $b_k$. The degree-$k$ determinant circuits give
+Division-free determinant circuits are classical \cite{Berkowitz,Soltys,Bird}. We use the homogeneous form of Bird's recurrence \cite{Bird}, also stated in \cite[Theorem 1.1]{Przezdziecki}: for a $k\times k$ scalar matrix $G$, put $F_1=G$ and $F_{q+1}=\mu(F_q)G$, where $\mu(F)$ keeps the strictly upper-triangular entries, has zero entries below the diagonal, and has diagonal entries $-\sum_{\ell>i}F_{\ell\ell}$. Then $(-1)^{k-1}(F_k)_{00}=\det G$. Each stage has homogeneous degree $q$; shared ordinary matrix multiplication implements the scalar recurrence with $O(k^4)$ arithmetic gates. Thus \eqref{eq:homogeneous-lift} applies directly, with all integer coefficients implemented as scaling gates. The auxiliary $k\times k$ arrays index original-order matrix registers. Let $b_k=(g_{ik})_{i<k}$ and let $G_k^{(i)}$ be $G_k$ with column $i$ replaced by $b_k$. The degree-$k$ determinant circuits give
 \[
 \widehat\Delta_k=n^{k-1}\det(G_k)J,\qquad
 \widehat\Delta_{k,i}=n^{k-1}\det(G_k^{(i)})J.
@@ -473,112 +702,252 @@ $\det(G_k^{(i)})=(\adj(G_k)b_k)_i$ holds also when $G_k$ is singular. Thus on tr
 \begin{equation}\label{eq:integer-sos}
 C_N=V_0V_0^*+\sum_{k=0}^{N-2}(V_k+V_{k+1})(V_k+V_{k+1})^*.
 \end{equation}
-Its value is $n[t_0t_0^{\mathsf T}+\sum_k(t_k+t_{k+1})(t_k+t_{k+1})^{\mathsf T}]$. The $t_i$ have the same orthogonal nonzero prefix and zero tail as the $u_i$. The Jacobi and image arguments following \eqref{eq:jacobi} apply with these positive rescalings, proving the three conclusions. Formula \eqref{eq:integer-sos} is formally self-adjoint and evaluates to a positive semidefinite matrix on every real symmetric pair; the image and cyclicity claims use the tree frame properties.
+Its value is $n[t_0t_0^{\mathsf T}+\sum_k(t_k+t_{k+1})(t_k+t_{k+1})^{\mathsf T}]$. The $t_i$ have the same orthogonal nonzero prefix and zero tail as the $u_i$. The Jacobi and image arguments following \eqref{eq:jacobi} apply with these positive rescalings, proving the three conclusions. Formula \eqref{eq:integer-sos} is formally self-adjoint and evaluates to a positive semidefinite matrix on every real symmetric pair; the image and cyclicity claims use the spanning and independence properties proved above.
 
 Since $\deg Z_i,\deg J\le N-1$, we have
 \[
 \deg B_{ij}\le4(N-1),\quad
 \deg\widehat\Delta_k,\deg\widehat\Delta_{k,i}\le4k(N-1),
 \]
-and $\deg V_k\le(4k+1)(N-1)$. Equation~\eqref{eq:integer-sos} consequently has degree at most $2(4N-3)(N-1)$. There are polynomially many determinant circuits of order at most $N$. Their auxiliary arrays consist of original-order matrix registers; no determinant oracle or larger matrix input is used. The standard homogeneous determinant recurrences use only integer addition and multiplication and have polynomial intermediate coefficient height. Together with the $O(N^6)$-bit folded-frame entries and degrees at most $N$ in the Gram variables, this gives polynomial bit complexity for every register. The construction does not assert that the spectrum of $C_N$ alone separates trees.
-\end{proof}
+and $\deg V_k\le(4k+1)(N-1)$. Equation~\eqref{eq:integer-sos} consequently has degree at most $2(4N-3)(N-1)$. There are polynomially many determinant circuits of order at most $N$. Their auxiliary arrays consist of original-order matrix registers.
 
-\section{A linear trace-degree lower bound}\label{sec:lower}
-The bound $3N-2$ is not claimed to be optimal in its leading constant. Its order is optimal.
-
-\begin{proposition}\label{prop:lower}
-For $m\ge2$, let $T_m$ and $T'_m$ be the spiders with arm lengths
+For the bit bound, let $c_q$ be the largest coefficient $\ell_1$ norm of an
+entry of $F_q$, viewed as a polynomial in the scalar matrix entries.
+The stated Bird recurrence gives
 \[
-(m,m,m+2)\quad\text{and}\quad(m,m+1,m+1),
+c_1=1,\qquad c_{q+1}\le k^2c_q,\qquad c_q\le k^{2(q-1)}.
 \]
-respectively. Both have $3m+3$ vertices and maximum degree three. Every AD word containing fewer than $2m$ occurrences of $A$ has the same trace on these two trees. Consequently, any single-trace polynomial separating all trees of order at most $N$ has degree at least $2\lfloor(N-3)/3\rfloor$ for $N\ge9$.
-\end{proposition}
-\begin{proof}
-A trace word with $s$ adjacency factors is a sum over closed walks of length $s$, with products of vertex degrees attached at prescribed positions. On a tree, such a walk traverses every edge of its image at least twice. Its image therefore has at most $s/2<m$ edges.
-
-Call the center and the three leaves special. The image cannot contain two special vertices. If it contains the center, its degree-labelled embeddings are the same in both spiders, since every arm has length at least $m$. If it contains a leaf but not the center, its image is a short path and the three leaf neighbourhoods agree. If it contains no special vertex, it is a path of length $\ell<m$ inside the degree-two portion of an arm. An arm of length $L_a$ has $L_a-1-\ell$ such undirected placements, so their total is $\sum_a L_a-3(\ell+1)$, equal for the two spiders. Orientations, choices of starting position, and repeated-walk patterns contribute the same multiplicities to each placement. Hence every degree-labelled walk count, and therefore every trace word in question, agrees. The case $s=0$ follows directly from the common degree multiset.
-
-A polynomial of total degree less than $2m$ is a linear combination of such words. The unique degree-three center has two leaves at distance $m$ in $T_m$ and one in $T'_m$, so the spiders are nonisomorphic. Taking $m=\lfloor(N-3)/3\rfloor$ proves the stated bound.
+Indeed, an entry of $\mu(F_q)$ is an entry of $F_q$ or a signed sum of at
+most $k$ such entries, and matrix multiplication sums at most $k$ products.
+If the scalar inputs have absolute value at most $A\ge1$, then
+$|(F_q)_{ij}|\le k^{2(q-1)}A^q$, with the same type of bound for partial
+sums in each stage. Thus their bit lengths are
+$O(q(\log(k+1)+\log(A+1)))$.
+Here the Gram entries have $O(N^6)$ bits and $q\le k\le N$.
+The homogeneous lift adds powers of $n$ of exponent at most $N-1$;
+the subsequent products and sums in \eqref{eq:integer-sos} preserve a
+polynomial bound on every register's bit length.
 \end{proof}
 
-\section{Relation to prior constructions}
-The graph-theoretic inputs are McKay's full adjacency--degree reconstruction theorem \cite{McKay} and the pointed reconstruction theorem \cite[Theorem 5.4]{LuLi}. McKay's distance-polynomial ingredient is used explicitly in the construction of $J_N$. Tree canonization in logarithmic space goes back to Lindell \cite{Lindell}; Arvind, Datta, Faris, and Khan give a polynomial canon in logarithmic space \cite{ADFK}. The computational task here prescribes an original-dimension, low-degree matrix circuit and a single final scalar readout.
-
-Trace coordinates themselves are classical. Procesi proves trace generation for simultaneous-conjugation invariants and treats orthogonal invariants using words in the matrices and their transposes \cite{Procesi}; Razmyslov studies trace identities of full matrix algebras in characteristic zero \cite{Razmyslov}. Bounds on the length of generated matrix algebras control the span of all short words, from the work of Paz and Pappacena to Shitov's $O(n\log n)$ bound for $n\times n$ matrices \cite{Paz,Pappacena,Shitov}. Sprung gives a further log-log saving in this general bound \cite{Sprung}. The full algebra can have dimension $n^2$, whereas a cyclic module from one seed has dimension at most $n$. These word-length bounds do not specify the fixed quadratic-size family of mixed polynomials required here.
-
-Fixed short word families are also known to span the full matrix algebra on a Zariski-open set of tuples: Klep and \v{S}penko construct sweeping words, and Jia and Capel develop the related generic quantum Wielandt bound \cite{KlepSpenko,JiaCapel}. This generic guarantee does not supply a frame valid throughout our stated self-adjoint class, including proper cyclic modules and arbitrary seeds.
-
-Pointed moments also define the series $w\mapsto v^{\mathsf T}w(H,K)v$, a linear representation of the form used for weighted automata. In the probabilistic setting, Tzeng's polynomial-time equivalence algorithm explores a representation and prunes linearly dependent vectors \cite{Tzeng}. The present frame instead supplies polynomial coordinates before the input is evaluated, under the stated self-adjointness and spectral-diameter conditions. The same redundant coordinates apply to proper cyclic modules and across changes in their dimension.
-
-Short separating words for matrix tuples and their algorithmic selection are studied in invariant theory \cite{DM}. Trace-product constructions, ROABPs and explicit separating sets are directly linked by Forbes and Shpilka \cite{FS}. The present proof does not invoke a polynomial-size hitting set for general ROABPs. It uses real self-adjoint matrices with a bounded spectral diameter and a scaled differential residue. Removing self-adjointness would invalidate the Rayleigh-quotient step \eqref{eq:integergap}; the result should not be advertised as a derandomization for arbitrary complex matrix tuples.
-
-Differential modules provide a standard framework \cite{vdPS}. The integrality of subbundle degree is already central to small-exponent constant-reduction arguments: Gontsov and Vyugin use a degree bound greater than $-1$ to force degree zero \cite[Lemma 2]{GV}. Barkatou and Gontsov also formulate reduction criteria using differences of formal exponents \cite[Theorem 2.3]{BG}. These criteria address Liouvillian solvability; their irregular cases require pairwise distinct eigenvalues of the leading matrices. Lemma~\ref{lem:rigidity} concerns every rational invariant subspace of the specified self-adjoint connection and permits repeated eigenvalues of $H$. Its application yields the explicit fixed-seed spanning recurrence and the circuit consequences. The folded-Wronskian step in Section~\ref{sec:cyclic} uses the established constructions of \cite{FS12,GK,FG}, followed by the single bounded-height specialization proved here.
-
-\appendix
 \section{A full-representation route using only McKay}\label{sec:fulltrace}
-This section records an independent graph-theoretic fallback if the principal-moment formulation is not used. It has larger, but still polynomial, parameters.
+There is also a polynomial-resource construction using McKay's full adjacency--degree reconstruction theorem as its graph-theoretic input. It has degree $O(N^2)$ and $O(N^4)$ gates. The written argument below uses the classical reconstruction theorem directly; Appendix~\ref{sec:verification} specifies the different reconstruction dependency of the formal development.
 
-Equip $M_n(\R)$ with the Frobenius inner product and seed $I$. Left multiplication by $A$ and $D$ gives symmetric operators in dimension $n^2\le N^2$; the latter has spectral diameter at most $N-1$. Theorem~\ref{thm:probes} with bound $N^2$ and $\kappa=N^4$ gives $O(N^4)$ polynomials of degree at most $N^2-1$ spanning $\langle A,D\rangle$.
+To invoke McKay's theorem directly, we recover all word traces. These are
+pointed moments for left multiplication on the Frobenius space with seed $I$,
+so the same finite Gram reconstruction applies with dimension bound $N^2$.
+Fix a tree $T$ of order $n\le N$ and write $A=A_T$, $D=D_T$. Equip $M_n(\R)$ with the Frobenius inner product and seed $I$. Left multiplication by $A$ and $D$ gives symmetric operators in dimension $n^2\le N^2$; the latter has spectral diameter at most $N-1$. Theorem~\ref{thm:probes} with dimension bound $N^2$, and hence recurrence scale $N^4$, gives $O(N^4)$ polynomials of degree at most $N^2-1$ spanning $\langle A,D\rangle$.
 
-The three Frobenius Gram tables
+The three matrices of Frobenius inner products, with entries
 \[
 \tr(U_i^*U_j),\quad\tr(U_i^*AU_j),\quad\tr(U_i^*DU_j)
 \]
-determine the pointed left-regular representation with seed $I$. Equality therefore implies equality of $\tr w(A,D)$ for every word $w$. For every fixed matrix polynomial $q$, equality also holds for $\tr(q^k)$ for every $k$. Newton identities therefore give the same characteristic polynomial for $q$ on the two inputs. McKay's theorem then distinguishes trees.
+determine the pointed left-regular representation with seed $I$. Their $(0,0)$ Gram entry is $\tr I=n$, so equality first gives the same order. It also implies equality of $\tr w(A,D)$ for every word $w$. For every fixed matrix polynomial $q$, equality also holds for $\tr(q^k)$ for every $k$. Newton identities therefore give the same characteristic polynomial for $q$ on the two inputs. McKay's theorem \cite[Theorem 5.3]{McKay} then distinguishes trees.
 
-The factoring used in \eqref{eq:factored} applies to these trace tables as well. If $M'=O(N^4)$ is the number of probes and $b$ exceeds twice a uniform bound on the integer table entries, put $Y=\sum_jb^jU_j$, $Z=\sum_ib^{iM'}U_i$, and $W=1+b^{M'^2}a+b^{2M'^2}d$. Then
+These Gram entries are already traces, so their integer encoding requires
+no additional factor $J_N$. The factoring used in \eqref{eq:factored}
+applies directly. If $M'=O(N^4)$ is the number of probes and $b$ exceeds twice a uniform bound on their integer entries, put $Y=\sum_jb^jU_j$, $Z=\sum_ib^{iM'}U_i$, and $W=1+b^{M'^2}x+b^{2M'^2}y$. Then
 \[
 p_N^{\mathrm{full}}=Z^*WY+Y^*WZ
 \]
-packs all three tables using $O(M')=O(N^4)$ gates and degree at most $2N^2-1$. All evaluations still use matrices of the original order; the Frobenius-space enlargement is only in the spanning proof. This construction needs no $J$ expression and has polynomial bit complexity. It uses the classical full-representation tree theorem and does not give the sharper linear-degree bound.
+encodes all entries of the three matrices using $O(M')=O(N^4)$ gates and degree at most $2N^2-1$. All evaluations still use matrices of the original order; the Frobenius-space enlargement is only in the spanning proof. The resulting polynomial belongs to $\Z\langle x,y\rangle$. The recurrence and integer encoding give polynomial bit complexity by the same norm estimates as in Section~\ref{sec:reconstruction}, with the larger dimension bound. The output expression uses only the polynomials spanning the full algebra and their formal adjoints.
 
-\section{Reproducibility and scope of computation}
-The accompanying verification directory contains the fixed emitter \texttt{quadratic\_ad\_circuit.py}, the independent checks \texttt{verify\_current.py} and \texttt{verify\_exports.py}, and their recorded results. The emitter sees only $N$. Its exported example \texttt{p5.quadratic.circuit.json.gz} has 407 gates and output formal degree 13. At $N=1$ it returns the identity. The allowed instructions are identity, adjacency, degree, zero, addition, multiplication and integer scaling; adjoints are compiled by reversing products. An evaluator may skip arithmetic on zero entries without changing the emitted DAG.
+\section{Computational verification and proof audit}\label{sec:verification}
+The accompanying artifact at \url{https://github.com/Lzp88/AD} contains the matrix-circuit emitters, finite checks, Lean proof sources, and audit records. The emitter \texttt{quadratic\_ad\_circuit.py} takes only $N$ as input. Its exported $N=5$ example has 407 stored instructions, including input instructions, and output formal degree 13; for $N=1$ it returns the identity. The instruction set consists of identity, adjacency, degree, zero, addition, multiplication, and integer scaling. Formal adjoints are compiled by reversing products.
 
-The file \texttt{current\_checks.json} records syntax checks for $N=1,\ldots,15$, exact evaluation on all 14 nonisomorphic nonempty trees of order at most six with the common bound $N=6$, three $N=1,2$ boundary inputs, and 42 real symmetric integer-matrix pairs. The checks compare the recurrence with an independently generated word span or rooted-tree orbit count, verify the actual distance expression and balanced-radix decoding, and record integer fingerprints. Modular rank is used as a characteristic-zero lower bound and compared with an independently justified upper bound.
+The record \texttt{current\_checks.json} covers circuit syntax for $N=1,\ldots,15$, all 14 nonisomorphic nonempty trees of order at most six with the common bound $N=6$, three boundary cases with $N=1,2$, and 42 seeded integer symmetric-pair cases. The checks compare the probe span with an independently generated word span or rooted-tree orbit count, evaluate the distance polynomials, and decode the integer trace. Integer trace fingerprints are recorded for the tree and boundary cases. All rank comparisons use exact arithmetic over the rationals.
 
-The file \texttt{export\_checks.json} records equality of the Python emitter with the actual Lean instruction arrays for $N=1,\ldots,15$. It also executes the actual division-free PSD factory for $N=1,\ldots,4$ on 11 tree inputs and 12 further symmetric matrix pairs. On trees, its values are compared with an independently computed fraction-free Gram-residual formula, and image, cyclicity and positivity are checked exactly. These are finite regressions, not universal proofs that two separately implemented emitters agree.
+The record \texttt{export\_checks.json} compares the Python instruction arrays and output references with those exported by the Lean definitions for $N=1,\ldots,15$. It also evaluates the division-free PSD factory for $N=1,\ldots,4$. The tree tests comprise 11 cases $(N,T)$ involving five distinct trees: they compare the output with a separately computed determinant-based Gram-residual formula and check its image, cyclicity, and positive semidefiniteness exactly. Three fixed $2\times2$ symmetric pairs are each tested at the four values of $N$, giving 12 additional cases that check symmetry and positive semidefiniteness. These finite comparisons do not prove equality of the Python and Lean emitters for arbitrary $N$.
 
-The Lean 4/mathlib proof-audit sources, source-to-statement table, pinned dependencies, build records and reproduction scripts are provided at \url{https://github.com/Lzp88/AD}. The project integrates the rational differential spanning proof, the literal allowed-gate compiler, and the previously audited principal-moment reconstruction input. The reconstruction interface is the actual finite-tree word-moment theorem of \cite[Theorem 5.4]{LuLi}; it constructs a graph isomorphism rather than assuming that a cyclic isometry is a permutation. Its proof is reused through the public \texttt{PrincipalMomentAudit} namespace.
+The Lean project formalizes the rational differential spanning argument, the prescribed matrix-circuit compiler, and the resource bounds. It uses the principal-moment reconstruction theorem of \cite[Theorem 5.4]{LuLi} through the \texttt{PrincipalMomentAudit} namespace. A source-to-statement map identifies the formal declarations and summarizes their hypotheses and scope. These include arbitrary prescribed seeds and proper cyclic modules, the tree distance identity, and the compiled single-trace classification theorem, including $N=1$. The resource results bound every stored instruction's formal degree and every integer register's bit length on graph inputs of order at most $N$. The PSD results cover the complete fixed determinant and sum-of-squares construction, and the degree lower bound uses nonisomorphic spider trees and arbitrary real polynomial coefficients. The elementary fixed-word lower bound in Remark~\ref{rem:wordlower} is proved in the text and is not part of this formalization.
+
+For Appendix~\ref{sec:fulltrace}, the project also proves Frobenius-space spanning, the three Gram-matrix identities, and the packed invariant with its resource bounds. Its tree-reconstruction step converts word traces into principal moments using the distance polynomial and then applies \cite[Theorem 5.4]{LuLi}. The written reconstruction argument in that section instead uses McKay's theorem and Newton identities. The source-to-statement file records these different proof dependencies.
+
+The original formalization comprises 189 modules with a pinned Lean 4.33.0 toolchain and dependencies. The original audit is preserved with separate audited-source and distributed-source hashes, since public identifiers were subsequently standardized. A fresh rebuild of all 189 distributed modules on 25 October 2026 passed the kernel checks without warnings and checked 4,704 declarations and 4,639 bodies. The declaration scan permits only \texttt{propext}, \texttt{Classical.choice}, and \texttt{Quot.sound} as transitive axioms. All source hashes remained unchanged, and the 19 fresh circuit export records agree with the original exports. The fresh report and declaration and export logs are in \texttt{lean/provenance/rebuild\_20261025/}. Running \texttt{python -B run\_audit.py} in the \texttt{lean} directory performs another fresh build and writes its records to \texttt{rebuild\_logs/}; the \texttt{--verify-only} mode checks package integrity without compiling.
 
 
-The source-to-statement table names the top-level declarations and their full hypotheses. In particular, it distinguishes the actual spectral-diameter spanning theorem from its quadratic-form helpers, includes arbitrary prescribed seeds and proper cyclic modules, and connects the actual tree distance identity to the compiled single-trace classification theorem, including $N=1$. The resource proofs bound every stored instruction's formal degree and every integer register's height. The PSD endpoint concerns the complete fixed Bird/Cramer/sum-of-squares factory, with no supplied rank or successful specialization premise. The spider endpoint uses actual nonisomorphic trees and arbitrary real polynomial coefficients.
+\paragraph{Integrated audit.}
+The public artifact also includes the 25 modules for Appendix~\ref{sec:multi}
+and a common audit entry point. A fresh build checks all 215 modules and
+scans the combined declaration environment with the same axiom allowlist.
+The extension audit covers multiple-pole rigidity, the integer recurrence
+and its evaluation, actual rank-sensitive spanning, coefficient count and
+word degree, shared circuit resources, and exact specialization to the
+two-generator recurrence. Its 15 endpoints have explicit type checks;
+the source-to-statement map records their hypotheses. The integrated report
+and logs are in \texttt{lean/provenance/integrated\_audit/}.
+The additional 43 exact finite tests supplement the universal proofs.
+No uniform bit bound on evaluated entries of arbitrary real inputs is claimed.
 
-The Frobenius-space spanning and three-table results in Appendix~A are also checked. Its final tree-reconstruction proof in the formal project uses the audited principal-moment input, via the actual distance expression, whereas the independent written argument in Appendix~A uses McKay and Newton identities. The source map records this difference in proof dependencies; it does not label the formal reconstruction proof as independent of the pointed input.
+\section{Several symmetric generators}\label{sec:multi}
+We give the direct extension of Theorem~\ref{thm:probes}. Here
+$\Z\langle x_0,\ldots,x_s\rangle$ denotes the free associative algebra
+in $s+1$ noncommuting variables, and $t$ commutes with every generator.
+For $s,N\ge1$, set
+\[
+\kappa=sN^2,\qquad a_i=i-1,\qquad
+D(t)=\prod_{i=1}^s(t-a_i),\qquad Q_i(t)=\prod_{j\ne i}(t-a_j).
+\]
+Define $F_k\in\Z\langle x_0,\ldots,x_s\rangle[t]$ by
+\begin{equation}\label{eq:multi-recurrence}
+\begin{aligned}
+F_0&=1,\\
+F_{k+1}&=\kappa D F_k'
+ +\left(\kappa D x_0+\sum_{i=1}^sQ_ix_i-k\kappa D'\right)F_k.
+\end{aligned}
+\end{equation}
+Write $F_k=\sum_{j=0}^{sk}P_{k,j}t^j$, including zero coefficients.
 
-The frozen build records source and imported-object hashes and rejects warnings, admitted proofs, project-local axioms and transitive axiom dependencies beyond \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}. The package contains the complete local import closure, toolchain and dependency pins, a rebuild script, and the source-to-statement table. The records describe the checked source snapshot; finite experiments remain separate evidence.
+\begin{corollary}[Fixed probes for several symmetric generators]\label{cor:multi}
+Let $s,N\ge1$ and $1\le n\le N$. Suppose that
+$H,A_1,\ldots,A_s\in M_n(\R)$ are symmetric and
+$\diam\Spec(A_i)\le N-1$ for every $i$. For every $v\in\R^n$, let
+\[
+\M=\spanop_\R\{w(H,A_1,\ldots,A_s)v:
+                 w\in\{x_0,\ldots,x_s\}^*\},\qquad r=\dim\M.
+\]
+Then
+\[
+\spanop_\R\{P_{k,j}(H,A_1,\ldots,A_s)v:0\le k<r,\ 0\le j\le sk\}
+=\M.
+\]
+In particular, the full family with $k<N$ spans $\M$ and has
+$N+sN(N-1)/2$ indexed members. It is constructed from $(s,N)$ alone,
+has noncommutative degree at most $N-1$, and admits a shared division-free
+circuit of $O(s^2N^2)$ gates on matrices of the original order.
+Its prescribed integer constants have
+$O(s\log(s+1)+\log(N+1))$ bits. No spectral bound is required for $H$.
+For $r=0$, the prefix is the empty family.
+\end{corollary}
 
-\section*{AI methodology}
+\begin{proof}
+We first extend Lemma~\ref{lem:rigidity}. Let the $a_i$ be distinct real
+numbers and let $H,B_1,\ldots,B_s$ be symmetric. If a rational subspace
+$V$ of rank $r$ is invariant under
+\[
+\nabla=\partial_t+H+\sum_{i=1}^s\frac{B_i}{t-a_i},
+\qquad r\sum_{i=1}^s\diam\Spec(B_i)<1,
+\]
+then it is the scalar extension of a real subspace invariant separately
+under $H,B_1,\ldots,B_s$. The rank-zero case is immediate. Otherwise choose
+a primitive polynomial exterior vector $w(t)$ representing $V$, of degree
+$\ell$ with nonzero leading coefficient $w_\ell$. The induced connection
+satisfies
+\[
+w'+\left(H^{[r]}+\sum_i\frac{B_i^{[r]}}{t-a_i}\right)w=c(t)w.
+\]
+A B\'ezout combination of the coordinates shows that $Dc$ is polynomial;
+degree comparison gives $\deg(Dc)\le s$. Consequently
+$c=\beta+\sum_i\alpha_i/(t-a_i)$. Primitivity gives $w(a_i)\ne0$ at every
+pole, and taking residues yields
+$B_i^{[r]}w(a_i)=\alpha_iw(a_i)$.
+
+Suppose $\ell>0$. Comparing the two highest terms at infinity gives
+\[
+\begin{aligned}
+H^{[r]}w_\ell&=\beta w_\ell,\\
+\ell w_\ell+H^{[r]}w_{\ell-1}+\sum_iB_i^{[r]}w_\ell
+ &=\beta w_{\ell-1}+\left(\sum_i\alpha_i\right)w_\ell.
+\end{aligned}
+\]
+Equivalently, these are the highest two coefficient identities after
+multiplication by $D$, with its next-to-leading coefficient cancelled
+using the first identity. Taking the inner product of the second identity
+with $w_\ell$ cancels the $H^{[r]}$ terms and gives
+\[
+\ell=\sum_i\left(\alpha_i-
+ \frac{\langle w_\ell,B_i^{[r]}w_\ell\rangle}{\|w_\ell\|^2}\right)
+\le\sum_i\diam\Spec(B_i^{[r]})
+\le r\sum_i\diam\Spec(B_i)<1.
+\]
+Thus $\ell=0$. The constant exterior line defines a real subspace $W$
+with $V=W\otimes_\R\R(t)$. Projecting $\nabla u$ to $\R^n/W$ for $u\in W$
+and comparing its residues and constant part proves separate invariance.
+
+Apply this result with $B_i=A_i/\kappa$. For every $r\le N$,
+\[
+r\sum_i\diam\Spec(B_i)\le\frac{N-1}{N}<1.
+\]
+Let $q_0=v$ and $q_{k+1}=\nabla q_k$. As in the proof of
+Theorem~\ref{thm:probes}, the first dependence is stable by the Leibniz
+rule. Its rational span lies in $\M\otimes_\R\R(t)$; rigidity makes it
+constant and separately invariant, and it contains $v$. Minimality of
+$\M$ therefore identifies this span with $\M\otimes_\R\R(t)$.
+The first $r$ iterates span it. Direct differentiation shows that
+$f_k=\kappa^kD^kq_k$ obeys \eqref{eq:multi-recurrence} evaluated on $v$.
+Induction gives $\deg_t F_k\le sk$ and $\deg P_{k,j}\le k$.
+Every coefficient response lies in $\M$. Conversely, the first $r$
+iterates belong to the scalar extension of the span of those coefficients;
+faithfulness of scalar extension proves the asserted real spanning equality.
+The full indexed family contains
+$\sum_{k=0}^{N-1}(sk+1)=N+sN(N-1)/2$ coefficients.
+
+For the circuit bound, put $G=DF_k$ and $T=DF_k'$. Multiplication by $D$
+can be performed successively through its $s$ monic linear factors.
+From the shared $G$, synthetic division by $t-a_i$ computes
+$Q_iF_k$ using only additions and multiplication by the fixed integer
+$a_i$. Since $D'F_k=G'-T$, the next row can be computed as
+\[
+F_{k+1}=\kappa(k+1)T+\kappa x_0G
+             +\sum_i x_i(Q_iF_k)-k\kappa G'.
+\]
+Scalar polynomials commute with the noncommuting generators, so this is
+exactly \eqref{eq:multi-recurrence}. The factor products and all $s$
+synthetic divisions require $O(s^2(k+1))$ gates in row $k$; the derivative
+and generator operations obey the same bound. Summing over $k<N$ gives
+$O(s^2N^2)$. This factor implementation needs only pole values, derivative
+indices and integer multiples of $\kappa$, which satisfy the stated
+constant-bit bound. All generator multiplications are on the left and
+all matrix registers retain the input order. For $s=1$, $D=t$ and
+\eqref{eq:multi-recurrence} gives exactly \eqref{eq:triangle}, with
+$x_0=x$ and $x_1=y$.
+\end{proof}
+
+The bound $N-1$ remains necessary: set every $A_i=0$ and use the diagonal
+$H$ and all-ones seed from Proposition~\ref{prop:probedegree}.
+The case of a single generator ($s=0$) is the ordinary Krylov family
+$1,H,\ldots,H^{N-1}$ and is separate from the formula $\kappa=sN^2$.
+
+\section*{AI disclosure}
 ChatGPT and OpenAI Codex helped develop parts of the supporting theory, including the formulation and refinement of intermediate results, and assisted with checking the proofs of most theoretical results. They also assisted with the literature review, drafting and editing, and the development and verification of Lean formalizations. The author takes full responsibility for the content of this paper.
 
-\clearpage
-\begin{thebibliography}{ADFK25}
+\begin{thebibliography}{KMOWW11}
 \raggedright
 \setlength{\itemsep}{3pt}
 \interlinepenalty=10000
+\bibitem[AI03]{AlpinIkramov} Yu. A. Al'pin and Kh. D. Ikramov, On the unitary similarity of matrix families, \emph{Mathematical Notes} \textbf{74} (2003), no.~5--6, 772--782. \href{https://doi.org/10.1023/B:MATN.0000009013.89673.0a}{Publisher's version}; \href{https://www.mathnet.ru/eng/mzm310}{Original Russian version and metadata}.
 \bibitem[ADFK25]{ADFK} V. Arvind, Samir Datta, Salman Faris, and Asif Khan, Revisiting tree canonization using polynomials, in \emph{SOSA 2025}, 465--472. \href{https://doi.org/10.1137/1.9781611978315.34}{Publisher's version}; \href{https://arxiv.org/abs/2408.10338}{arXiv:2408.10338}.
-\bibitem[BG19]{BG} Moulay A. Barkatou and Renat R. Gontsov, Linear differential systems with small coefficients: Various types of solvability and their verification, \emph{SIGMA} \textbf{15} (2019), 058, 15 pp. \href{https://doi.org/10.3842/SIGMA.2019.058}{Publisher's version}; \href{https://arxiv.org/abs/1901.09951}{arXiv:1901.09951}.
-\bibitem[Bir11]{Bird} Richard S. Bird, A simple division-free algorithm for computing determinants, \emph{Information Processing Letters} \textbf{111} (2011), 1072--1074. \href{https://doi.org/10.1016/j.ipl.2011.08.006}{Publisher's version}.
-\bibitem[DM20]{DM} Harm Derksen and Visu Makam, Algorithms for orbit closure separation for invariants and semi-invariants of matrices, \emph{Algebra \& Number Theory} \textbf{14} (2020), 2791--2813. \href{https://doi.org/10.2140/ant.2020.14.2791}{Publisher's version}; \href{https://arxiv.org/abs/1801.02043}{arXiv:1801.02043}.
-\bibitem[FG15]{FG} Michael A. Forbes and Venkatesan Guruswami, Dimension expanders via rank condensers, in \emph{APPROX/RANDOM 2015}, LIPIcs 40 (2015), 800--814. \href{https://doi.org/10.4230/LIPIcs.APPROX-RANDOM.2015.800}{Publisher's version}.
-\bibitem[FS12]{FS12} Michael A. Forbes and Amir Shpilka, On identity testing of tensors, low-rank recovery and compressed sensing, in \emph{STOC 2012}, 163--172. \href{https://doi.org/10.1145/2213977.2213995}{Publisher's version}; \href{https://arxiv.org/abs/1111.0663}{arXiv:1111.0663}.
-\bibitem[FS13]{FS} Michael A. Forbes and Amir Shpilka, Explicit Noether normalization for simultaneous conjugation via polynomial identity testing, in \emph{APPROX/RANDOM 2013}, LNCS 8096, 527--542. \href{https://doi.org/10.1007/978-3-642-40328-6_37}{Publisher's version}; \href{https://arxiv.org/abs/1303.0084}{arXiv:1303.0084}.
-\bibitem[GV15]{GV} Renat R. Gontsov and Ilya V. Vyugin, Solvability of linear differential systems with small exponents in the Liouvillian sense, \emph{Arnold Mathematical Journal} \textbf{1} (2015), 445--471. \href{https://doi.org/10.1007/s40598-015-0032-4}{Publisher's version}; \href{https://arxiv.org/abs/1312.2518}{arXiv:1312.2518}.
-\bibitem[GK16]{GK} Venkatesan Guruswami and Swastik Kopparty, Explicit subspace designs, \emph{Combinatorica} \textbf{36} (2016), 161--185. \href{https://doi.org/10.1007/s00493-014-3169-1}{Publisher's version}.
-\bibitem[JC24]{JiaCapel} Yifan Jia and Angela Capel, A generic quantum Wielandt's inequality, \emph{Quantum} \textbf{8} (2024), 1331. \href{https://doi.org/10.22331/q-2024-05-02-1331}{Publisher's version}.
+\bibitem[BG19]{BG} Moulay A. Barkatou and Renat R. Gontsov, Linear differential systems with small coefficients: Various types of solvability and their verification, \emph{SIGMA} \textbf{15} (2019), article 058, 15 pp. \href{https://doi.org/10.3842/SIGMA.2019.058}{Publisher's version}; \href{https://arxiv.org/abs/1901.09951}{arXiv:1901.09951}.
+\bibitem[Ber84]{Berkowitz} Stuart J. Berkowitz, On computing the determinant in small parallel time using a small number of processors, \emph{Information Processing Letters} \textbf{18} (1984), no.~3, 147--150. \href{https://doi.org/10.1016/0020-0190(84)90018-8}{Publisher's version}.
+\bibitem[Bir11]{Bird} Richard S. Bird, A simple division-free algorithm for computing determinants, \emph{Information Processing Letters} \textbf{111} (2011), no.~21--22, 1072--1074. \href{https://doi.org/10.1016/j.ipl.2011.08.006}{Publisher's version}.
+\bibitem[DM20]{DM} Harm Derksen and Visu Makam, Algorithms for orbit closure separation for invariants and semi-invariants of matrices, \emph{Algebra \& Number Theory} \textbf{14} (2020), no.~10, 2791--2813. \href{https://doi.org/10.2140/ant.2020.14.2791}{Publisher's version}; \href{https://arxiv.org/abs/1801.02043}{arXiv:1801.02043}.
+\bibitem[FXZW26]{FanEtAl} Yi-Zheng Fan, Ruo-Jie Xing, Yi-Liu Zhang, and Wei Wang, Degree-similar graphs and cospectral graphs, \emph{Electronic Journal of Combinatorics} \textbf{33} (2026), no.~2, article P2.62. \href{https://doi.org/10.37236/14707}{Publisher's version}; \href{https://arxiv.org/abs/2509.01520}{arXiv:2509.01520}.
+\bibitem[FG15]{FG} Michael A. Forbes and Venkatesan Guruswami, Dimension expanders via rank condensers, in \emph{APPROX/RANDOM 2015}, LIPIcs 40 (2015), 800--814. \href{https://doi.org/10.4230/LIPIcs.APPROX-RANDOM.2015.800}{Publisher's version}; full version: \href{https://arxiv.org/abs/1411.7455}{arXiv:1411.7455}.
+\bibitem[FS12]{FS12} Michael A. Forbes and Amir Shpilka, On identity testing of tensors, low-rank recovery and compressed sensing, in \emph{STOC 2012}, 163--172. \href{https://doi.org/10.1145/2213977.2213995}{Publisher's version}; full version: \href{https://arxiv.org/abs/1111.0663}{arXiv:1111.0663}.
+\bibitem[FS13]{FS} Michael A. Forbes and Amir Shpilka, Explicit Noether normalization for simultaneous conjugation via polynomial identity testing, in \emph{APPROX/RANDOM 2013}, LNCS 8096, 527--542. \href{https://doi.org/10.1007/978-3-642-40328-6_37}{Publisher's version}; full version: \href{https://arxiv.org/abs/1303.0084}{arXiv:1303.0084}.
+\bibitem[FHS17]{FHS} Vyacheslav Futorny, Roger A. Horn, and Vladimir V. Sergeichuk, Specht's criterion for systems of linear mappings, \emph{Linear Algebra and its Applications} \textbf{519} (2017), 278--295. \href{https://doi.org/10.1016/j.laa.2017.01.006}{Publisher's version}; \href{https://arxiv.org/abs/1701.08826}{arXiv:1701.08826}.
+\bibitem[GR08]{GabizonRaz} Ariel Gabizon and Ran Raz, Deterministic extractors for affine sources over large fields, \emph{Combinatorica} \textbf{28} (2008), no.~4, 415--440. \href{https://doi.org/10.1007/s00493-008-2259-3}{Publisher's version}; \href{https://eccc.weizmann.ac.il/report/2005/108/}{Earlier ECCC version}.
+\bibitem[GS25]{GodsilSun} Chris Godsil and Wanting Sun, Degree-similar graphs, \emph{Electronic Journal of Combinatorics} \textbf{32} (2025), no.~4, article P4.12. \href{https://doi.org/10.37236/13199}{Publisher's version}; \href{https://arxiv.org/abs/2407.11328}{arXiv:2407.11328}.
+\bibitem[GV15]{GV} Renat R. Gontsov and Ilya V. Vyugin, Solvability of linear differential systems with small exponents in the Liouvillian sense, \emph{Arnold Mathematical Journal} \textbf{1} (2015), no.~4, 445--471. \href{https://doi.org/10.1007/s40598-015-0032-4}{Publisher's version}; earlier preprint: \href{https://arxiv.org/abs/1312.2518}{arXiv:1312.2518}.
+\bibitem[GRS25]{GRS} Martin Grohe, Gaurav Rattan, and Tim Seppelt, Homomorphism tensors and linear equations, \emph{Advances in Combinatorics} (2025), Paper 4, 50 pp. \href{https://doi.org/10.19086/aic.2025.4}{Publisher's version}; \href{https://arxiv.org/abs/2111.11313}{arXiv:2111.11313}.
+\bibitem[GK16]{GK} Venkatesan Guruswami and Swastik Kopparty, Explicit subspace designs, \emph{Combinatorica} \textbf{36} (2016), no.~2, 161--185. \href{https://doi.org/10.1007/s00493-014-3169-1}{Publisher's version}.
+\bibitem[JC24]{JiaCapel} Yifan Jia and Angela Capel, A generic quantum Wielandt's inequality, \emph{Quantum} \textbf{8} (2024), article 1331. \href{https://doi.org/10.22331/q-2024-05-02-1331}{Publisher's version}.
+\bibitem[Kat87]{Katz} Nicholas M. Katz, A simple algorithm for cyclic vectors, \emph{American Journal of Mathematics} \textbf{109} (1987), no.~1, 65--70. \href{https://doi.org/10.2307/2374551}{Publisher's version}; \href{https://web.math.princeton.edu/~nmk/old/simplealgorithm.pdf}{Author's copy}.
+\bibitem[KMOWW11]{KMOWW} Stefan Kiefer, Andrzej S. Murawski, Jo\"el Ouaknine, Bj\"orn Wachter, and James Worrell, Language equivalence for probabilistic automata, in \emph{CAV 2011}, LNCS 6806, 526--540. \href{https://doi.org/10.1007/978-3-642-22110-1_42}{Publisher's version}; \href{https://people.mpi-sws.org/~joel/publications/langeqprobaut11.pdf}{Author's version}.
 \bibitem[K\v{S}16]{KlepSpenko} Igor Klep and \v{S}pela \v{S}penko, Sweeping words and the length of a generic vector subspace of $M_n(\mathbb F)$, \emph{Journal of Combinatorial Theory, Series A} \textbf{143} (2016), 56--65. \href{https://doi.org/10.1016/j.jcta.2016.05.003}{Publisher's version}; \href{https://arxiv.org/abs/1506.03460}{arXiv:1506.03460}.
 \bibitem[Lin92]{Lindell} Steven Lindell, A logspace algorithm for tree canonization (extended abstract), in \emph{STOC 1992}, 400--404. \href{https://doi.org/10.1145/129712.129750}{Publisher's version}.
 \bibitem[LL26]{LuLi} Zhipeng Lu and Pengxiang Li, Adjacency-degree algebras and spectral determination of graphs, preprint, 2026, \href{https://arxiv.org/abs/2607.21494v1}{arXiv:2607.21494}, version 1.
 \bibitem[McK77]{McKay} Brendan D. McKay, On the spectral characterisation of trees, \emph{Ars Combinatoria} \textbf{3} (1977), 219--232. Author's scan: \url{https://users.cecs.anu.edu.au/~bdm/papers/SpectralTrees.pdf}.
-\bibitem[Pap97]{Pappacena} Christopher J. Pappacena, An upper bound for the length of a finite-dimensional algebra, \emph{Journal of Algebra} \textbf{197} (1997), 535--545. \href{https://doi.org/10.1006/jabr.1997.7140}{Publisher's version}.
-\bibitem[Paz84]{Paz} Azaria Paz, An application of the Cayley--Hamilton theorem to matrix polynomials in several variables, \emph{Linear and Multilinear Algebra} \textbf{15} (1984), 161--170. \href{https://doi.org/10.1080/03081088408817585}{Publisher's version}.
-\bibitem[Pro76]{Procesi} Claudio Procesi, The invariant theory of $n\times n$ matrices, \emph{Advances in Mathematics} \textbf{19} (1976), 306--381. \href{https://doi.org/10.1016/0001-8708(76)90027-X}{Publisher's version}.
-\bibitem[Raz74]{Razmyslov} Yuri P. Razmyslov, Trace identities of full matrix algebras over a field of characteristic zero, \emph{Mathematics of the USSR-Izvestiya} \textbf{8} (1974), 727--760. \href{https://doi.org/10.1070/IM1974v008n04ABEH002126}{Publisher's version}.
+\bibitem[Pap97]{Pappacena} Christopher J. Pappacena, An upper bound for the length of a finite-dimensional algebra, \emph{Journal of Algebra} \textbf{197} (1997), no.~2, 535--545. \href{https://doi.org/10.1006/jabr.1997.7140}{Publisher's version}.
+\bibitem[Paz84]{Paz} Azaria Paz, An application of the Cayley--Hamilton theorem to matrix polynomials in several variables, \emph{Linear and Multilinear Algebra} \textbf{15} (1984), no.~2, 161--170. \href{https://doi.org/10.1080/03081088408817585}{Publisher's version}.
+\bibitem[Pro76]{Procesi} Claudio Procesi, The invariant theory of $n\times n$ matrices, \emph{Advances in Mathematics} \textbf{19} (1976), no.~3, 306--381. \href{https://doi.org/10.1016/0001-8708(76)90027-X}{Publisher's version}.
+\bibitem[Prz25]{Przezdziecki} Adam J. Prze\'zdziecki, A simple division-free algorithm for computing Pfaffians, \emph{Information Processing Letters} \textbf{189} (2025), article 106550. \href{https://doi.org/10.1016/j.ipl.2024.106550}{Publisher's version}; \href{https://arxiv.org/abs/2302.12081}{arXiv:2302.12081}.
+\bibitem[Raz74]{Razmyslov} Yuri P. Razmyslov, Trace identities of full matrix algebras over a field of characteristic zero, \emph{Mathematics of the USSR-Izvestiya} \textbf{8} (1974), no.~4, 727--760. \href{https://doi.org/10.1070/IM1974v008n04ABEH002126}{Publisher's version}.
 \bibitem[Sch73]{Schwenk} Allen J. Schwenk, Almost all trees are cospectral, in Frank Harary (ed.), \emph{New Directions in the Theory of Graphs}, Academic Press, New York, 1973, 275--307.
-\bibitem[Shi19]{Shitov} Yaroslav Shitov, An improved bound for the lengths of matrix algebras, \emph{Algebra \& Number Theory} \textbf{13} (2019), 1501--1507. \href{https://doi.org/10.2140/ant.2019.13.1501}{Publisher's version}; \href{https://arxiv.org/abs/1807.09310}{arXiv:1807.09310}.
+\bibitem[Shi19]{Shitov} Yaroslav Shitov, An improved bound for the lengths of matrix algebras, \emph{Algebra \& Number Theory} \textbf{13} (2019), no.~6, 1501--1507. \href{https://doi.org/10.2140/ant.2019.13.1501}{Publisher's version}; \href{https://arxiv.org/abs/1807.09310}{arXiv:1807.09310}.
 \bibitem[Sol02]{Soltys} Michael Soltys, Berkowitz's algorithm and clow sequences, \emph{Electronic Journal of Linear Algebra} \textbf{9} (2002), 42--54. \href{https://doi.org/10.13001/1081-3810.1072}{Publisher's version}.
 \bibitem[Spr26]{Sprung} Florian Ito Sprung, A log-log saving for matrix-algebra length and terseness, preprint, 2026, \href{https://arxiv.org/abs/2607.16679v2}{arXiv:2607.16679}, version 2.
-\bibitem[Tze92]{Tzeng} Wen-Guey Tzeng, A polynomial-time algorithm for the equivalence of probabilistic automata, \emph{SIAM Journal on Computing} \textbf{21} (1992), 216--227. \href{https://doi.org/10.1137/0221017}{Publisher's version}.
-\bibitem[vPS03]{vdPS} Marius van der Put and Michael F. Singer, \emph{Galois Theory of Linear Differential Equations}, Grundlehren der mathematischen Wissenschaften 328, Springer, 2003. \href{https://doi.org/10.1007/978-3-642-55750-7}{Publisher's version}.
+\bibitem[Tze92]{Tzeng} Wen-Guey Tzeng, A polynomial-time algorithm for the equivalence of probabilistic automata, \emph{SIAM Journal on Computing} \textbf{21} (1992), no.~2, 216--227. \href{https://doi.org/10.1137/0221017}{Publisher's version}.
+\bibitem[vPS03]{vdPS} Marius van der Put and Michael F. Singer, \emph{Galois Theory of Linear Differential Equations}, Grundlehren der mathematischen Wissenschaften, vol. 328, Springer-Verlag, Berlin--Heidelberg, 2003. \href{https://doi.org/10.1007/978-3-642-55750-7}{Publisher's version}.
+\bibitem[WZ26]{WangZhao} Wei Wang and Da Zhao, Graph isomorphism and multivariate graph spectrum, \emph{Advances in Applied Mathematics} \textbf{173} (2026), Part B, article 102994. \href{https://doi.org/10.1016/j.aam.2025.102994}{Publisher's version}; \href{https://arxiv.org/abs/2412.20016}{arXiv:2412.20016}.
 \end{thebibliography}
 \end{document}

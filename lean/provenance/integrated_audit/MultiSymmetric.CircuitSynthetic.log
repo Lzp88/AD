@@ -1,0 +1,2 @@
+'MultiSymmetric.Circuit.syntheticScan_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MultiSymmetric.Circuit.syntheticScan_all_coefficients' depends on axioms: [propext, Classical.choice, Quot.sound]

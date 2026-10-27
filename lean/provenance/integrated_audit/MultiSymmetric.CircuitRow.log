@@ -1,0 +1,2 @@
+'MultiSymmetric.Circuit.rowRun_semantics' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MultiSymmetric.Circuit.rowRun_cost' depends on axioms: [propext, Classical.choice, Quot.sound]

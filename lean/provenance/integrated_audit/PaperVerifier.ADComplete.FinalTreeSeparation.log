@@ -1,0 +1,7 @@
+'ADComplete.FinalTreeSeparation.actual_graph_probe_spanning' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.FinalTreeSeparation.actual_tree_trace_implies_moments' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ADComplete.FinalTreeSeparation.public_compiled_trace_classifies_trees' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

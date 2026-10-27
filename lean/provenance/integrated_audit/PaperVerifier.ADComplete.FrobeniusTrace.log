@@ -1,0 +1,2 @@
+'ADComplete.Frobenius.trace_expression_equal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.Frobenius.moment_trace' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,3 @@
+'ADComplete.PSDFactory.residualStep_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PSDFactory.residualScan_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PSDFactory.sos_value' depends on axioms: [propext, Classical.choice, Quot.sound]

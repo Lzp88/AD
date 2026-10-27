@@ -1,0 +1,9 @@
+'PrincipalMomentAudit.PointedGrafting.graft_colored_iso_with_fiber_images' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.PointedGrafting.graft_colored_iso_pointed_child' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.PointedGrafting.graft_colored_iso_givenleaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

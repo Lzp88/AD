@@ -1,0 +1,2 @@
+'ADComplete.Frobenius.full_word_traces_imply_pointed_moments' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.Frobenius.full_word_traces_determine_trees' depends on axioms: [propext, Classical.choice, Quot.sound]

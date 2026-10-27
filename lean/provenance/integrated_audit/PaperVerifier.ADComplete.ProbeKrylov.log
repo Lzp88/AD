@@ -1,0 +1,2 @@
+'ADComplete.Spanning.probePolynomial_connection_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.Spanning.probePolynomial_rationalKrylov' depends on axioms: [propext, Classical.choice, Quot.sound]

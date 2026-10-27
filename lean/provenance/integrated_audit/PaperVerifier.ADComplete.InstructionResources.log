@@ -1,0 +1,3 @@
+'ADComplete.InstructionHeights.compiled_all_weights' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.InstructionHeights.actual_register_norm_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.InstructionHeights.actual_register_entry_bits' depends on axioms: [propext, Classical.choice, Quot.sound]

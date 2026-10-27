@@ -1,0 +1,2 @@
+'MultiSymmetric.Circuit.mergeStage_semantics' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MultiSymmetric.Circuit.mergeStage_cost' depends on axioms: [propext, Classical.choice, Quot.sound]

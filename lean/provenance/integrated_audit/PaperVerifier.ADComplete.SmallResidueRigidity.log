@@ -1,0 +1,4 @@
+'ADComplete.SmallResidueRigidity.invariant_subspace_constant_rank' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ADComplete.SmallResidueRigidity.invariant_subspace_constant' depends on axioms: [propext, Classical.choice, Quot.sound]

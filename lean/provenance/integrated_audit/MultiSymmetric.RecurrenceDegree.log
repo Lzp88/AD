@@ -1,0 +1,3 @@
+'MultiSymmetric.Recurrence.universalRow_wordDegree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MultiSymmetric.Recurrence.probe_wordDegree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MultiSymmetric.Recurrence.probe_mem_wordSpan' depends on axioms: [propext, Classical.choice, Quot.sound]

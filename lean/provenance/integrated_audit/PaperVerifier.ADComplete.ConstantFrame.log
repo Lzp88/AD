@@ -1,0 +1,2 @@
+'ADComplete.ConstantFrame.polynomial_coeff_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.ConstantFrame.real_invariance' depends on axioms: [propext, Classical.choice, Quot.sound]

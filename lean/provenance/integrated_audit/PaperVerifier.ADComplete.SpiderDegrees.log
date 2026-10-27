@@ -1,0 +1,1 @@
+'ADComplete.SpiderGraph.arm_degree' depends on axioms: [propext, Classical.choice, Quot.sound]

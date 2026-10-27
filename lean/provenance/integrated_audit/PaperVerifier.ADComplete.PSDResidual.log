@@ -1,0 +1,4 @@
+'ADComplete.PSDResidual.residual_orthogonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PSDResidual.residual_zero_of_mem_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PSDResidual.gram_singular_annihilates_adjugate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PSDResidual.residual_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]

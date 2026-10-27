@@ -1,0 +1,6 @@
+'PrincipalMomentAudit.PrincipalExpressions.literal_selector_indicator_mem' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.PrincipalExpressions.all_stage_type_indicators_orbit_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

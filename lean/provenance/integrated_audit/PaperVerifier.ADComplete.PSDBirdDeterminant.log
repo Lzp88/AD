@@ -1,0 +1,1 @@
+'ADComplete.PSDBird.compiler_determinant' depends on axioms: [propext, Classical.choice, Quot.sound]

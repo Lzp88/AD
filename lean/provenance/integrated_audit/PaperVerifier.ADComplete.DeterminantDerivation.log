@@ -1,0 +1,2 @@
+'ADComplete.DeterminantDerivation.derivation_det_columns' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.DeterminantDerivation.derivation_det_rows' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,9 @@
+'ADComplete.ProbeDegreeLowerBound.realPolynomialVector_mem_powerRange' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ADComplete.ProbeDegreeLowerBound.real_polynomial_frame_degree_lower_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ADComplete.ProbeDegreeLowerBound.explicit_real_diagonal_degree_lower_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

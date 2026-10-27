@@ -1,0 +1,1 @@
+'ADComplete.PSDFoldedScaling.primitive_scaling_line_constant' depends on axioms: [propext, Classical.choice, Quot.sound]

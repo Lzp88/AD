@@ -1,0 +1,2 @@
+'ADComplete.SmallResidueRigidity.constant_and_invariant_rank' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.SmallResidueRigidity.small_residue_rigidity' depends on axioms: [propext, Classical.choice, Quot.sound]

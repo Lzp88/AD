@@ -1,0 +1,3 @@
+'ADComplete.PSDPairStar.compiler_star' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PSDPairStar.determinantBatch_star' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PSDPairStar.residual_star' depends on axioms: [propext, Classical.choice, Quot.sound]

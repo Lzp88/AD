@@ -1,0 +1,6 @@
+'ADComplete.PolynomialFrameIsometry.pointed_isometry_polynomial_transport' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ADComplete.PolynomialFrameIsometry.three_tables_iff_pointed_isometry' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

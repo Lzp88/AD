@@ -1,0 +1,3 @@
+'ADComplete.Spanning.rank_sensitive_probes_of_spectral_diameter' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

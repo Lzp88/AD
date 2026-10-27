@@ -1,0 +1,2 @@
+'ADComplete.SpiderGraph.closed_walk_root_height_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.SpiderGraph.witness_nonisomorphic' depends on axioms: [propext, Classical.choice, Quot.sound]

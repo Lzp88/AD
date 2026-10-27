@@ -1,0 +1,5 @@
+'ADComplete.PrimitiveLine.primitive_rational_line_degree_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ADComplete.PrimitiveLine.primitive_degree_witness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PrimitiveLine.primitive_rational_line_constant' depends on axioms: [propext, Classical.choice, Quot.sound]

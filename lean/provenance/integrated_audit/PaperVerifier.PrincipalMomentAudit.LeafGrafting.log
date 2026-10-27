@@ -1,0 +1,5 @@
+'PrincipalMomentAudit.LeafGrafting.locationValue_bijective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.LeafGrafting.core_child_adj_iff' does not depend on any axioms
+'PrincipalMomentAudit.LeafGrafting.locationMatch_adj' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.LeafGrafting.graft_colored_iso' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.LeafGrafting.graft_colored_iso_of_card' depends on axioms: [propext, Classical.choice, Quot.sound]

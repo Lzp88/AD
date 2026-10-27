@@ -1,0 +1,5 @@
+'PrincipalMomentAudit.Transport.expression_transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.Transport.levelSelector_transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.Transport.pruning_adjacency_transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.Transport.scalarSelector_integer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.Transport.seed_expression_transport' depends on axioms: [propext, Classical.choice, Quot.sound]

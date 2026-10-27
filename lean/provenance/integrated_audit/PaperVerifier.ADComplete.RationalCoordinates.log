@@ -1,0 +1,2 @@
+'ADComplete.RationalCoordinates.clear_denominators' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.RationalCoordinates.primitive_representative' depends on axioms: [propext, Classical.choice, Quot.sound]

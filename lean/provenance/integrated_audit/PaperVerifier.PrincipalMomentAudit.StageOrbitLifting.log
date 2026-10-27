@@ -1,0 +1,3 @@
+'PrincipalMomentAudit.StageOrbitLifting.stage_profile' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.StageOrbitLifting.previous_stage_aut' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.StageOrbitLifting.stage_aut_lifts' depends on axioms: [propext, Classical.choice, Quot.sound]

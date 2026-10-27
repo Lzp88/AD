@@ -1,0 +1,3 @@
+'ADComplete.CompiledReadout.output_eq_source' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.CompiledReadout.actual_trace_recovers_tables' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.CompiledReadout.graphIso_preserves_trace' depends on axioms: [propext, Classical.choice, Quot.sound]

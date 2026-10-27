@@ -1,0 +1,1 @@
+'MultiSymmetric.Rigidity.primitive_representative_constant' depends on axioms: [propext, Classical.choice, Quot.sound]

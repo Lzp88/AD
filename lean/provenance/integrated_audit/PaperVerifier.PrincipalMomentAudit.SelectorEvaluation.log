@@ -1,0 +1,23 @@
+'PrincipalMomentAudit.SelectorEvaluation.levelSelector_matrixEval_integer' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.SelectorEvaluation.next_realizes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.SelectorEvaluation.all_stages_realizes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.SelectorEvaluation.literal_forest_pruning_terminates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.SelectorEvaluation.centerEdgeType_matrixEval' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.SelectorEvaluation.centerEdgeSet_is_leaf_pair' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.SelectorEvaluation.all_stage_typeIndicator_mem' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.SelectorEvaluation.all_stage_centerVertexIndicator_mem' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.SelectorEvaluation.all_stage_centerEdgeIndicator_mem' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

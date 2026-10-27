@@ -1,0 +1,11 @@
+'PrincipalMomentAudit.PointedSupport.leaf_neighborCount' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.PointedSupport.leaf_parents_same_color' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.PointedSupport.same_color_leaf_core_parents' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.PointedSupport.pointAdjustedEquiv_preserves_label' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.PointedSupport.small_colored_tree_iso_pointed' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

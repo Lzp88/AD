@@ -1,0 +1,2 @@
+'ADComplete.PSDBird.compiler_grade' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PSDBird.compiler_grade_global' depends on axioms: [propext, Classical.choice, Quot.sound]

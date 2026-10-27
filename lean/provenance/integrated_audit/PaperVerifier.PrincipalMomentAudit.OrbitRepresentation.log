@@ -1,0 +1,7 @@
+'PrincipalMomentAudit.OrbitRepresentation.quotientEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.OrbitRepresentation.adjacency_quotient_intertwines' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.OrbitRepresentation.matrixEval_quotient_compatibility' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

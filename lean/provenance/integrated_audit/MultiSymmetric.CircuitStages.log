@@ -1,0 +1,3 @@
+'MultiSymmetric.Circuit.factorStage_semantics' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MultiSymmetric.Circuit.derivativeStage_semantics' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MultiSymmetric.Circuit.generatorStage_semantics' depends on axioms: [propext, Classical.choice, Quot.sound]

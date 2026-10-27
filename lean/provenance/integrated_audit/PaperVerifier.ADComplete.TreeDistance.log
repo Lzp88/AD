@@ -1,0 +1,7 @@
+'ADComplete.TreeDistance.unique_predecessor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.TreeDistance.sum_distanceMatrix_eq_ones' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.TreeDistance.distancePolynomial_eq_distanceMatrix' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ADComplete.TreeDistance.tree_allOnes_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.TreeDistance.actual_allOnes_expression_identity' depends on axioms: [propext, Classical.choice, Quot.sound]

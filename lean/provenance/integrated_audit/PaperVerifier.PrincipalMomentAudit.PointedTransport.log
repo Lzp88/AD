@@ -1,0 +1,6 @@
+'PrincipalMomentAudit.PointedTransport.pointed_isometry_transports_words' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.PointedTransport.pointed_isometry_implies_equal_word_moments' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

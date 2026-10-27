@@ -1,0 +1,3 @@
+'ADComplete.PSDSpecialization.length_mul_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PSDSpecialization.eval_height_plus_two_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PSDSpecialization.eval_length_plus_two_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]

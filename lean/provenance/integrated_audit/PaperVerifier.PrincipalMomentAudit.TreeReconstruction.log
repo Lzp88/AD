@@ -1,0 +1,12 @@
+'PrincipalMomentAudit.TreeReconstruction.degree_eq_of_colored_neighbor_counts' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.TreeReconstruction.core_cell_sizes_equal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.TreeReconstruction.core_neighbor_counts_equal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.TreeReconstruction.small_colored_tree_iso' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

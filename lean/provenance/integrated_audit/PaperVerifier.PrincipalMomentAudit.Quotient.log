@@ -1,0 +1,14 @@
+'PrincipalMomentAudit.Quotient.reverseProduct_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.Quotient.reverseProduct_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.Quotient.reverseProduct_offDiagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.Quotient.reverseProduct_empty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.Quotient.reverseProduct_eq_coordinate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.Quotient.matrixSelector_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.Quotient.positiveSelector_coordinate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.Quotient.extract_unique_child' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.Quotient.extracted_child_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.Quotient.degree_one_parent_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.Quotient.undirected_support_of_balance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.Quotient.extract_unique_child_of_counts' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

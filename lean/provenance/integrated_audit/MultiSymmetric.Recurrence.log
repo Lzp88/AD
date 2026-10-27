@@ -1,0 +1,2 @@
+'MultiSymmetric.Recurrence.row_natDegree_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MultiSymmetric.Recurrence.index_card' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,3 @@
+'ADComplete.PSDBird.gramDetCompiler_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PSDBird.gramStage_safe_grade' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PSDBird.gramDetCompiler_safe_grade' depends on axioms: [propext, Classical.choice, Quot.sound]

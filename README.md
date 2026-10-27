@@ -2,59 +2,90 @@
 
 Manuscript and reproducibility materials by Zhipeng Lu.
 
-- `paper/` contains the latest manuscript source and its PDF. The introduction
-  is revised; the mathematical body matches the audited version.
-- `lean/` contains the exact 189-module local dependency closure of the final
-  declaration audit, pinned dependencies, the source-to-statement mapping,
-  a portable runner, and the completed kernel-audit provenance.
-- `verification/` contains the integer circuit emitter, independent finite
-  checks, their recorded results, and the manuscript's circuit example.
+This version includes the direct extension to several real symmetric generators.
+The main tree invariant and the original two-generator spanning theorem are
+unchanged. The introduction and the spanning section explain the extension;
+Appendix D gives its recurrence and complete proof.
 
-The manuscript source and PDF are preserved byte for byte. The completed Lean
-audit is reused; proof-source changes consist only of consistent public module
-identities, verified against the audited source. The provenance distinguishes
-the audited source hashes from the distributed source hashes. Public module names
-are consistent throughout the proof sources and Python reference metadata.
-The manuscript links directly to this repository for the Lean audit and
-reproduction materials. The proof project is distributed as `lean/`.
+## Contents
 
-## Verify the distributed snapshot
+- `paper/uniform_ad_probes.pdf` and `.tex`: the manuscript and self-contained
+  LaTeX source.
+- `lean/`: the complete local proof package, pinned dependencies, a portable
+  rebuild script, the statement correspondence, and recorded audit evidence.
+  It includes the original 189 modules, 25 extension modules, and one combined
+  declaration-audit entry point.
+- `verification/`: the original integer circuit emitters and finite checks,
+  their recorded results, and 43 exact tests of the several-generator extension.
 
-Use Python 3.11 or later for the pinned numerical dependencies.
+The extension preserves the degree bound N-1 and the prefix determined by the
+actual cyclic-space dimension. Its fixed family has N+s*N*(N-1)/2 indexed
+outputs and a shared division-free circuit of O(s^2*N^2) gates. The hypotheses
+are real symmetry and spectral diameter at most N-1 for each of the s residue
+generators; the remaining generator H has no spectral bound. This is a direct
+extension of the same rigidity argument, without a matrix-order enlargement.
+
+## Recorded integrated audit
+
+The recorded integrated build freshly compiled all 215 modules, with no reused steps or warnings. The combined scan checked 5,390 project declarations and 5,297 bodies, including 685 extension declarations. All 15 required extension endpoints passed.
+
+## Check the distributed snapshot
+
+Use Python 3.11 or later. From the repository root:
 
 ```text
 python -B verify_artifacts.py
+python -B lean/run_audit.py --verify-only
 ```
 
-This checks every distributed file against `artifact_manifest.json`, including
-the manuscript, proof sources, dependency pins, and recorded results.
+The first command verifies the distributed files against the root manifest.
+The second verifies all proof inputs and the complete recorded build evidence,
+including the combined declaration scan, without downloading Lean dependencies.
+Neither command is a new kernel build. Run them before regenerating results.
 
-## Build the paper
+The Lean integrity command can also be used before a first build. In that case
+an empty `verified_audit_reports` list means that no completed evidence was
+checked, not that the audit passed. For this published snapshot the list must
+include `provenance/integrated_audit/rebuild_report.json`; the root manifest
+also requires that report and all its logs to be present.
 
-With a LaTeX installation providing the packages named in the self-contained
-source, run from `paper/`:
+## Build the manuscript
+
+With a LaTeX installation providing the packages named in the source, run from
+`paper/`:
 
 ```text
 pdflatex -interaction=nonstopmode -halt-on-error uniform_ad_probes.tex
 pdflatex -interaction=nonstopmode -halt-on-error uniform_ad_probes.tex
 ```
 
-No separate bibliography, figures, or input files are required. Different TeX
+No external bibliography, figures, or input files are required. Different TeX
 installations may produce different PDF bytes.
 
-## Rebuild the Lean audit
+## Rebuild all Lean proofs
 
 Install Lean 4.33.0 through elan. From `lean/`:
 
 ```text
 lake exe cache get
-python -B run_audit.py
+python -B run_audit.py --jobs 2
 ```
 
-Every local module is freshly compiled. The final audit permits only `propext`,
-`Classical.choice`, and `Quot.sound` as transitive axioms. Fresh results are saved
-under `lean/rebuild_logs/`. See `lean/README.md` and the statement mapping for
-the formal endpoints, hypotheses, and reused reconstruction theorem.
+The runner freshly compiles all 215 local modules in dependency order and checks
+the original, extension, and combined declaration-audit markers. The original
+214 proof source files are unchanged from their prior checked versions. The
+only added Lean file for integration is `CombinedAudit.lean`.
+
+The allowed transitive axioms are `propext`, `Classical.choice`, and `Quot.sound`.
+Project-local axioms, incomplete proofs, compiler failures, and warnings are
+rejected. The dependency Git revisions and all source, output, and log hashes
+are checked. The extension's 15 required endpoints have explicit type checks.
+
+The fresh report and per-module logs are written under `lean/rebuild_logs/`.
+The distributed completed report is under `lean/provenance/integrated_audit/`.
+No historical `.olean` file or private directory is needed. Compiled artifact
+hashes describe an observed build; different platforms need not reproduce the
+same compiled bytes. See `lean/README.md` for scope and recovery options.
 
 ## Reproduce the finite checks
 
@@ -64,22 +95,23 @@ From the repository root, preferably in a Python virtual environment:
 python -m pip install -r verification/requirements.txt
 python -B verification/verify_current.py
 python -B verification/verify_exports.py
+python -B verification/verify_exact.py
 ```
 
-The export checks use the actual Lean factory instructions in
-`lean/provenance/circuit_exports.log`. To check a fresh Lean rebuild instead:
+The original checks cover 14 small trees, boundary inputs, 42 seeded symmetric
+pairs, and circuit syntax for bounds 1 through 15. The export checks compare
+actual Lean instruction exports with the Python implementation and evaluate
+the PSD factory on trees and symmetric pairs. The extension tests compare the
+literal and factored recurrences, an independently generated word span, and the
+actual-rank prefix over exact rational arithmetic, including zero seeds, proper
+cyclic spaces, strict dimension bounds, and large scalar spectral shifts.
+
+After a fresh Lean build, use its instruction export log with:
 
 ```text
-python -B verification/verify_exports.py --export-log lean/rebuild_logs/circuit_exports.log
+python -B verification/verify_exports.py --export-log lean/rebuild_logs/PaperVerifier.ADComplete.CircuitExports.log
 ```
 
-The first check covers 14 trees with common bound six, three boundary inputs,
-42 symmetric pairs, and circuit syntax for bounds one through fifteen.
-The second compares the Python and Lean linear instructions for bounds one
-through fifteen and checks the exported PSD factory on 11 tree cases and
-12 symmetric pairs. These finite checks supplement the proofs; they do not
-establish universal equality of separately implemented emitters.
-
-Reproduction rewrites the recorded results, so snapshot integrity should be
-checked before running it. Build products and auxiliary regenerated exports
-are ignored by Git.
+Finite tests supplement the universal proofs. They do not prove universal
+equality of separately implemented emitters. Regenerating check results can
+change recorded files, so verify snapshot integrity first.

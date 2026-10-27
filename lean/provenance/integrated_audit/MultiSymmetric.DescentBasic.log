@@ -1,0 +1,1 @@
+'MultiSymmetric.Descent.polynomial_eval_mem' depends on axioms: [propext, Classical.choice, Quot.sound]

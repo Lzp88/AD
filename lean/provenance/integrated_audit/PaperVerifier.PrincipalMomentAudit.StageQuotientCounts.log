@@ -1,0 +1,24 @@
+'PrincipalMomentAudit.StageQuotientCounts.currentCounts_at_vertex' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.StageQuotientCounts.currentCounts_reverse_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.StageQuotientCounts.selected_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.StageQuotientCounts.parent_fibre_unique' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.StageQuotientCounts.parent_active_next' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.StageQuotientCounts.reverse_coordinate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.StageQuotientCounts.reverse_product_value' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.StageQuotientCounts.reverse_product_empty' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.StageQuotientCounts.current_adjacency_matrixEval' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.StageQuotientCounts.typed_selector_matrixEval' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

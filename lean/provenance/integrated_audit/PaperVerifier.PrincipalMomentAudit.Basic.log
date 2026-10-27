@@ -1,0 +1,11 @@
+'PrincipalMomentAudit.leaf_diagonal_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.adjacencyDegreeAlgebra_transpose_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.MatrixPrincipal.principalIdealSpan_eq_cyclicRankOneSpan' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.MatrixPrincipal.principalIdeal_full_action' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.MatrixPrincipal.principalIdeal_annihilates_orthogonal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

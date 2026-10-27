@@ -1,0 +1,14 @@
+'PrincipalMomentAudit.TerminalOrbits.closed_component_aut_extend' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.TerminalOrbits.closed_components_iso_swap' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.TerminalOrbits.isolated_same_label_orbit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.TerminalOrbits.leaf_pair_same_labels_orbit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PrincipalMomentAudit.TerminalOrbits.isolated_orbit_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.TerminalOrbits.terminal_edge_orbit_iff' depends on axioms: [propext, Classical.choice, Quot.sound]

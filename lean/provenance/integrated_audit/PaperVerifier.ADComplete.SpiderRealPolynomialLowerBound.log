@@ -1,0 +1,3 @@
+'ADComplete.SpiderGraph.witness_real_polynomial_trace_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.SpiderGraph.actual_spider_polynomial_obstruction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.SpiderGraph.single_trace_degree_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

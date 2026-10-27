@@ -1,0 +1,2 @@
+'ADComplete.Frobenius.actual_full_graph_probe_spanning' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.Frobenius.actual_full_frame_range' depends on axioms: [propext, Classical.choice, Quot.sound]

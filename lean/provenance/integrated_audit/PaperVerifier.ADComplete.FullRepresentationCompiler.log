@@ -1,0 +1,3 @@
+'ADComplete.FullRepresentationCompiler.compiled_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.FullRepresentationCompiler.compiled_gate_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.FullRepresentationCompiler.compiled_all_degrees' depends on axioms: [propext, Classical.choice, Quot.sound]

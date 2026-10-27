@@ -1,0 +1,11 @@
+'ADComplete.FullRepresentationCompiler.polynomial_self_adjoint' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ADComplete.FullRepresentationCompiler.polynomial_evaluation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.FullRepresentationCompiler.expression_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.FullRepresentationCompiler.compiled_scalar_labels_bits' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ADComplete.FullRepresentationCompiler.actual_register_entry_bits' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

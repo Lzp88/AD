@@ -1,0 +1,2 @@
+'CircuitAudit.Degrees.factored_probe_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CircuitAudit.Degrees.literal_packed_degree' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,4 @@
+'PrincipalMomentAudit.PruningOrbits.core_aut_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrincipalMomentAudit.PruningOrbits.peeled_pair_core_aut_orbit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,4 @@
+'ADComplete.InstructionDegrees.compiled_every_register_syntax' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ADComplete.InstructionDegrees.expression_register_value' depends on axioms: [propext]

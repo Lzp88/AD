@@ -1,0 +1,4 @@
+'ADComplete.TraceMomentBridge.actual_trace_implies_moments_of_spanning' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ADComplete.TraceMomentBridge.singleton_trees_isomorphic' depends on axioms: [propext, Classical.choice, Quot.sound]

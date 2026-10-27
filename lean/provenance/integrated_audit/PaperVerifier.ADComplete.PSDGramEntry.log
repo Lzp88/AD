@@ -1,0 +1,2 @@
+'ADComplete.PSDBird.gramEntry_corner' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ADComplete.PSDBird.gramEntry_grade' depends on axioms: [propext, Classical.choice, Quot.sound]

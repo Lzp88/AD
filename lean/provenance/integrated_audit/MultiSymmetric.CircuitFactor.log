@@ -1,0 +1,4 @@
+'MultiSymmetric.Circuit.factorRun_semantics' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MultiSymmetric.Circuit.factorRun_cost' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MultiSymmetric.Circuit.quotientRun_semantics' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MultiSymmetric.Circuit.quotientRun_cost' depends on axioms: [propext, Classical.choice, Quot.sound]

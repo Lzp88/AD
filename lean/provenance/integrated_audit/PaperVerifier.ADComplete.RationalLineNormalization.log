@@ -1,0 +1,6 @@
+'ADComplete.RationalLineNormalization.normalize_connection_line' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ADComplete.RationalLineNormalization.primitive_representative_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

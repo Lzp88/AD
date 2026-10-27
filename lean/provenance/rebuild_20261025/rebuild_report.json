@@ -1,0 +1,4019 @@
+{
+  "roots": [
+    "PaperVerifier.ADComplete.PaperAxiomAudit"
+  ],
+  "dependency_order": [
+    "PaperVerifier.ADComplete.Spanning",
+    "PaperVerifier.PrincipalMomentAudit.GNS",
+    "PaperVerifier.PrincipalMomentAudit.GraphSemantics",
+    "PaperVerifier.CircuitAudit.Degrees",
+    "PaperVerifier.ADComplete.FrameSemantics",
+    "PaperVerifier.ADComplete.GramTables",
+    "PaperVerifier.ADComplete.Radix",
+    "PaperVerifier.ADComplete.TreeDistance",
+    "PaperVerifier.CircuitAudit.RadixFactorization",
+    "PaperVerifier.CircuitAudit.HornerBridge",
+    "PaperVerifier.CircuitAudit.WrittenPolynomialBridge",
+    "PaperVerifier.ADComplete.TreeSeparation",
+    "PaperVerifier.ADComplete.MatrixSemantics",
+    "PaperVerifier.CircuitAudit.CircuitCosts",
+    "PaperVerifier.CircuitAudit.ProbeCircuit",
+    "PaperVerifier.CircuitAudit.DistanceCircuit",
+    "PaperVerifier.CircuitAudit.DistanceSemantics",
+    "PaperVerifier.CircuitAudit.FullCompression",
+    "PaperVerifier.ADComplete.InstructionDegrees",
+    "PaperVerifier.ADComplete.InstructionDistanceDegrees",
+    "PaperVerifier.ADComplete.InstructionCompressionDegrees",
+    "PaperVerifier.ADComplete.InstructionSyntaxBridge",
+    "PaperVerifier.ADComplete.IntegerBounds",
+    "PaperVerifier.ADComplete.IntegerBitBounds",
+    "PaperVerifier.ADComplete.CompiledReadout",
+    "PaperVerifier.ADComplete.TraceMomentBridge",
+    "PaperVerifier.ADComplete.Rigidity",
+    "PaperVerifier.ADComplete.GraphDegreeBand",
+    "PaperVerifier.ADComplete.DifferentialKrylov",
+    "PaperVerifier.ADComplete.InvariantCoordinates",
+    "PaperVerifier.ADComplete.DeterminantDerivation",
+    "PaperVerifier.ADComplete.PluckerConnection",
+    "PaperVerifier.ADComplete.PluckerNonzero",
+    "PaperVerifier.ADComplete.PluckerDescent",
+    "PaperVerifier.ADComplete.PolynomialPrimitivity",
+    "PaperVerifier.ADComplete.RationalCoordinates",
+    "PaperVerifier.ADComplete.TensorResidue",
+    "PaperVerifier.ADComplete.TensorMatrix",
+    "PaperVerifier.ADComplete.RationalDerivative",
+    "PaperVerifier.ADComplete.PolynomialLine",
+    "PaperVerifier.ADComplete.PrimitiveLine",
+    "PaperVerifier.ADComplete.RationalLineNormalization",
+    "PaperVerifier.ADComplete.TensorBaseChange",
+    "PaperVerifier.ADComplete.SmallResidueRigidity",
+    "PaperVerifier.ADComplete.ConstantFrame",
+    "PaperVerifier.ADComplete.ScalarExtension",
+    "PaperVerifier.ADComplete.ProbePolynomial",
+    "PaperVerifier.ADComplete.ProbeKrylov",
+    "PaperVerifier.ADComplete.UniformProbes",
+    "PaperVerifier.ADComplete.UniformProbeBounds",
+    "PaperVerifier.PrincipalMomentAudit.Transport",
+    "PaperVerifier.PrincipalMomentAudit.Basic",
+    "PaperVerifier.PrincipalMomentAudit.ForestPruning",
+    "PaperVerifier.PrincipalMomentAudit.PruningExpressions",
+    "PaperVerifier.PrincipalMomentAudit.SelectorEvaluation",
+    "PaperVerifier.PrincipalMomentAudit.Quotient",
+    "PaperVerifier.PrincipalMomentAudit.OrbitQuotient",
+    "PaperVerifier.PrincipalMomentAudit.IntrinsicRecovery",
+    "PaperVerifier.PrincipalMomentAudit.PrincipalExpressions",
+    "PaperVerifier.PrincipalMomentAudit.SharedVectorFamily",
+    "PaperVerifier.PrincipalMomentAudit.LeafGrafting",
+    "PaperVerifier.PrincipalMomentAudit.PruningLift",
+    "PaperVerifier.PrincipalMomentAudit.RootedOrbit",
+    "PaperVerifier.PrincipalMomentAudit.TerminalOrbits",
+    "PaperVerifier.PrincipalMomentAudit.TreeReconstruction",
+    "PaperVerifier.PrincipalMomentAudit.PointedSupport",
+    "PaperVerifier.PrincipalMomentAudit.PointedGrafting",
+    "PaperVerifier.PrincipalMomentAudit.PruningOrbits",
+    "PaperVerifier.PrincipalMomentAudit.StageGeometry",
+    "PaperVerifier.PrincipalMomentAudit.StageCounts",
+    "PaperVerifier.PrincipalMomentAudit.StageOrbitLifting",
+    "PaperVerifier.PrincipalMomentAudit.PeeledOrbitGeometry",
+    "PaperVerifier.PrincipalMomentAudit.TreeRigidity",
+    "PaperVerifier.PrincipalMomentAudit.WeightedQuotientRigidity",
+    "PaperVerifier.PrincipalMomentAudit.SharedFamilyMomentRigidity",
+    "PaperVerifier.PrincipalMomentAudit.FinalOrbitGeometry",
+    "PaperVerifier.PrincipalMomentAudit.OrbitRepresentation",
+    "PaperVerifier.PrincipalMomentAudit.StageQuotientCounts",
+    "PaperVerifier.PrincipalMomentAudit.PointedTransport",
+    "PaperVerifier.PrincipalMomentAudit.SharedCoordinateFamily",
+    "PaperVerifier.PrincipalMomentAudit.WrittenProof",
+    "PaperVerifier.ADComplete.FinalTreeSeparation",
+    "PaperVerifier.ADComplete.SpectralBands",
+    "PaperVerifier.ADComplete.SpectralUniformProbes",
+    "PaperVerifier.ADComplete.DifferentialRank",
+    "PaperVerifier.ADComplete.RankSensitiveProbes",
+    "PaperVerifier.ADComplete.SpectralRankSensitiveProbes",
+    "PaperVerifier.ADComplete.SpectralRigidity",
+    "PaperVerifier.ADComplete.ProbeDegreeLowerBound",
+    "PaperVerifier.ADComplete.RealPolynomialDegreeLowerBound",
+    "PaperVerifier.ADComplete.RealDegreeWitness",
+    "PaperVerifier.ADComplete.InstructionHeights",
+    "PaperVerifier.ADComplete.InstructionDistanceHeights",
+    "PaperVerifier.ADComplete.InstructionCompressionHeights",
+    "PaperVerifier.ADComplete.InstructionNormBridge",
+    "PaperVerifier.ADComplete.InstructionResources",
+    "PaperVerifier.ADComplete.InstructionSharpBits",
+    "PaperVerifier.ADComplete.InstructionPolynomial",
+    "PaperVerifier.ADComplete.MainResourceEndpoints",
+    "PaperVerifier.ADComplete.PolynomialFrameIsometry",
+    "PaperVerifier.ADComplete.FixedPointedTables",
+    "PaperVerifier.ADComplete.PointedCoordinateDegree",
+    "PaperVerifier.ADComplete.PointedPolynomialCoordinates",
+    "PaperVerifier.ADComplete.PSDHomogeneousLift",
+    "PaperVerifier.ADComplete.PSDBirdEntry",
+    "PaperVerifier.ADComplete.PSDBirdCompiler",
+    "PaperVerifier.ADComplete.BirdCertificate",
+    "PaperVerifier.ADComplete.PSDBirdDeterminant",
+    "PaperVerifier.ADComplete.PSDBirdSafety",
+    "PaperVerifier.ADComplete.PSDBirdDegrees",
+    "PaperVerifier.ADComplete.PSDGramEntry",
+    "PaperVerifier.ADComplete.PSDGramCompiler",
+    "PaperVerifier.ADComplete.PSDResidualCompiler",
+    "PaperVerifier.ADComplete.PSDFoldCompiler",
+    "PaperVerifier.ADComplete.PSDMinorsCompiler",
+    "PaperVerifier.ADComplete.PSDFoldedScaling",
+    "PaperVerifier.ADComplete.PSDFoldedLine",
+    "PaperVerifier.ADComplete.PSDFoldedKrylov",
+    "PaperVerifier.ADComplete.PSDFoldedSubspace",
+    "PaperVerifier.ADComplete.PSDFoldedPrefix",
+    "PaperVerifier.ADComplete.PSDSpecialization",
+    "PaperVerifier.ADComplete.PSDPolynomialHeight",
+    "PaperVerifier.ADComplete.PSDFoldedFrame",
+    "PaperVerifier.ADComplete.PSDFactoryDefinition",
+    "PaperVerifier.ADComplete.PSDFactoryDegrees",
+    "PaperVerifier.ADComplete.PSDFrameSemantics",
+    "PaperVerifier.ADComplete.PSDFactoryValues",
+    "PaperVerifier.ADComplete.PSDResidualScanClosed",
+    "PaperVerifier.ADComplete.PSDScalarExtension",
+    "PaperVerifier.ADComplete.PSDFoldedRank",
+    "PaperVerifier.ADComplete.PSDFoldedInteger",
+    "PaperVerifier.ADComplete.PSDResidual",
+    "PaperVerifier.ADComplete.PSDCyclic",
+    "PaperVerifier.ADComplete.PSDFoldedSpecialization",
+    "PaperVerifier.ADComplete.PSDFoldedBound",
+    "PaperVerifier.ADComplete.PSDFoldedFixed",
+    "PaperVerifier.ADComplete.PSDCyclicAction",
+    "PaperVerifier.ADComplete.PSDCyclicPowers",
+    "PaperVerifier.ADComplete.PSDResidualPrefix",
+    "PaperVerifier.ADComplete.PSDResidualIndependence",
+    "PaperVerifier.ADComplete.PSDRescaling",
+    "PaperVerifier.ADComplete.PSDRepresentative",
+    "PaperVerifier.ADComplete.PSDFoldedRepresentative",
+    "PaperVerifier.ADComplete.PSDCramerBridge",
+    "PaperVerifier.ADComplete.PSDSOSBridge",
+    "PaperVerifier.ADComplete.PSDFoldedLiteral",
+    "PaperVerifier.ADComplete.PSDCompiledValue",
+    "PaperVerifier.ADComplete.PSDGraphFrame",
+    "PaperVerifier.ADComplete.PSDPairStar",
+    "PaperVerifier.ADComplete.PSDFactoryStar",
+    "PaperVerifier.ADComplete.PSDFactorySOS",
+    "PaperVerifier.ADComplete.PSDTreeRepresentative",
+    "PaperVerifier.ADComplete.PSDBirdHeights",
+    "PaperVerifier.ADComplete.PSDOperationHeights",
+    "PaperVerifier.ADComplete.PSDFactoryCounts",
+    "PaperVerifier.ADComplete.PSDFactoryHeights",
+    "PaperVerifier.ADComplete.PSDFoldedBitBounds",
+    "PaperVerifier.ADComplete.PSDFactoryConstants",
+    "PaperVerifier.ADComplete.PSDFactoryResources",
+    "PaperVerifier.ADComplete.SpiderGraph",
+    "PaperVerifier.ADComplete.SpiderDegrees",
+    "PaperVerifier.ADComplete.SpiderDistances",
+    "PaperVerifier.ADComplete.ADClosedWalks",
+    "PaperVerifier.ADComplete.SpiderGeometry",
+    "PaperVerifier.ADComplete.SpiderArmWalks",
+    "PaperVerifier.ADComplete.ClosedChainEquiv",
+    "PaperVerifier.ADComplete.FlatWordPaths",
+    "PaperVerifier.ADComplete.SpiderCenterChains",
+    "PaperVerifier.ADComplete.SpiderArmChains",
+    "PaperVerifier.ADComplete.NormalizedArmTuples",
+    "PaperVerifier.ADComplete.SpiderWordNormalization",
+    "PaperVerifier.ADComplete.SpiderPlacements",
+    "PaperVerifier.ADComplete.SpiderArmWeights",
+    "PaperVerifier.ADComplete.SpiderTraceWords",
+    "PaperVerifier.ADComplete.SpiderRealPolynomialLowerBound",
+    "PaperVerifier.ADComplete.FrobeniusCoordinates",
+    "PaperVerifier.ADComplete.FrobeniusProbes",
+    "PaperVerifier.ADComplete.FrobeniusTrace",
+    "PaperVerifier.ADComplete.FrobeniusGraphProbes",
+    "PaperVerifier.ADComplete.FrobeniusTables",
+    "PaperVerifier.ADComplete.FrobeniusTreeReconstruction",
+    "PaperVerifier.ADComplete.FrobeniusTreeTables",
+    "PaperVerifier.ADComplete.FullRepresentationCompiler",
+    "PaperVerifier.ADComplete.FullTraceReadout",
+    "PaperVerifier.ADComplete.FullTraceTrees",
+    "PaperVerifier.ADComplete.FullRepresentationResources",
+    "PaperVerifier.ADComplete.FullTraceBits",
+    "PaperVerifier.ADComplete.CircuitExports",
+    "PaperVerifier.ADComplete.PaperAxiomAudit"
+  ],
+  "source_snapshot": {
+    "PaperVerifier.ADComplete.Spanning": {
+      "source_sha256": "dd9317db4a182ad52958a1abf99ebf14562d9d27f6c64f1f70b881b7142128e6",
+      "local_imports": []
+    },
+    "PaperVerifier.PrincipalMomentAudit.GNS": {
+      "source_sha256": "14438b32cd4db1c69d6faa4b9e84b81851d4f4447286d45be6340ca02fe9d1c6",
+      "local_imports": []
+    },
+    "PaperVerifier.PrincipalMomentAudit.GraphSemantics": {
+      "source_sha256": "592a471af98cf145d92c287d62697f6ffc58e478ef417c5f7cd30f74561c5ef0",
+      "local_imports": [
+        "PaperVerifier.PrincipalMomentAudit.GNS"
+      ]
+    },
+    "PaperVerifier.CircuitAudit.Degrees": {
+      "source_sha256": "a404cbf6094e856ed7920be26e0bb5da89b88b2b76bd5aee93431a5bc12bfb4d",
+      "local_imports": []
+    },
+    "PaperVerifier.ADComplete.FrameSemantics": {
+      "source_sha256": "36f0760b3d9eab0d7bd1bd01bd4b3b84bee1ef14c6e079a2a1f7e6a9b3a4cf49",
+      "local_imports": [
+        "PaperVerifier.ADComplete.Spanning",
+        "PaperVerifier.PrincipalMomentAudit.GraphSemantics",
+        "PaperVerifier.CircuitAudit.Degrees"
+      ]
+    },
+    "PaperVerifier.ADComplete.GramTables": {
+      "source_sha256": "e1d8c3c6a6c95072de5720b8db2822cb4781f2894c4d7d4ddd4982c2ee2f1c4e",
+      "local_imports": [
+        "PaperVerifier.PrincipalMomentAudit.GNS"
+      ]
+    },
+    "PaperVerifier.ADComplete.Radix": {
+      "source_sha256": "b2328151bcc7991011f1df3c413acb618e0757d1b1fb77f7c8ed7245957565d8",
+      "local_imports": []
+    },
+    "PaperVerifier.ADComplete.TreeDistance": {
+      "source_sha256": "f754fba727e63b74e8a2fe769164ef0039da691e4163052bb47d1f93a2ce28bb",
+      "local_imports": [
+        "PaperVerifier.CircuitAudit.Degrees"
+      ]
+    },
+    "PaperVerifier.CircuitAudit.RadixFactorization": {
+      "source_sha256": "166328962d1dbb02983d5bbd880925070f8de0785571417447b068da260c2412",
+      "local_imports": []
+    },
+    "PaperVerifier.CircuitAudit.HornerBridge": {
+      "source_sha256": "d309407793ea1954a7b9a2a974ecee345caa39369fd1b80095c295670ddf715c",
+      "local_imports": [
+        "PaperVerifier.CircuitAudit.RadixFactorization"
+      ]
+    },
+    "PaperVerifier.CircuitAudit.WrittenPolynomialBridge": {
+      "source_sha256": "4af077bb048b29959863db0d324a36e794e873cae333cf36856f5557c1dc5975",
+      "local_imports": [
+        "PaperVerifier.CircuitAudit.Degrees",
+        "PaperVerifier.CircuitAudit.HornerBridge"
+      ]
+    },
+    "PaperVerifier.ADComplete.TreeSeparation": {
+      "source_sha256": "3ed29c804eda742a72f536f7bad2fc6faecca3deb792a26df5a6029a2474ee10",
+      "local_imports": [
+        "PaperVerifier.ADComplete.GramTables",
+        "PaperVerifier.ADComplete.Radix",
+        "PaperVerifier.ADComplete.TreeDistance",
+        "PaperVerifier.CircuitAudit.WrittenPolynomialBridge",
+        "PaperVerifier.PrincipalMomentAudit.GraphSemantics"
+      ]
+    },
+    "PaperVerifier.ADComplete.MatrixSemantics": {
+      "source_sha256": "67b9c22124de7d4e8a70722230a79ee3d7e9646676fe77219c79db5c724a4505",
+      "local_imports": [
+        "PaperVerifier.ADComplete.GramTables",
+        "PaperVerifier.ADComplete.TreeSeparation"
+      ]
+    },
+    "PaperVerifier.CircuitAudit.CircuitCosts": {
+      "source_sha256": "51767ada17433afabad7228a9930aabb6454708dce3ea37a5878be8cb14b4068",
+      "local_imports": []
+    },
+    "PaperVerifier.CircuitAudit.ProbeCircuit": {
+      "source_sha256": "abd6650d19f8c64a5ea5fd1ebae4f163863874c2be8743088bd3d16b8111e305",
+      "local_imports": [
+        "PaperVerifier.CircuitAudit.CircuitCosts",
+        "PaperVerifier.CircuitAudit.Degrees"
+      ]
+    },
+    "PaperVerifier.CircuitAudit.DistanceCircuit": {
+      "source_sha256": "9e9b9b3ccec9532a6b873334e5c177722b4467b54b8f07a90ea7a8ad68241b57",
+      "local_imports": [
+        "PaperVerifier.CircuitAudit.ProbeCircuit",
+        "PaperVerifier.CircuitAudit.Degrees"
+      ]
+    },
+    "PaperVerifier.CircuitAudit.DistanceSemantics": {
+      "source_sha256": "e221f50de7a611c926d372e23698e56497c14915a211789a9762ac75a380380c",
+      "local_imports": [
+        "PaperVerifier.CircuitAudit.DistanceCircuit"
+      ]
+    },
+    "PaperVerifier.CircuitAudit.FullCompression": {
+      "source_sha256": "1662df725aca57ed7d615f6cd6941520565c1ae4dfb1db13d2d41f5b66081ad6",
+      "local_imports": [
+        "PaperVerifier.CircuitAudit.DistanceSemantics",
+        "PaperVerifier.CircuitAudit.WrittenPolynomialBridge"
+      ]
+    },
+    "PaperVerifier.ADComplete.InstructionDegrees": {
+      "source_sha256": "1d157fd7a40eb2758062fd97c68529af4361764cf1d42a21ce082fd73c239ce7",
+      "local_imports": [
+        "PaperVerifier.CircuitAudit.FullCompression"
+      ]
+    },
+    "PaperVerifier.ADComplete.InstructionDistanceDegrees": {
+      "source_sha256": "82fe4648c3ee97838a9a4a8aec7e2ef71000ff3633806e1a2f75557ef802e70b",
+      "local_imports": [
+        "PaperVerifier.ADComplete.InstructionDegrees"
+      ]
+    },
+    "PaperVerifier.ADComplete.InstructionCompressionDegrees": {
+      "source_sha256": "a8358757d83d8e58c4632b08dc6c0f89d023716f6beee19e67144948a2692c1d",
+      "local_imports": [
+        "PaperVerifier.ADComplete.InstructionDistanceDegrees"
+      ]
+    },
+    "PaperVerifier.ADComplete.InstructionSyntaxBridge": {
+      "source_sha256": "243757269f7bea3aea0ec3cd240630fbfb2a401f7b11f23fa5a4b08ac7c32198",
+      "local_imports": [
+        "PaperVerifier.ADComplete.InstructionCompressionDegrees"
+      ]
+    },
+    "PaperVerifier.ADComplete.IntegerBounds": {
+      "source_sha256": "a98385736631de6ddbed8b6d72675ff784b8a344859919ae26f7fc0aa52f9d32",
+      "local_imports": [
+        "PaperVerifier.ADComplete.InstructionSyntaxBridge"
+      ]
+    },
+    "PaperVerifier.ADComplete.IntegerBitBounds": {
+      "source_sha256": "a8a495c1e1f1a713792ef55bc1c67ae214de2634905d91b8b493e50401e2f2ea",
+      "local_imports": [
+        "PaperVerifier.ADComplete.IntegerBounds"
+      ]
+    },
+    "PaperVerifier.ADComplete.CompiledReadout": {
+      "source_sha256": "c78355c57b8c67238fd914d8b8f0d59ec8f81dd8488b52cd7de541fa43a72158",
+      "local_imports": [
+        "PaperVerifier.ADComplete.FrameSemantics",
+        "PaperVerifier.ADComplete.MatrixSemantics",
+        "PaperVerifier.ADComplete.IntegerBitBounds",
+        "PaperVerifier.ADComplete.InstructionDegrees"
+      ]
+    },
+    "PaperVerifier.ADComplete.TraceMomentBridge": {
+      "source_sha256": "5c0cc1cea3e807ab4ceb1a3fd68b4fef112594bd939a29238a68b1917b2459ef",
+      "local_imports": [
+        "PaperVerifier.ADComplete.CompiledReadout"
+      ]
+    },
+    "PaperVerifier.ADComplete.Rigidity": {
+      "source_sha256": "c7aaf240307e59dfceff0723b70d53848412b6397ea46a603e75f5fc5c9bbd44",
+      "local_imports": []
+    },
+    "PaperVerifier.ADComplete.GraphDegreeBand": {
+      "source_sha256": "8a5b0daea0fe5c54eb7abf54b324c4bb08bc3cea38aa99b1a3bcba31d82849b9",
+      "local_imports": [
+        "PaperVerifier.ADComplete.Rigidity"
+      ]
+    },
+    "PaperVerifier.ADComplete.DifferentialKrylov": {
+      "source_sha256": "8059340a420b05a9e449d7e56e254b3c013c734076564f9df9d447b4f9c58e91",
+      "local_imports": []
+    },
+    "PaperVerifier.ADComplete.InvariantCoordinates": {
+      "source_sha256": "8b82b92fb8dbeffb4b27b0377db369c041db0233a8b95c7f25a646f643e60507",
+      "local_imports": [
+        "PaperVerifier.ADComplete.DifferentialKrylov"
+      ]
+    },
+    "PaperVerifier.ADComplete.DeterminantDerivation": {
+      "source_sha256": "c747fdda00d1f39e2e8fa3539109ac1b3055ad1813019312befad9f280740b1b",
+      "local_imports": []
+    },
+    "PaperVerifier.ADComplete.PluckerConnection": {
+      "source_sha256": "b4278308f847fdfa2c26af67ee61b8ae36afaadc9fd3b30daf7d4d03489d957d",
+      "local_imports": [
+        "PaperVerifier.ADComplete.DeterminantDerivation"
+      ]
+    },
+    "PaperVerifier.ADComplete.PluckerNonzero": {
+      "source_sha256": "56dd664d0718b918e528e0aade8e12976d7333edbc32ab87cf7630d8a89441f0",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PluckerConnection"
+      ]
+    },
+    "PaperVerifier.ADComplete.PluckerDescent": {
+      "source_sha256": "4dab745a985b7bb8b79071528a4d03eab529f64b84cab312182fdb7bdc0ade28",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PluckerConnection"
+      ]
+    },
+    "PaperVerifier.ADComplete.PolynomialPrimitivity": {
+      "source_sha256": "2fe6c7587b82de08881f58482b51eecf6d4caaa23874c7f74bb17a00d74c757e",
+      "local_imports": []
+    },
+    "PaperVerifier.ADComplete.RationalCoordinates": {
+      "source_sha256": "04eae8b61649a23e78f01e7e74ab1d26e673defd3a298ede8bc72ad401aa3576",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PolynomialPrimitivity"
+      ]
+    },
+    "PaperVerifier.ADComplete.TensorResidue": {
+      "source_sha256": "869bf4f9580f59e3bc3b328bae380f0ad239cc693fed23e7c71177d281494c0c",
+      "local_imports": [
+        "PaperVerifier.ADComplete.Rigidity"
+      ]
+    },
+    "PaperVerifier.ADComplete.TensorMatrix": {
+      "source_sha256": "9f24b9d9d01a5c13527ee6f0c95eda07b3f40a8897d386fb1a6150c79ba89c05",
+      "local_imports": [
+        "PaperVerifier.ADComplete.TensorResidue",
+        "PaperVerifier.ADComplete.PluckerConnection"
+      ]
+    },
+    "PaperVerifier.ADComplete.RationalDerivative": {
+      "source_sha256": "ea0131220103462b82132642732a3d9ed9c08bae313875697a9894c2688df815",
+      "local_imports": []
+    },
+    "PaperVerifier.ADComplete.PolynomialLine": {
+      "source_sha256": "739f641225e782f2dd5b6a10538f5dc60562489094023fe23fd9abd775b19be7",
+      "local_imports": [
+        "PaperVerifier.ADComplete.Rigidity"
+      ]
+    },
+    "PaperVerifier.ADComplete.PrimitiveLine": {
+      "source_sha256": "291adc71c2ea128470c749a69abff694b0d0c1bcec819c64a60d4203e1f33381",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PolynomialPrimitivity",
+        "PaperVerifier.ADComplete.PolynomialLine"
+      ]
+    },
+    "PaperVerifier.ADComplete.RationalLineNormalization": {
+      "source_sha256": "75bb095623fa3d1e4f7824682e4f31ff1e2b85637c2c9c7caba78044573a8d97",
+      "local_imports": [
+        "PaperVerifier.ADComplete.RationalDerivative",
+        "PaperVerifier.ADComplete.PrimitiveLine"
+      ]
+    },
+    "PaperVerifier.ADComplete.TensorBaseChange": {
+      "source_sha256": "7d3b1401d7c2b6b07393a85e9eba445ed1a9b3f94d249c8fe5d763914e46f932",
+      "local_imports": [
+        "PaperVerifier.ADComplete.TensorMatrix",
+        "PaperVerifier.ADComplete.RationalLineNormalization"
+      ]
+    },
+    "PaperVerifier.ADComplete.SmallResidueRigidity": {
+      "source_sha256": "c7e937973c868fb3db98217621439fbad313d980186c49b2893fa1d27524ab9e",
+      "local_imports": [
+        "PaperVerifier.ADComplete.InvariantCoordinates",
+        "PaperVerifier.ADComplete.PluckerNonzero",
+        "PaperVerifier.ADComplete.PluckerDescent",
+        "PaperVerifier.ADComplete.RationalCoordinates",
+        "PaperVerifier.ADComplete.TensorBaseChange"
+      ]
+    },
+    "PaperVerifier.ADComplete.ConstantFrame": {
+      "source_sha256": "3c3727e07ab22e25e6722c34e63ca37732119f93589ff18e8a617be20aa648b9",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PluckerDescent",
+        "PaperVerifier.ADComplete.RationalLineNormalization",
+        "PaperVerifier.ADComplete.DifferentialKrylov"
+      ]
+    },
+    "PaperVerifier.ADComplete.ScalarExtension": {
+      "source_sha256": "17648a34d4f32d8b2bb93000f098cd554e66a8c007d53737b319a97f948cecd3",
+      "local_imports": []
+    },
+    "PaperVerifier.ADComplete.ProbePolynomial": {
+      "source_sha256": "13576a0623b662140e3adcff287f9e987e80c03e29b9047e34e186251e48fe9e",
+      "local_imports": [
+        "PaperVerifier.ADComplete.Spanning",
+        "PaperVerifier.ADComplete.PolynomialLine",
+        "PaperVerifier.ADComplete.RationalLineNormalization",
+        "PaperVerifier.ADComplete.DifferentialKrylov"
+      ]
+    },
+    "PaperVerifier.ADComplete.ProbeKrylov": {
+      "source_sha256": "afa5700011ab421fa3ea049dab823f2fc8f6640cf859f5cbd94c02d43c98c2f6",
+      "local_imports": [
+        "PaperVerifier.ADComplete.ProbePolynomial"
+      ]
+    },
+    "PaperVerifier.ADComplete.UniformProbes": {
+      "source_sha256": "68977944298f8fe10f4564bfe4ce035f222c34a4ee2d14651ac905ddc7ddc365",
+      "local_imports": [
+        "PaperVerifier.ADComplete.SmallResidueRigidity",
+        "PaperVerifier.ADComplete.ConstantFrame",
+        "PaperVerifier.ADComplete.ScalarExtension",
+        "PaperVerifier.ADComplete.ProbeKrylov"
+      ]
+    },
+    "PaperVerifier.ADComplete.UniformProbeBounds": {
+      "source_sha256": "521130c5c28a4db524b30e06249f287572d37b16a0b7180326af70e936d0d554",
+      "local_imports": [
+        "PaperVerifier.ADComplete.UniformProbes"
+      ]
+    },
+    "PaperVerifier.PrincipalMomentAudit.Transport": {
+      "source_sha256": "3560e6b2591050becfd6274c3c1c469500e994ebe0d95d5bba363441e1d6c343",
+      "local_imports": []
+    },
+    "PaperVerifier.PrincipalMomentAudit.Basic": {
+      "source_sha256": "91a68b1f13d6cfe00f8a1f158e3e38957a0179235b5f0f28bd1a9c6a40fa73e8",
+      "local_imports": []
+    },
+    "PaperVerifier.PrincipalMomentAudit.ForestPruning": {
+      "source_sha256": "03c32328b4d2a88243ba210a7ed17fe8df197f5fcd3ba25eaea0df7b4abec86a",
+      "local_imports": [
+        "PaperVerifier.PrincipalMomentAudit.Basic"
+      ]
+    },
+    "PaperVerifier.PrincipalMomentAudit.PruningExpressions": {
+      "source_sha256": "cfc2559fab0bf7ab8956a2586d9e331cce67bc969da21030194c35a4040e03bd",
+      "local_imports": [
+        "PaperVerifier.PrincipalMomentAudit.Transport"
+      ]
+    },
+    "PaperVerifier.PrincipalMomentAudit.SelectorEvaluation": {
+      "source_sha256": "b0cfbae3a2e7c18f425ddeca3405067d12b89f3ca294ca774902996474028bc5",
+      "local_imports": [
+        "PaperVerifier.PrincipalMomentAudit.Transport",
+        "PaperVerifier.PrincipalMomentAudit.ForestPruning",
+        "PaperVerifier.PrincipalMomentAudit.PruningExpressions"
+      ]
+    },
+    "PaperVerifier.PrincipalMomentAudit.Quotient": {
+      "source_sha256": "e3e508e1c65090b0d795446c766d9e306c276bb9ff1df224cd15bcf7bfeddce4",
+      "local_imports": [
+        "PaperVerifier.PrincipalMomentAudit.Transport"
+      ]
+    },
+    "PaperVerifier.PrincipalMomentAudit.OrbitQuotient": {
+      "source_sha256": "617d23cd6c83172079fcc9a8773036dd6fc0fab76e020d9094041bb3999f8c12",
+      "local_imports": [
+        "PaperVerifier.PrincipalMomentAudit.GraphSemantics"
+      ]
+    },
+    "PaperVerifier.PrincipalMomentAudit.IntrinsicRecovery": {
+      "source_sha256": "db6023112e5027880694949eb4e999fee005b6d02ae474303b984de3ab8bc16f",
+      "local_imports": [
+        "PaperVerifier.PrincipalMomentAudit.SelectorEvaluation",
+        "PaperVerifier.PrincipalMomentAudit.Quotient",
+        "PaperVerifier.PrincipalMomentAudit.OrbitQuotient"
+      ]
+    },
+    "PaperVerifier.PrincipalMomentAudit.PrincipalExpressions": {
+      "source_sha256": "2026ad596925ad277c4f256086e0c51cb796744ba646704bdefb4b46028d4d10",
+      "local_imports": [
+        "PaperVerifier.PrincipalMomentAudit.GraphSemantics",
+        "PaperVerifier.PrincipalMomentAudit.OrbitQuotient",
+        "PaperVerifier.PrincipalMomentAudit.SelectorEvaluation"
+      ]
+    },
+    "PaperVerifier.PrincipalMomentAudit.SharedVectorFamily": {
+      "source_sha256": "93cd8923909ce556a68d54eff21e42d9eff0cda9de96884dcccc348f9a33b48e",
+      "local_imports": [
+        "PaperVerifier.PrincipalMomentAudit.IntrinsicRecovery",
+        "PaperVerifier.PrincipalMomentAudit.PrincipalExpressions"
+      ]
+    },
+    "PaperVerifier.PrincipalMomentAudit.LeafGrafting": {
+      "source_sha256": "8ae88885dde3f42f0a1777df4a6c276da6a636ace600b0078f4e5c0d13f0ee77",
+      "local_imports": []
+    },
+    "PaperVerifier.PrincipalMomentAudit.PruningLift": {
+      "source_sha256": "92f8a219f05f3b8e54b224ff254c5ef37fc987dccb9d1225e673138fbe4a54b3",
+      "local_imports": [
+        "PaperVerifier.PrincipalMomentAudit.LeafGrafting",
+        "PaperVerifier.PrincipalMomentAudit.ForestPruning"
+      ]
+    },
+    "PaperVerifier.PrincipalMomentAudit.RootedOrbit": {
+      "source_sha256": "80904be34e37bd262cd8366a5769b7a32225a040e73fcf5418ff48492b89863b",
+      "local_imports": []
+    },
+    "PaperVerifier.PrincipalMomentAudit.TerminalOrbits": {
+      "source_sha256": "0cf496227ec921d79806635ee889181078a01466165117c6934be9e32ba742dd",
+      "local_imports": [
+        "PaperVerifier.PrincipalMomentAudit.RootedOrbit",
+        "PaperVerifier.PrincipalMomentAudit.PruningLift"
+      ]
+    },
+    "PaperVerifier.PrincipalMomentAudit.TreeReconstruction": {
+      "source_sha256": "fc721adad9f9a8f5ab955998b55c4de11ae4907618ea2e69e0d8f317a32d241d",
+      "local_imports": []
+    },
+    "PaperVerifier.PrincipalMomentAudit.PointedSupport": {
+      "source_sha256": "ce5fc8c7c126ba4a694fcee126e0b5dfeba26fbafc3052ae0fb81ae72fc22ee2",
+      "local_imports": [
+        "PaperVerifier.PrincipalMomentAudit.TreeReconstruction"
+      ]
+    },
+    "PaperVerifier.PrincipalMomentAudit.PointedGrafting": {
+      "source_sha256": "894a7839c74145e0c326b733ac4927f3d453bf76dd2b5bb37934a7b64078a9c7",
+      "local_imports": [
+        "PaperVerifier.PrincipalMomentAudit.LeafGrafting",
+        "PaperVerifier.PrincipalMomentAudit.PointedSupport"
+      ]
+    },
+    "PaperVerifier.PrincipalMomentAudit.PruningOrbits": {
+      "source_sha256": "a7a33e2a2a547739690341bc084acbd98d79b508dfe0674b9aa0be6d94792035",
+      "local_imports": [
+        "PaperVerifier.PrincipalMomentAudit.PruningLift",
+        "PaperVerifier.PrincipalMomentAudit.TerminalOrbits",
+        "PaperVerifier.PrincipalMomentAudit.PointedGrafting"
+      ]
+    },
+    "PaperVerifier.PrincipalMomentAudit.StageGeometry": {
+      "source_sha256": "87abedfba11205800c0fa3d17fe23986859526e0932f0d10994cd0f278050e4e",
+      "local_imports": [
+        "PaperVerifier.PrincipalMomentAudit.ForestPruning"
+      ]
+    },
+    "PaperVerifier.PrincipalMomentAudit.StageCounts": {
+      "source_sha256": "c7edbf730bdf52d75aae1b3dd427dbdae9b662e71d2a84f03e63b0855ece5eb9",
+      "local_imports": [
+        "PaperVerifier.PrincipalMomentAudit.StageGeometry"
+      ]
+    },
+    "PaperVerifier.PrincipalMomentAudit.StageOrbitLifting": {
+      "source_sha256": "83fafe8f393b6dd4c986475f1c271afed52f8581acb335a2fe3e7e3e347772db",
+      "local_imports": [
+        "PaperVerifier.PrincipalMomentAudit.PruningOrbits",
+        "PaperVerifier.PrincipalMomentAudit.StageCounts",
+        "PaperVerifier.PrincipalMomentAudit.SelectorEvaluation"
+      ]
+    },
+    "PaperVerifier.PrincipalMomentAudit.PeeledOrbitGeometry": {
+      "source_sha256": "ad55b567410066d51007872abf94a53b0c0a4b03484b364b3607ed99d4df017f",
+      "local_imports": [
+        "PaperVerifier.PrincipalMomentAudit.StageOrbitLifting",
+        "PaperVerifier.PrincipalMomentAudit.SharedVectorFamily"
+      ]
+    },
+    "PaperVerifier.PrincipalMomentAudit.TreeRigidity": {
+      "source_sha256": "a32a58216ea36c1d516ca8341a5d8b5434644b4914caca71100f97b95ceb62cc",
+      "local_imports": [
+        "PaperVerifier.PrincipalMomentAudit.TreeReconstruction",
+        "PaperVerifier.PrincipalMomentAudit.ForestPruning",
+        "PaperVerifier.PrincipalMomentAudit.LeafGrafting"
+      ]
+    },
+    "PaperVerifier.PrincipalMomentAudit.WeightedQuotientRigidity": {
+      "source_sha256": "55d3e501769f12472b002ee1371a4fd4c3b32fc6453010d353005829d1e9cdce",
+      "local_imports": [
+        "PaperVerifier.PrincipalMomentAudit.OrbitQuotient",
+        "PaperVerifier.PrincipalMomentAudit.TreeRigidity"
+      ]
+    },
+    "PaperVerifier.PrincipalMomentAudit.SharedFamilyMomentRigidity": {
+      "source_sha256": "9308c990b0f3a90162b4d7833b350e4c9fe5447336c699d7f8b0d436edf19a94",
+      "local_imports": [
+        "PaperVerifier.PrincipalMomentAudit.PrincipalExpressions",
+        "PaperVerifier.PrincipalMomentAudit.WeightedQuotientRigidity"
+      ]
+    },
+    "PaperVerifier.PrincipalMomentAudit.FinalOrbitGeometry": {
+      "source_sha256": "a3c32f6fad671ad3a9546e0c3664bd932919ce888d537c8818a1dcfd6e767f7b",
+      "local_imports": [
+        "PaperVerifier.PrincipalMomentAudit.SharedVectorFamily",
+        "PaperVerifier.PrincipalMomentAudit.StageOrbitLifting",
+        "PaperVerifier.PrincipalMomentAudit.PeeledOrbitGeometry",
+        "PaperVerifier.PrincipalMomentAudit.SharedFamilyMomentRigidity"
+      ]
+    },
+    "PaperVerifier.PrincipalMomentAudit.OrbitRepresentation": {
+      "source_sha256": "78d0207e1eadec11e88395a7b09fbb4e7266269ba41ff1c93d4f14bf14a4d5dd",
+      "local_imports": [
+        "PaperVerifier.PrincipalMomentAudit.OrbitQuotient",
+        "PaperVerifier.PrincipalMomentAudit.SelectorEvaluation"
+      ]
+    },
+    "PaperVerifier.PrincipalMomentAudit.StageQuotientCounts": {
+      "source_sha256": "7c4c84b13f9abc216651388259cd9835664ee58165a778bc46ae8a9f7d18c73c",
+      "local_imports": [
+        "PaperVerifier.PrincipalMomentAudit.PeeledOrbitGeometry",
+        "PaperVerifier.PrincipalMomentAudit.OrbitRepresentation",
+        "PaperVerifier.PrincipalMomentAudit.Quotient"
+      ]
+    },
+    "PaperVerifier.PrincipalMomentAudit.PointedTransport": {
+      "source_sha256": "515126c200434a12698edfab42b38435d9d8201e9e6fd638560d4315a272bc5b",
+      "local_imports": [
+        "PaperVerifier.PrincipalMomentAudit.GNS"
+      ]
+    },
+    "PaperVerifier.PrincipalMomentAudit.SharedCoordinateFamily": {
+      "source_sha256": "ae7b761ba009da07e0b51f6f0f58f6320e87466fe7bf448585018baf041b588d",
+      "local_imports": [
+        "PaperVerifier.PrincipalMomentAudit.FinalOrbitGeometry",
+        "PaperVerifier.PrincipalMomentAudit.OrbitRepresentation",
+        "PaperVerifier.PrincipalMomentAudit.StageQuotientCounts",
+        "PaperVerifier.PrincipalMomentAudit.PointedTransport"
+      ]
+    },
+    "PaperVerifier.PrincipalMomentAudit.WrittenProof": {
+      "source_sha256": "3e394197b60011058f9c90aa3b86a501547755e8a8da08f7aab1efae65960078",
+      "local_imports": [
+        "PaperVerifier.PrincipalMomentAudit.SharedCoordinateFamily",
+        "PaperVerifier.PrincipalMomentAudit.WeightedQuotientRigidity"
+      ]
+    },
+    "PaperVerifier.ADComplete.FinalTreeSeparation": {
+      "source_sha256": "fdb93d8538327936714961f5f1efb7f1b4cb47d472eb850e41c2a17a13969c4f",
+      "local_imports": [
+        "PaperVerifier.ADComplete.TraceMomentBridge",
+        "PaperVerifier.ADComplete.GraphDegreeBand",
+        "PaperVerifier.ADComplete.UniformProbeBounds",
+        "PaperVerifier.PrincipalMomentAudit.WrittenProof"
+      ]
+    },
+    "PaperVerifier.ADComplete.SpectralBands": {
+      "source_sha256": "bced0ff6755d0ba7d1af0cc781808cc5c79f3ef2e59769d6fa497dc390e30920",
+      "local_imports": [
+        "PaperVerifier.ADComplete.Rigidity"
+      ]
+    },
+    "PaperVerifier.ADComplete.SpectralUniformProbes": {
+      "source_sha256": "59d902313d54a0eba16c81f4d21d96ef98aa92bf56a0449fc64353eaa5d98a67",
+      "local_imports": [
+        "PaperVerifier.ADComplete.SpectralBands",
+        "PaperVerifier.ADComplete.UniformProbeBounds"
+      ]
+    },
+    "PaperVerifier.ADComplete.DifferentialRank": {
+      "source_sha256": "39e69ab9bee8d9df0e1516d3e1ae0c69f937b7eb0060c5a39457e0ffd8a1410e",
+      "local_imports": [
+        "PaperVerifier.ADComplete.DifferentialKrylov"
+      ]
+    },
+    "PaperVerifier.ADComplete.RankSensitiveProbes": {
+      "source_sha256": "4ad8ea44717b7c0b388e1c45ce48bfaeee199500511c3596aade4d5bf8ca16b8",
+      "local_imports": [
+        "PaperVerifier.ADComplete.SmallResidueRigidity",
+        "PaperVerifier.ADComplete.ConstantFrame",
+        "PaperVerifier.ADComplete.ScalarExtension",
+        "PaperVerifier.ADComplete.ProbeKrylov",
+        "PaperVerifier.ADComplete.DifferentialRank"
+      ]
+    },
+    "PaperVerifier.ADComplete.SpectralRankSensitiveProbes": {
+      "source_sha256": "3c69995f9cfa4e9643ec7a5cd804988c108cb38bbaaa38925ad0254b1a515937",
+      "local_imports": [
+        "PaperVerifier.ADComplete.SpectralBands",
+        "PaperVerifier.ADComplete.RankSensitiveProbes"
+      ]
+    },
+    "PaperVerifier.ADComplete.SpectralRigidity": {
+      "source_sha256": "1cf25fac3b6507842227b26f809f84c3b791e019529d0bd48eae4e0a893c141a",
+      "local_imports": [
+        "PaperVerifier.ADComplete.SmallResidueRigidity",
+        "PaperVerifier.ADComplete.SpectralBands",
+        "PaperVerifier.ADComplete.ConstantFrame"
+      ]
+    },
+    "PaperVerifier.ADComplete.ProbeDegreeLowerBound": {
+      "source_sha256": "9790f0face053109561308c6294eb3b3c32899755920311a0fb7e6af1749cb33",
+      "local_imports": [
+        "PaperVerifier.ADComplete.Spanning",
+        "PaperVerifier.CircuitAudit.Degrees"
+      ]
+    },
+    "PaperVerifier.ADComplete.RealPolynomialDegreeLowerBound": {
+      "source_sha256": "ee66164cdf5df8dbe3274daf211137ff2a3c3969d2c36923402100834112a825",
+      "local_imports": [
+        "PaperVerifier.ADComplete.ProbeDegreeLowerBound"
+      ]
+    },
+    "PaperVerifier.ADComplete.RealDegreeWitness": {
+      "source_sha256": "b3a2eb8226403afac8bae4626ecc41fd75ae3665270455511175b587546de5a3",
+      "local_imports": [
+        "PaperVerifier.ADComplete.RealPolynomialDegreeLowerBound"
+      ]
+    },
+    "PaperVerifier.ADComplete.InstructionHeights": {
+      "source_sha256": "2d9019863128c059f4fdff779098faedaff5b9369944489c6f1d332ba5089715",
+      "local_imports": [
+        "PaperVerifier.ADComplete.InstructionSyntaxBridge"
+      ]
+    },
+    "PaperVerifier.ADComplete.InstructionDistanceHeights": {
+      "source_sha256": "7c0de474efcaeb8e9a32cc968c5b137593d2d2c38eb8c9c109bcaf19f5e742b2",
+      "local_imports": [
+        "PaperVerifier.ADComplete.InstructionHeights"
+      ]
+    },
+    "PaperVerifier.ADComplete.InstructionCompressionHeights": {
+      "source_sha256": "0ede8e3c608df98c29f56245215f846e77dc3af42cb89f5ed06294eb5c49a6ac",
+      "local_imports": [
+        "PaperVerifier.ADComplete.InstructionDistanceHeights"
+      ]
+    },
+    "PaperVerifier.ADComplete.InstructionNormBridge": {
+      "source_sha256": "c48b2e157bc9a179dd192d790704712fccfa0f3773086e5524629e03686e5214",
+      "local_imports": [
+        "PaperVerifier.ADComplete.InstructionHeights",
+        "PaperVerifier.ADComplete.IntegerBounds"
+      ]
+    },
+    "PaperVerifier.ADComplete.InstructionResources": {
+      "source_sha256": "42d06e3f584bce9146f338bf576d0bcd052c2b4600abafeb7d0ebb9539a39d6d",
+      "local_imports": [
+        "PaperVerifier.ADComplete.InstructionCompressionHeights",
+        "PaperVerifier.ADComplete.InstructionNormBridge",
+        "PaperVerifier.ADComplete.IntegerBitBounds"
+      ]
+    },
+    "PaperVerifier.ADComplete.InstructionSharpBits": {
+      "source_sha256": "509f8cdc677ccb01bc39117891cc67aa0c91dd0220dab2df7f90a2fadb218bac",
+      "local_imports": [
+        "PaperVerifier.ADComplete.InstructionResources"
+      ]
+    },
+    "PaperVerifier.ADComplete.InstructionPolynomial": {
+      "source_sha256": "6af9c64cf2f7b89630d8250b44df42a875ac65371d3209d293ee2111ed3eef05",
+      "local_imports": [
+        "PaperVerifier.ADComplete.InstructionSharpBits"
+      ]
+    },
+    "PaperVerifier.ADComplete.MainResourceEndpoints": {
+      "source_sha256": "1617731ae4193dd6f061857208d573b18d9cc574a82e005c62c9213278c682ae",
+      "local_imports": [
+        "PaperVerifier.ADComplete.InstructionSharpBits",
+        "PaperVerifier.ADComplete.CompiledReadout"
+      ]
+    },
+    "PaperVerifier.ADComplete.PolynomialFrameIsometry": {
+      "source_sha256": "f81ed85d0b426fa21d2cab431ab431329847ce12787382e67b6c94df57cc13f2",
+      "local_imports": [
+        "PaperVerifier.ADComplete.GramTables"
+      ]
+    },
+    "PaperVerifier.ADComplete.FixedPointedTables": {
+      "source_sha256": "03097ccae76bd788364bcaf64f682e2bfaee2202b20f216c367eaca08957f7e7",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PolynomialFrameIsometry",
+        "PaperVerifier.ADComplete.FrameSemantics",
+        "PaperVerifier.ADComplete.SpectralUniformProbes"
+      ]
+    },
+    "PaperVerifier.ADComplete.PointedCoordinateDegree": {
+      "source_sha256": "a4b8d94926fc408bf4f71b0542db6c2c5d93415808278f86c8b0b5b88b316ba3",
+      "local_imports": [
+        "PaperVerifier.CircuitAudit.Degrees"
+      ]
+    },
+    "PaperVerifier.ADComplete.PointedPolynomialCoordinates": {
+      "source_sha256": "80d0f7692ff895d98209c4c2df125fbbcc1b7945dbc90878f3f87e56869c7b4e",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PointedCoordinateDegree",
+        "PaperVerifier.ADComplete.FixedPointedTables"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDHomogeneousLift": {
+      "source_sha256": "e1e69c45245d28f3193278db5bed537fec40f4b696590c3e536ba40d8c1668bb",
+      "local_imports": []
+    },
+    "PaperVerifier.ADComplete.PSDBirdEntry": {
+      "source_sha256": "ad22da6259dabc5ddfdf7403c1eaf8616d65a04ed4d6d888f92759ee994c908a",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDHomogeneousLift",
+        "PaperVerifier.ADComplete.InstructionCompressionDegrees"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDBirdCompiler": {
+      "source_sha256": "6ed0db34d8e2d27f4afb5345af66689db5bd6ad02dc58680177ed84dd552c8ba",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDBirdEntry"
+      ]
+    },
+    "PaperVerifier.ADComplete.BirdCertificate": {
+      "source_sha256": "7880778afa8d44ca1d038028fe5c5532e9a6f074c27d74bae10767c85ec39acb",
+      "local_imports": []
+    },
+    "PaperVerifier.ADComplete.PSDBirdDeterminant": {
+      "source_sha256": "b1bcb86c7b892fa0a7510c52122d6ff0ccf85c7d16256967ae54f2b5bbae8902",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDBirdCompiler",
+        "PaperVerifier.ADComplete.BirdCertificate"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDBirdSafety": {
+      "source_sha256": "1e4a00543999a3841231dc49880d74c2a9a49e543aee2128cfb5e5a3c658f31b",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDBirdCompiler"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDBirdDegrees": {
+      "source_sha256": "19f64a3c0bd794a6cc5792a51947f7d46f2bded4ed8e92ca490942ec8176d818",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDBirdCompiler"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDGramEntry": {
+      "source_sha256": "5e06519da29b8b0ca3033fa9415772205107b67fa3406b8b446ccf77f48d229a",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDBirdDeterminant",
+        "PaperVerifier.ADComplete.PSDBirdSafety",
+        "PaperVerifier.ADComplete.PSDBirdDegrees"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDGramCompiler": {
+      "source_sha256": "4f0edabaab8592e8005caa23ffa0b653d978dca661dc0de41fbf6e3108b2ac8a",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDGramEntry"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDResidualCompiler": {
+      "source_sha256": "ea9208b826e477b9a615b578eb654211397fa7730b2a2876da08a7125514f57b",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDGramCompiler"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDFoldCompiler": {
+      "source_sha256": "8d1a9c4e8fbd6f82c8afc307ce103bc218d33113180ff5974085e8833fce8083",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDResidualCompiler"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDMinorsCompiler": {
+      "source_sha256": "0807706c96ff56235d717ca4ca94d0e91aff0de5e44d452392c2fb0f02321e60",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDGramCompiler"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDFoldedScaling": {
+      "source_sha256": "5d1f691feb969f60d1562e1c1747df54f7e13cae288c07ea5fd50d55cc50903b",
+      "local_imports": []
+    },
+    "PaperVerifier.ADComplete.PSDFoldedLine": {
+      "source_sha256": "380ce1fd85368033c513fb92e99fab9ca456dc1e68fc775eb4551d2e512fffd2",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDFoldedScaling",
+        "PaperVerifier.ADComplete.PolynomialPrimitivity"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDFoldedKrylov": {
+      "source_sha256": "559091c66a7226e6669ac65122c2eaca894a6bd9f2bc377954f7d61fb4520304",
+      "local_imports": [
+        "PaperVerifier.ADComplete.DifferentialKrylov"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDFoldedSubspace": {
+      "source_sha256": "94cdd328e6982a496e66014f2f7ab688a1ce48b8b33036f57016227ab5305c37",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDFoldedLine",
+        "PaperVerifier.ADComplete.PSDFoldedKrylov",
+        "PaperVerifier.ADComplete.InvariantCoordinates",
+        "PaperVerifier.ADComplete.PluckerNonzero",
+        "PaperVerifier.ADComplete.PluckerDescent",
+        "PaperVerifier.ADComplete.RationalCoordinates"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDFoldedPrefix": {
+      "source_sha256": "a3607939fff73b51af7e0d4316fbd9c5ec5e31116997e4ebf371c8a9a16f2852",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDFoldedKrylov"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDSpecialization": {
+      "source_sha256": "91a528f6e4b16b241ec24676c15aa6bcfef04c62bcad71f86ee333cc340831d2",
+      "local_imports": []
+    },
+    "PaperVerifier.ADComplete.PSDPolynomialHeight": {
+      "source_sha256": "f4b8ce96313b948640091044169e7bb42ed1407e31cb6590dd380b4f2fb9f54f",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDSpecialization"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDFoldedFrame": {
+      "source_sha256": "4f345e86779cfd0a83de90a6980af7aa9d0d708a640b48dacfbfba8631f0ad7f",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDFoldedSubspace",
+        "PaperVerifier.ADComplete.PSDFoldedPrefix",
+        "PaperVerifier.ADComplete.PSDPolynomialHeight",
+        "PaperVerifier.ADComplete.ConstantFrame",
+        "PaperVerifier.ADComplete.ScalarExtension"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDFactoryDefinition": {
+      "source_sha256": "5e9c4d40e9673c215669cd0d81318ba51fbc131998a6a75846bca79ebbfdf99b",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDFoldCompiler",
+        "PaperVerifier.ADComplete.PSDMinorsCompiler",
+        "PaperVerifier.ADComplete.PSDFoldedFrame",
+        "PaperVerifier.ADComplete.IntegerBounds"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDFactoryDegrees": {
+      "source_sha256": "a691966b9475625b2b1ce933f49b57db730472f7f306a77b8baabc619178a104",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDFactoryDefinition",
+        "PaperVerifier.ADComplete.InstructionDistanceDegrees"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDFrameSemantics": {
+      "source_sha256": "4adde0bb3147ceae92b363a8243a9c015d728ca10a09a117eece23754b407994",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDFactoryDegrees"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDFactoryValues": {
+      "source_sha256": "3af06543d9f030c7beede3fbbbc474a076d82782ea2aa9c6f1f934b526455faf",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDFactoryDegrees"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDResidualScanClosed": {
+      "source_sha256": "58e72cd249d8972ef25b4593d04a6382c802ca1ac664133b53570867d35943df",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDFactoryValues"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDScalarExtension": {
+      "source_sha256": "275690ea7e308eb431f482f4822f237460b1fac7c2f713ddddc49a0e58074e8d",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDFoldedScaling",
+        "PaperVerifier.ADComplete.PSDFoldedKrylov",
+        "PaperVerifier.ADComplete.ScalarExtension"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDFoldedRank": {
+      "source_sha256": "e0274edc0c3c47ef469a025c86b0c9e4f238c7d19e48ef2728da2f87c3a3ed5f",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDFoldedSubspace",
+        "PaperVerifier.ADComplete.PSDFoldedPrefix",
+        "PaperVerifier.ADComplete.PSDScalarExtension",
+        "PaperVerifier.ADComplete.ConstantFrame"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDFoldedInteger": {
+      "source_sha256": "d2604812778a00889306f2139cfb1499db03c61c09a61b82b1fc213c17c46f49",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDFoldedFrame",
+        "PaperVerifier.ADComplete.PSDFoldedRank"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDResidual": {
+      "source_sha256": "3a15cdf6267557bbed718a0d2f0b2695f0b29f5aa5229eb5770745c2d7a577ad",
+      "local_imports": []
+    },
+    "PaperVerifier.ADComplete.PSDCyclic": {
+      "source_sha256": "7542276fb8e2a74ea4276c84bf912588b9e06fac38d1745e79e33d578d92207d",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDResidual",
+        "PaperVerifier.ADComplete.DifferentialKrylov"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDFoldedSpecialization": {
+      "source_sha256": "4be2d95164e2fbc0ab198040e2ee32c71c106bb20ab4a8bf1b58a30967e66531",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDFoldedInteger",
+        "PaperVerifier.ADComplete.PSDCyclic"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDFoldedBound": {
+      "source_sha256": "93203952eb992eb326700428a43a59739372823c300a340ac35faa0fc906d5ce",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDFoldedFrame"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDFoldedFixed": {
+      "source_sha256": "750e1fbd6e9e19c63196c1c6261b397a17209745980ca1a4db1ce5eebe55ad60",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDFoldedSpecialization",
+        "PaperVerifier.ADComplete.PSDFoldedBound"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDCyclicAction": {
+      "source_sha256": "e8373965ba72777d5b3f67062ae6babe4b6b27df9018a5e6acb3ba41611b1e65",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDCyclic"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDCyclicPowers": {
+      "source_sha256": "de1a633886e43fc606e33122ba285cf3fe5e377eeb1aab519a0dc4848cffe581",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDCyclicAction"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDResidualPrefix": {
+      "source_sha256": "5954ccd8d8899d0ca5f568a4daa4fac374b0cc4b1844654796737039dd3086af",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDResidual",
+        "PaperVerifier.ADComplete.PSDCyclicAction"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDResidualIndependence": {
+      "source_sha256": "e582e890581d40f5547e59f343ef9a72191365662ee28027248fdf2fbd09abce",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDResidualPrefix"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDRescaling": {
+      "source_sha256": "98b6e488a053bea99eca5dae61b8bdb8d0fc50aab561fcfed89e87b573039376",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDCyclicPowers",
+        "PaperVerifier.ADComplete.PSDResidualIndependence"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDRepresentative": {
+      "source_sha256": "07c5c196b4d6e5151410d871422040d437435eb6ababeac58b48c5653f0db89f",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDRescaling"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDFoldedRepresentative": {
+      "source_sha256": "ca6c5aada37604e1df55e472311c91855b2bf3edc0c3cd44b703cb630673e72e",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDFoldedFixed",
+        "PaperVerifier.ADComplete.PSDRepresentative"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDCramerBridge": {
+      "source_sha256": "c0731a8bd5f11cfde910bf63165667e71b9847b6286f15a10b170cc65740bb2d",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDResidualScanClosed",
+        "PaperVerifier.ADComplete.PSDFoldedRepresentative"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDSOSBridge": {
+      "source_sha256": "f5e824d8f19c4955531348dcc19722675ca7ee31dfdb0b2f52aa0d3877235014",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDCramerBridge"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDFoldedLiteral": {
+      "source_sha256": "abadbd097b30c783ac2e34a43ef547233ee73576cca891fd6b8ec79f99582678",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDFoldedFixed",
+        "PaperVerifier.ADComplete.PSDFoldCompiler",
+        "PaperVerifier.CircuitAudit.WrittenPolynomialBridge"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDCompiledValue": {
+      "source_sha256": "d3904be9190cfbfc47804e3ff89a0c192e1dc3c1ca7dc358c3b6c4e5e02396a7",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDFrameSemantics",
+        "PaperVerifier.ADComplete.PSDSOSBridge",
+        "PaperVerifier.ADComplete.PSDFoldedLiteral",
+        "PaperVerifier.ADComplete.MatrixSemantics"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDGraphFrame": {
+      "source_sha256": "bf0a8fc85cc8d8acc429a6ec53c629cf6f1976bf594874892269df863bbead1d",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDFoldedLiteral",
+        "PaperVerifier.ADComplete.PSDFoldedRepresentative",
+        "PaperVerifier.ADComplete.FinalTreeSeparation"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDPairStar": {
+      "source_sha256": "f48044fb6b5c8e685bfd20c1e1fd61a6ea5fb6cf6f214d80839d37cdcc450d60",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDFactoryDefinition"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDFactoryStar": {
+      "source_sha256": "2c604913babcecb1539d580edd8b52c1c7907827437ba6eb8b65aff5dfa12ee2",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDPairStar",
+        "PaperVerifier.ADComplete.PSDFactoryDegrees",
+        "PaperVerifier.ADComplete.InstructionPolynomial"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDFactorySOS": {
+      "source_sha256": "b2863012ac0183414ebfaeb6cbdc6d182cb2354fbb393799de8f6047f4ca1116",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDFactoryStar"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDTreeRepresentative": {
+      "source_sha256": "d40821c3444dc1398ae79c7b7ed39f358a217d88ccf99280b258c179fe0d864e",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDCompiledValue",
+        "PaperVerifier.ADComplete.PSDGraphFrame",
+        "PaperVerifier.ADComplete.PSDFactorySOS"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDBirdHeights": {
+      "source_sha256": "aa026477ebdf46094c37b6479c21bb9c9836e6817783ee122c481ceb1ca9b201",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDBirdCompiler",
+        "PaperVerifier.ADComplete.InstructionCompressionHeights"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDOperationHeights": {
+      "source_sha256": "69e856e3e328ede7ebde7932b46ea4671031421edaca15c6d88aa8106fb13324",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDBirdHeights",
+        "PaperVerifier.ADComplete.PSDFactoryDegrees"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDFactoryCounts": {
+      "source_sha256": "5ad16e2cddd1eb5065ffc230d4a3d3e4d53bf6ae76040a79256fe9aae610e8b9",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDFactoryDegrees"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDFactoryHeights": {
+      "source_sha256": "c2df03b24c09e0e1dbb9791c895569483696cfb1bdd195c4985709b048cf34d6",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDOperationHeights",
+        "PaperVerifier.ADComplete.PSDFactoryCounts"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDFoldedBitBounds": {
+      "source_sha256": "7e2c73224d0d0f98c5c17e67635f35bf48d28bbdaf80d2fd3c3d1e5a0dce146b",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDFactoryDefinition",
+        "PaperVerifier.ADComplete.IntegerBitBounds"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDFactoryConstants": {
+      "source_sha256": "320836d571ac58ab01fd6a67de5e575f110edd8a70c326f1a79ce564360c3bfc",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDFactoryHeights",
+        "PaperVerifier.ADComplete.PSDFoldedBitBounds",
+        "PaperVerifier.ADComplete.InstructionResources"
+      ]
+    },
+    "PaperVerifier.ADComplete.PSDFactoryResources": {
+      "source_sha256": "4032e9578fa2ff9f1806aae4f3e5bd393138b00be3b3f49f53d921bfe8fd1bd2",
+      "local_imports": [
+        "PaperVerifier.ADComplete.PSDFactoryConstants"
+      ]
+    },
+    "PaperVerifier.ADComplete.SpiderGraph": {
+      "source_sha256": "1a52a19300044874dc6296fb776e9ed37017fe7804750700e1341361cabbd9d5",
+      "local_imports": []
+    },
+    "PaperVerifier.ADComplete.SpiderDegrees": {
+      "source_sha256": "a8485667705c0a5199e4a1f2cd524d4428c14c79bc730077ab4edd717c1eff68",
+      "local_imports": [
+        "PaperVerifier.ADComplete.SpiderGraph"
+      ]
+    },
+    "PaperVerifier.ADComplete.SpiderDistances": {
+      "source_sha256": "9f9957cc2771139efdb33feb5d49feae2f3be825e22df82ee7cce24b24de96f8",
+      "local_imports": [
+        "PaperVerifier.ADComplete.SpiderDegrees"
+      ]
+    },
+    "PaperVerifier.ADComplete.ADClosedWalks": {
+      "source_sha256": "a0c88747ebea8e76abc697d347eabbc3d39ebad33ad3427cc4d83199852a8784",
+      "local_imports": []
+    },
+    "PaperVerifier.ADComplete.SpiderGeometry": {
+      "source_sha256": "79a78fe3393883d72cfe163b349871242635524fc7c0556a01c0e444330c66e5",
+      "local_imports": [
+        "PaperVerifier.ADComplete.SpiderDistances",
+        "PaperVerifier.ADComplete.ADClosedWalks"
+      ]
+    },
+    "PaperVerifier.ADComplete.SpiderArmWalks": {
+      "source_sha256": "5f5b8a0ec362ed08c73fee1642a049cc1e2381f31ef384a9a40dc17097150f93",
+      "local_imports": [
+        "PaperVerifier.ADComplete.SpiderGeometry"
+      ]
+    },
+    "PaperVerifier.ADComplete.ClosedChainEquiv": {
+      "source_sha256": "247d064353da1415ac0f30410a9c4bc7e05b9e2689b9e81444055629c3652498",
+      "local_imports": [
+        "PaperVerifier.ADComplete.ADClosedWalks"
+      ]
+    },
+    "PaperVerifier.ADComplete.FlatWordPaths": {
+      "source_sha256": "c1147a39240c0a3925396c9bec9c789fe8374c06fa13332929d07c35eedb0ffe",
+      "local_imports": [
+        "PaperVerifier.ADComplete.ClosedChainEquiv"
+      ]
+    },
+    "PaperVerifier.ADComplete.SpiderCenterChains": {
+      "source_sha256": "34df65189e1705599c7b9ed764b4ebbf0c2275a4abbd694092b2d15b606710e6",
+      "local_imports": [
+        "PaperVerifier.ADComplete.SpiderArmWalks",
+        "PaperVerifier.ADComplete.FlatWordPaths"
+      ]
+    },
+    "PaperVerifier.ADComplete.SpiderArmChains": {
+      "source_sha256": "4a68a5c221c64474f3ed628736377e3bc66c712488f85ad5cb695c05e1e93e2f",
+      "local_imports": [
+        "PaperVerifier.ADComplete.SpiderArmWalks",
+        "PaperVerifier.ADComplete.FlatWordPaths"
+      ]
+    },
+    "PaperVerifier.ADComplete.NormalizedArmTuples": {
+      "source_sha256": "238f58e7451b7ada39b0ce519815238494059ad6bf595dd6e4e96a71fae4352d",
+      "local_imports": [
+        "PaperVerifier.ADComplete.SpiderArmChains"
+      ]
+    },
+    "PaperVerifier.ADComplete.SpiderWordNormalization": {
+      "source_sha256": "b52755e82bfaefdfe5dd84c6269d79f4355f931311cb8a275cef5fe5e889a63b",
+      "local_imports": [
+        "PaperVerifier.ADComplete.NormalizedArmTuples"
+      ]
+    },
+    "PaperVerifier.ADComplete.SpiderPlacements": {
+      "source_sha256": "e124468406dd91f4a6c68cf85a620667e7c8bd26365f73700be0da71f32f7823",
+      "local_imports": []
+    },
+    "PaperVerifier.ADComplete.SpiderArmWeights": {
+      "source_sha256": "89fa0dd59d9eeee01f3e5eaf7ff5e2ef7b3b8888525e6a270bb0ae98652b2bce",
+      "local_imports": [
+        "PaperVerifier.ADComplete.SpiderWordNormalization",
+        "PaperVerifier.ADComplete.SpiderPlacements"
+      ]
+    },
+    "PaperVerifier.ADComplete.SpiderTraceWords": {
+      "source_sha256": "6ec96ab6193a05a75d2965bb9e009a49402ce79f634e2181ddf30d3ad2fa402a",
+      "local_imports": [
+        "PaperVerifier.ADComplete.SpiderCenterChains",
+        "PaperVerifier.ADComplete.SpiderArmWeights"
+      ]
+    },
+    "PaperVerifier.ADComplete.SpiderRealPolynomialLowerBound": {
+      "source_sha256": "6a98f8e4c53a2824270b5e4fbef9b884186e3be3c5d39c02e2ae345784637f71",
+      "local_imports": [
+        "PaperVerifier.ADComplete.SpiderTraceWords"
+      ]
+    },
+    "PaperVerifier.ADComplete.FrobeniusCoordinates": {
+      "source_sha256": "4588419ba131d39e3895e4335f87ed5777307e13219e4442861d767702459711",
+      "local_imports": [
+        "PaperVerifier.ADComplete.UniformProbeBounds",
+        "PaperVerifier.ADComplete.FrameSemantics"
+      ]
+    },
+    "PaperVerifier.ADComplete.FrobeniusProbes": {
+      "source_sha256": "eb1caaf942a7fa1fb4ab6bd2835a00af466b28084f4027a5345cad5a6ffe6b23",
+      "local_imports": [
+        "PaperVerifier.ADComplete.FrobeniusCoordinates"
+      ]
+    },
+    "PaperVerifier.ADComplete.FrobeniusTrace": {
+      "source_sha256": "8119f1dcc331406aa2daa967a224d29385acad22987e580a5c15d2cc84e9aa85",
+      "local_imports": [
+        "PaperVerifier.ADComplete.FrobeniusProbes",
+        "PaperVerifier.ADComplete.GramTables"
+      ]
+    },
+    "PaperVerifier.ADComplete.FrobeniusGraphProbes": {
+      "source_sha256": "d51ab12b4226cdb4025ad3dc81007688b7c9f0bf24133a88a57fa99c18f1e736",
+      "local_imports": [
+        "PaperVerifier.ADComplete.FrobeniusTrace",
+        "PaperVerifier.ADComplete.GraphDegreeBand"
+      ]
+    },
+    "PaperVerifier.ADComplete.FrobeniusTables": {
+      "source_sha256": "db471f962842e8377236e96977d4e93b54a4031c8ad303bc74cff336fce252a3",
+      "local_imports": [
+        "PaperVerifier.ADComplete.FrobeniusGraphProbes"
+      ]
+    },
+    "PaperVerifier.ADComplete.FrobeniusTreeReconstruction": {
+      "source_sha256": "fbccc5a53b76e79c682cf619c1d4e686d13d657ee9bec90f4386012a1f6cf002",
+      "local_imports": [
+        "PaperVerifier.ADComplete.FrobeniusTables",
+        "PaperVerifier.ADComplete.MatrixSemantics",
+        "PaperVerifier.PrincipalMomentAudit.WrittenProof"
+      ]
+    },
+    "PaperVerifier.ADComplete.FrobeniusTreeTables": {
+      "source_sha256": "603e6c46d7b73f21548d43a4f9f5ebf4c6658eae6476ad5b466d804667e348ae",
+      "local_imports": [
+        "PaperVerifier.ADComplete.FrobeniusTreeReconstruction"
+      ]
+    },
+    "PaperVerifier.ADComplete.FullRepresentationCompiler": {
+      "source_sha256": "69f73641b136ad4afa6033e558b5a382e40fe608d5fdf3e62c6ecc5518eb8ae0",
+      "local_imports": [
+        "PaperVerifier.ADComplete.InstructionCompressionDegrees",
+        "PaperVerifier.ADComplete.InstructionResources",
+        "PaperVerifier.ADComplete.CompiledReadout"
+      ]
+    },
+    "PaperVerifier.ADComplete.FullTraceReadout": {
+      "source_sha256": "dad8293a50d9bc1bc29fe6cfdb16532c156fe6d96ad14f02ff2e178cfdc8e006",
+      "local_imports": [
+        "PaperVerifier.ADComplete.FullRepresentationCompiler",
+        "PaperVerifier.ADComplete.FrobeniusTreeReconstruction"
+      ]
+    },
+    "PaperVerifier.ADComplete.FullTraceTrees": {
+      "source_sha256": "3431cc5c9e92029c91d994af0a75925950fbeb2232fc37b035d87f3b73e4d45c",
+      "local_imports": [
+        "PaperVerifier.ADComplete.FullTraceReadout",
+        "PaperVerifier.ADComplete.FrobeniusTreeTables"
+      ]
+    },
+    "PaperVerifier.ADComplete.FullRepresentationResources": {
+      "source_sha256": "6f09f5160c9ab007926b35ebbd9c8131dafce15c1759735e0f80e32734a40279",
+      "local_imports": [
+        "PaperVerifier.ADComplete.FullRepresentationCompiler",
+        "PaperVerifier.ADComplete.InstructionPolynomial"
+      ]
+    },
+    "PaperVerifier.ADComplete.FullTraceBits": {
+      "source_sha256": "4e96f3c416bf7676f1e2d9fea76a74cb1c5ccd9f2e112e28841a00a45f217509",
+      "local_imports": [
+        "PaperVerifier.ADComplete.FullRepresentationResources",
+        "PaperVerifier.ADComplete.FullTraceReadout"
+      ]
+    },
+    "PaperVerifier.ADComplete.CircuitExports": {
+      "source_sha256": "61c8ddee3766e5e5cb1f904f1cd17460b8defd0244b40f8cad23ec1430d64d51",
+      "local_imports": [
+        "PaperVerifier.ADComplete.InstructionResources",
+        "PaperVerifier.ADComplete.PSDFactoryDefinition"
+      ]
+    },
+    "PaperVerifier.ADComplete.PaperAxiomAudit": {
+      "source_sha256": "57bcb71dabfb7627dcec47fedada84fb67fb86c9b32641941f785b19db4196de",
+      "local_imports": [
+        "PaperVerifier.ADComplete.FinalTreeSeparation",
+        "PaperVerifier.ADComplete.SpectralUniformProbes",
+        "PaperVerifier.ADComplete.SpectralRankSensitiveProbes",
+        "PaperVerifier.ADComplete.SpectralRigidity",
+        "PaperVerifier.ADComplete.RealDegreeWitness",
+        "PaperVerifier.ADComplete.InstructionPolynomial",
+        "PaperVerifier.ADComplete.MainResourceEndpoints",
+        "PaperVerifier.ADComplete.FixedPointedTables",
+        "PaperVerifier.ADComplete.PointedPolynomialCoordinates",
+        "PaperVerifier.ADComplete.PSDTreeRepresentative",
+        "PaperVerifier.ADComplete.PSDFactoryResources",
+        "PaperVerifier.ADComplete.PSDFactoryCounts",
+        "PaperVerifier.ADComplete.SpiderRealPolynomialLowerBound",
+        "PaperVerifier.ADComplete.FrobeniusTreeTables",
+        "PaperVerifier.ADComplete.FullTraceTrees",
+        "PaperVerifier.ADComplete.FullRepresentationResources",
+        "PaperVerifier.ADComplete.FullTraceBits",
+        "PaperVerifier.ADComplete.CircuitExports"
+      ]
+    }
+  },
+  "all_sources_unchanged": true,
+  "all_kernel_checks_passed": true,
+  "records": [
+    {
+      "module": "PaperVerifier.ADComplete.Spanning",
+      "source_sha256": "dd9317db4a182ad52958a1abf99ebf14562d9d27f6c64f1f70b881b7142128e6",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "3a44ba12ae104bfc5adfa7a3bf49905ab404aabe95ed2ebf0920775c983dd7d9",
+      "local_import_olean_sha256": {},
+      "checked_utc": "2026-10-25T14:13:14.708714+00:00"
+    },
+    {
+      "module": "PaperVerifier.PrincipalMomentAudit.GNS",
+      "source_sha256": "14438b32cd4db1c69d6faa4b9e84b81851d4f4447286d45be6340ca02fe9d1c6",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "8bf0d947df6d6a8f21d4c4f93887b3d686561b933ddccd0c7907b9805344eeae",
+      "local_import_olean_sha256": {},
+      "checked_utc": "2026-10-25T14:09:31.554861+00:00"
+    },
+    {
+      "module": "PaperVerifier.PrincipalMomentAudit.GraphSemantics",
+      "source_sha256": "592a471af98cf145d92c287d62697f6ffc58e478ef417c5f7cd30f74561c5ef0",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "4bafac5fe22a221f699a2b2320284a89dcecc9922d76fd39f850767e46dd603a",
+      "local_import_olean_sha256": {
+        "PaperVerifier.PrincipalMomentAudit.GNS": "8bf0d947df6d6a8f21d4c4f93887b3d686561b933ddccd0c7907b9805344eeae"
+      },
+      "checked_utc": "2026-10-25T14:09:52.462992+00:00"
+    },
+    {
+      "module": "PaperVerifier.CircuitAudit.Degrees",
+      "source_sha256": "a404cbf6094e856ed7920be26e0bb5da89b88b2b76bd5aee93431a5bc12bfb4d",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "dc6ee93f186dd428528d657bef878a53169f2147cb1bb6b21678a8b1d1707a4a",
+      "local_import_olean_sha256": {},
+      "checked_utc": "2026-10-25T14:13:14.960606+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.FrameSemantics",
+      "source_sha256": "36f0760b3d9eab0d7bd1bd01bd4b3b84bee1ef14c6e079a2a1f7e6a9b3a4cf49",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "e1fff509701a5a87e66c1ef4de7c80881568bedf4ee86a396eaca5b492eaea62",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.Spanning": "3a44ba12ae104bfc5adfa7a3bf49905ab404aabe95ed2ebf0920775c983dd7d9",
+        "PaperVerifier.PrincipalMomentAudit.GraphSemantics": "4bafac5fe22a221f699a2b2320284a89dcecc9922d76fd39f850767e46dd603a",
+        "PaperVerifier.CircuitAudit.Degrees": "dc6ee93f186dd428528d657bef878a53169f2147cb1bb6b21678a8b1d1707a4a"
+      },
+      "checked_utc": "2026-10-25T14:13:33.678607+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.GramTables",
+      "source_sha256": "e1d8c3c6a6c95072de5720b8db2822cb4781f2894c4d7d4ddd4982c2ee2f1c4e",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "ce414ff88d792abc5f01ad5e5fd5bda7970e510a599e55916593f05657fdc000",
+      "local_import_olean_sha256": {
+        "PaperVerifier.PrincipalMomentAudit.GNS": "8bf0d947df6d6a8f21d4c4f93887b3d686561b933ddccd0c7907b9805344eeae"
+      },
+      "checked_utc": "2026-10-25T14:10:13.993002+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.Radix",
+      "source_sha256": "b2328151bcc7991011f1df3c413acb618e0757d1b1fb77f7c8ed7245957565d8",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "4a8541853c6623b4b36e41b125bacccd0b9f34665713b201fa736e342e506281",
+      "local_import_olean_sha256": {},
+      "checked_utc": "2026-10-25T14:13:14.709715+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.TreeDistance",
+      "source_sha256": "f754fba727e63b74e8a2fe769164ef0039da691e4163052bb47d1f93a2ce28bb",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "2ffd5dae335c6be7516675c775068f5a766ace454bd65e53a626517c13e2ab51",
+      "local_import_olean_sha256": {
+        "PaperVerifier.CircuitAudit.Degrees": "dc6ee93f186dd428528d657bef878a53169f2147cb1bb6b21678a8b1d1707a4a"
+      },
+      "checked_utc": "2026-10-25T14:13:40.656544+00:00"
+    },
+    {
+      "module": "PaperVerifier.CircuitAudit.RadixFactorization",
+      "source_sha256": "166328962d1dbb02983d5bbd880925070f8de0785571417447b068da260c2412",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "b862d719388ed7daa80adfc9a812f43a950928cc4f6cc9191fefb1441764efba",
+      "local_import_olean_sha256": {},
+      "checked_utc": "2026-10-25T14:13:22.342902+00:00"
+    },
+    {
+      "module": "PaperVerifier.CircuitAudit.HornerBridge",
+      "source_sha256": "d309407793ea1954a7b9a2a974ecee345caa39369fd1b80095c295670ddf715c",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "369cbaf7911186a6571b62723dff2d9285a49ef66d71a55d435925ed3f410b97",
+      "local_import_olean_sha256": {
+        "PaperVerifier.CircuitAudit.RadixFactorization": "b862d719388ed7daa80adfc9a812f43a950928cc4f6cc9191fefb1441764efba"
+      },
+      "checked_utc": "2026-10-25T14:13:41.050904+00:00"
+    },
+    {
+      "module": "PaperVerifier.CircuitAudit.WrittenPolynomialBridge",
+      "source_sha256": "4af077bb048b29959863db0d324a36e794e873cae333cf36856f5557c1dc5975",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "71f4b83a896bdffd320a9aa706dce4600bb91f50ad2916eab0ffb249050c96db",
+      "local_import_olean_sha256": {
+        "PaperVerifier.CircuitAudit.Degrees": "dc6ee93f186dd428528d657bef878a53169f2147cb1bb6b21678a8b1d1707a4a",
+        "PaperVerifier.CircuitAudit.HornerBridge": "369cbaf7911186a6571b62723dff2d9285a49ef66d71a55d435925ed3f410b97"
+      },
+      "checked_utc": "2026-10-25T14:13:59.086218+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.TreeSeparation",
+      "source_sha256": "3ed29c804eda742a72f536f7bad2fc6faecca3deb792a26df5a6029a2474ee10",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "0b06a8a6101081de60129e661df5223546e35b9f1825fb849cf2b8f225815750",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.GramTables": "ce414ff88d792abc5f01ad5e5fd5bda7970e510a599e55916593f05657fdc000",
+        "PaperVerifier.ADComplete.Radix": "4a8541853c6623b4b36e41b125bacccd0b9f34665713b201fa736e342e506281",
+        "PaperVerifier.ADComplete.TreeDistance": "2ffd5dae335c6be7516675c775068f5a766ace454bd65e53a626517c13e2ab51",
+        "PaperVerifier.CircuitAudit.WrittenPolynomialBridge": "71f4b83a896bdffd320a9aa706dce4600bb91f50ad2916eab0ffb249050c96db",
+        "PaperVerifier.PrincipalMomentAudit.GraphSemantics": "4bafac5fe22a221f699a2b2320284a89dcecc9922d76fd39f850767e46dd603a"
+      },
+      "checked_utc": "2026-10-25T14:14:17.788464+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.MatrixSemantics",
+      "source_sha256": "67b9c22124de7d4e8a70722230a79ee3d7e9646676fe77219c79db5c724a4505",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "76f00d83a0be3b9c7d5d4fa6c02aec76bf64d8d08aa6166c4f7722d47c1c655a",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.GramTables": "ce414ff88d792abc5f01ad5e5fd5bda7970e510a599e55916593f05657fdc000",
+        "PaperVerifier.ADComplete.TreeSeparation": "0b06a8a6101081de60129e661df5223546e35b9f1825fb849cf2b8f225815750"
+      },
+      "checked_utc": "2026-10-25T14:14:37.410811+00:00"
+    },
+    {
+      "module": "PaperVerifier.CircuitAudit.CircuitCosts",
+      "source_sha256": "51767ada17433afabad7228a9930aabb6454708dce3ea37a5878be8cb14b4068",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "7316907a68d24f94fca8d9a28ee7fcda2a01dac7fe8ddb0ad558c26ad0689a04",
+      "local_import_olean_sha256": {},
+      "checked_utc": "2026-10-25T14:13:34.471868+00:00"
+    },
+    {
+      "module": "PaperVerifier.CircuitAudit.ProbeCircuit",
+      "source_sha256": "abd6650d19f8c64a5ea5fd1ebae4f163863874c2be8743088bd3d16b8111e305",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "2cab392d29bb4867d7980925d340a326c9c567aff784e6b92711c41d4ec57452",
+      "local_import_olean_sha256": {
+        "PaperVerifier.CircuitAudit.CircuitCosts": "7316907a68d24f94fca8d9a28ee7fcda2a01dac7fe8ddb0ad558c26ad0689a04",
+        "PaperVerifier.CircuitAudit.Degrees": "dc6ee93f186dd428528d657bef878a53169f2147cb1bb6b21678a8b1d1707a4a"
+      },
+      "checked_utc": "2026-10-25T14:13:54.028653+00:00"
+    },
+    {
+      "module": "PaperVerifier.CircuitAudit.DistanceCircuit",
+      "source_sha256": "9e9b9b3ccec9532a6b873334e5c177722b4467b54b8f07a90ea7a8ad68241b57",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "4f3f067faebe8e9a6e9d979fd76d42581287569a71d068f670401e3292a9431a",
+      "local_import_olean_sha256": {
+        "PaperVerifier.CircuitAudit.ProbeCircuit": "2cab392d29bb4867d7980925d340a326c9c567aff784e6b92711c41d4ec57452",
+        "PaperVerifier.CircuitAudit.Degrees": "dc6ee93f186dd428528d657bef878a53169f2147cb1bb6b21678a8b1d1707a4a"
+      },
+      "checked_utc": "2026-10-25T14:14:11.788466+00:00"
+    },
+    {
+      "module": "PaperVerifier.CircuitAudit.DistanceSemantics",
+      "source_sha256": "e221f50de7a611c926d372e23698e56497c14915a211789a9762ac75a380380c",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "2f873c85cfd1acba6dfc5f303cf8c2aafdd8b5380fb9dac166156566aed95edc",
+      "local_import_olean_sha256": {
+        "PaperVerifier.CircuitAudit.DistanceCircuit": "4f3f067faebe8e9a6e9d979fd76d42581287569a71d068f670401e3292a9431a"
+      },
+      "checked_utc": "2026-10-25T14:14:30.217199+00:00"
+    },
+    {
+      "module": "PaperVerifier.CircuitAudit.FullCompression",
+      "source_sha256": "1662df725aca57ed7d615f6cd6941520565c1ae4dfb1db13d2d41f5b66081ad6",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "dac3e7143db0f7f699b4cfc71f409992f85e8a593497987442ff4896334d57c4",
+      "local_import_olean_sha256": {
+        "PaperVerifier.CircuitAudit.DistanceSemantics": "2f873c85cfd1acba6dfc5f303cf8c2aafdd8b5380fb9dac166156566aed95edc",
+        "PaperVerifier.CircuitAudit.WrittenPolynomialBridge": "71f4b83a896bdffd320a9aa706dce4600bb91f50ad2916eab0ffb249050c96db"
+      },
+      "checked_utc": "2026-10-25T14:14:49.023161+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.InstructionDegrees",
+      "source_sha256": "1d157fd7a40eb2758062fd97c68529af4361764cf1d42a21ce082fd73c239ce7",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "24bb24330da07d6a5248172784303642a63754b4269b6b9c62dc4669958731e6",
+      "local_import_olean_sha256": {
+        "PaperVerifier.CircuitAudit.FullCompression": "dac3e7143db0f7f699b4cfc71f409992f85e8a593497987442ff4896334d57c4"
+      },
+      "checked_utc": "2026-10-25T14:15:11.089491+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.InstructionDistanceDegrees",
+      "source_sha256": "82fe4648c3ee97838a9a4a8aec7e2ef71000ff3633806e1a2f75557ef802e70b",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "4296ba5db71e4d968c7d9bfb5ce51367beeb38be652825dfbc7b234f4f9e564d",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.InstructionDegrees": "24bb24330da07d6a5248172784303642a63754b4269b6b9c62dc4669958731e6"
+      },
+      "checked_utc": "2026-10-25T14:15:30.006895+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.InstructionCompressionDegrees",
+      "source_sha256": "a8358757d83d8e58c4632b08dc6c0f89d023716f6beee19e67144948a2692c1d",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "342814333a444d509c24278d74d14717d642f1cdc7c3c3b82830d3ea3014e395",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.InstructionDistanceDegrees": "4296ba5db71e4d968c7d9bfb5ce51367beeb38be652825dfbc7b234f4f9e564d"
+      },
+      "checked_utc": "2026-10-25T14:15:48.345475+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.InstructionSyntaxBridge",
+      "source_sha256": "243757269f7bea3aea0ec3cd240630fbfb2a401f7b11f23fa5a4b08ac7c32198",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "cebbdb5b79f029ac8a3b9149418d366da3b68dbbcc41c4f3a1295e8d3b304dbf",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.InstructionCompressionDegrees": "342814333a444d509c24278d74d14717d642f1cdc7c3c3b82830d3ea3014e395"
+      },
+      "checked_utc": "2026-10-25T14:16:06.321404+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.IntegerBounds",
+      "source_sha256": "a98385736631de6ddbed8b6d72675ff784b8a344859919ae26f7fc0aa52f9d32",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "5b44ca97acbc60d88d330a63ade46c27a3355f4ce8811263adb9917926925dc1",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.InstructionSyntaxBridge": "cebbdb5b79f029ac8a3b9149418d366da3b68dbbcc41c4f3a1295e8d3b304dbf"
+      },
+      "checked_utc": "2026-10-25T14:16:25.690477+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.IntegerBitBounds",
+      "source_sha256": "a8a495c1e1f1a713792ef55bc1c67ae214de2634905d91b8b493e50401e2f2ea",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "debbef3192ef9affb399bbe743793b397dfea2442fe6572b2c1a7bcf26a7e009",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.IntegerBounds": "5b44ca97acbc60d88d330a63ade46c27a3355f4ce8811263adb9917926925dc1"
+      },
+      "checked_utc": "2026-10-25T14:16:43.876316+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.CompiledReadout",
+      "source_sha256": "c78355c57b8c67238fd914d8b8f0d59ec8f81dd8488b52cd7de541fa43a72158",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "90455b5a8d0408dac1febb925533c5762c4f0c51c81569fd035d0fd1444a5d69",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.FrameSemantics": "e1fff509701a5a87e66c1ef4de7c80881568bedf4ee86a396eaca5b492eaea62",
+        "PaperVerifier.ADComplete.MatrixSemantics": "76f00d83a0be3b9c7d5d4fa6c02aec76bf64d8d08aa6166c4f7722d47c1c655a",
+        "PaperVerifier.ADComplete.IntegerBitBounds": "debbef3192ef9affb399bbe743793b397dfea2442fe6572b2c1a7bcf26a7e009",
+        "PaperVerifier.ADComplete.InstructionDegrees": "24bb24330da07d6a5248172784303642a63754b4269b6b9c62dc4669958731e6"
+      },
+      "checked_utc": "2026-10-25T14:17:01.707952+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.TraceMomentBridge",
+      "source_sha256": "5c0cc1cea3e807ab4ceb1a3fd68b4fef112594bd939a29238a68b1917b2459ef",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "d82494cf1c4ad5453a6d46d15bfa8f0706b971096106c3e93258cd4412e86d55",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.CompiledReadout": "90455b5a8d0408dac1febb925533c5762c4f0c51c81569fd035d0fd1444a5d69"
+      },
+      "checked_utc": "2026-10-25T14:17:20.082283+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.Rigidity",
+      "source_sha256": "c7aaf240307e59dfceff0723b70d53848412b6397ea46a603e75f5fc5c9bbd44",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "a281b4cca7b255fd012c30db6223f71707fbc03c3c2c327f7e696ab54b06ab74",
+      "local_import_olean_sha256": {},
+      "checked_utc": "2026-10-25T14:13:59.708263+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.GraphDegreeBand",
+      "source_sha256": "8a5b0daea0fe5c54eb7abf54b324c4bb08bc3cea38aa99b1a3bcba31d82849b9",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "bfad21ee2da11a2cb7c8899971c3d45a239a8b5d70336991c431902e530f941c",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.Rigidity": "a281b4cca7b255fd012c30db6223f71707fbc03c3c2c327f7e696ab54b06ab74"
+      },
+      "checked_utc": "2026-10-25T14:14:19.017186+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.DifferentialKrylov",
+      "source_sha256": "8059340a420b05a9e449d7e56e254b3c013c734076564f9df9d447b4f9c58e91",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "e40aa531519f7a2541673df7906b7f5b492c1a81115bd4a5929daf23558bfd61",
+      "local_import_olean_sha256": {},
+      "checked_utc": "2026-10-25T14:14:38.153980+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.InvariantCoordinates",
+      "source_sha256": "8b82b92fb8dbeffb4b27b0377db369c041db0233a8b95c7f25a646f643e60507",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "d52bcafb143e8ad962d6649d2513d2397da79ffff06d4a1a0caac8fcd78c6533",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.DifferentialKrylov": "e40aa531519f7a2541673df7906b7f5b492c1a81115bd4a5929daf23558bfd61"
+      },
+      "checked_utc": "2026-10-25T14:14:57.399452+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.DeterminantDerivation",
+      "source_sha256": "c747fdda00d1f39e2e8fa3539109ac1b3055ad1813019312befad9f280740b1b",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "999be8766eec7c8ce177f028f5975dab42b678e56fcbdb92ac94b985be3e9d66",
+      "local_import_olean_sha256": {},
+      "checked_utc": "2026-10-25T14:14:56.238542+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PluckerConnection",
+      "source_sha256": "b4278308f847fdfa2c26af67ee61b8ae36afaadc9fd3b30daf7d4d03489d957d",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "d310a7c14073ddcce5f3d56bfb244101cd8ecb8092cede78e9728f5afff81b3b",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.DeterminantDerivation": "999be8766eec7c8ce177f028f5975dab42b678e56fcbdb92ac94b985be3e9d66"
+      },
+      "checked_utc": "2026-10-25T14:15:15.749204+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PluckerNonzero",
+      "source_sha256": "56dd664d0718b918e528e0aade8e12976d7333edbc32ab87cf7630d8a89441f0",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "4197362ce38a32764b8420a20a4c46ca9390cc84f9855c218dd663f56b90ec14",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PluckerConnection": "d310a7c14073ddcce5f3d56bfb244101cd8ecb8092cede78e9728f5afff81b3b"
+      },
+      "checked_utc": "2026-10-25T14:15:35.590383+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PluckerDescent",
+      "source_sha256": "4dab745a985b7bb8b79071528a4d03eab529f64b84cab312182fdb7bdc0ade28",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "4e24c1f0b6ead0c37018e3671211829cfbbf2b66c802906e6065a34a59fbf077",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PluckerConnection": "d310a7c14073ddcce5f3d56bfb244101cd8ecb8092cede78e9728f5afff81b3b"
+      },
+      "checked_utc": "2026-10-25T14:15:36.682035+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PolynomialPrimitivity",
+      "source_sha256": "2fe6c7587b82de08881f58482b51eecf6d4caaa23874c7f74bb17a00d74c757e",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "256c2b2ca8255024d38be7ee5bb01612ca0bf749c8637f1915fdba1769de01e9",
+      "local_import_olean_sha256": {},
+      "checked_utc": "2026-10-25T14:15:17.100270+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.RationalCoordinates",
+      "source_sha256": "04eae8b61649a23e78f01e7e74ab1d26e673defd3a298ede8bc72ad401aa3576",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "d19a3d4a1126df3f32d56b7f277019f627c0cde34a7a8caa0c4ca879e5bc448e",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PolynomialPrimitivity": "256c2b2ca8255024d38be7ee5bb01612ca0bf749c8637f1915fdba1769de01e9"
+      },
+      "checked_utc": "2026-10-25T14:15:54.936055+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.TensorResidue",
+      "source_sha256": "869bf4f9580f59e3bc3b328bae380f0ad239cc693fed23e7c71177d281494c0c",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "d141e27154222bef38bf0826bd50f2a3e9546dea62090bd3a45a2b53968cc292",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.Rigidity": "a281b4cca7b255fd012c30db6223f71707fbc03c3c2c327f7e696ab54b06ab74"
+      },
+      "checked_utc": "2026-10-25T14:15:55.116331+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.TensorMatrix",
+      "source_sha256": "9f24b9d9d01a5c13527ee6f0c95eda07b3f40a8897d386fb1a6150c79ba89c05",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "6c33c17b881d7456d42dff5a291dada3b205b9bd066bcfd047e8a21a129129c0",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.TensorResidue": "d141e27154222bef38bf0826bd50f2a3e9546dea62090bd3a45a2b53968cc292",
+        "PaperVerifier.ADComplete.PluckerConnection": "d310a7c14073ddcce5f3d56bfb244101cd8ecb8092cede78e9728f5afff81b3b"
+      },
+      "checked_utc": "2026-10-25T14:16:13.643355+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.RationalDerivative",
+      "source_sha256": "ea0131220103462b82132642732a3d9ed9c08bae313875697a9894c2688df815",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "56509b196186e95c3b74c776eb923819ab00c73596d357b31ab60e1278d9c52c",
+      "local_import_olean_sha256": {},
+      "checked_utc": "2026-10-25T14:16:15.119239+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PolynomialLine",
+      "source_sha256": "739f641225e782f2dd5b6a10538f5dc60562489094023fe23fd9abd775b19be7",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "5479003878800fb2d5482338b7ebeba942b4b531438e943378e53c60a8520d08",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.Rigidity": "a281b4cca7b255fd012c30db6223f71707fbc03c3c2c327f7e696ab54b06ab74"
+      },
+      "checked_utc": "2026-10-25T14:16:32.382299+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PrimitiveLine",
+      "source_sha256": "291adc71c2ea128470c749a69abff694b0d0c1bcec819c64a60d4203e1f33381",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "ef4405439a44fe1cc1daf5b770d29edb096dd2be7ae792d321581f8392803017",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PolynomialPrimitivity": "256c2b2ca8255024d38be7ee5bb01612ca0bf749c8637f1915fdba1769de01e9",
+        "PaperVerifier.ADComplete.PolynomialLine": "5479003878800fb2d5482338b7ebeba942b4b531438e943378e53c60a8520d08"
+      },
+      "checked_utc": "2026-10-25T14:16:50.705813+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.RationalLineNormalization",
+      "source_sha256": "75bb095623fa3d1e4f7824682e4f31ff1e2b85637c2c9c7caba78044573a8d97",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "a1ec6027d9c0543824b3fb580b3b730f64c95560b5105d128c8c984686c39d45",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.RationalDerivative": "56509b196186e95c3b74c776eb923819ab00c73596d357b31ab60e1278d9c52c",
+        "PaperVerifier.ADComplete.PrimitiveLine": "ef4405439a44fe1cc1daf5b770d29edb096dd2be7ae792d321581f8392803017"
+      },
+      "checked_utc": "2026-10-25T14:17:10.060098+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.TensorBaseChange",
+      "source_sha256": "7d3b1401d7c2b6b07393a85e9eba445ed1a9b3f94d249c8fe5d763914e46f932",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "f9fcc27f6aa4ae1da96ac613fb3dd3f6d6d0ba6ee8836e65cd6da17d7dda0f7d",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.TensorMatrix": "6c33c17b881d7456d42dff5a291dada3b205b9bd066bcfd047e8a21a129129c0",
+        "PaperVerifier.ADComplete.RationalLineNormalization": "a1ec6027d9c0543824b3fb580b3b730f64c95560b5105d128c8c984686c39d45"
+      },
+      "checked_utc": "2026-10-25T14:17:28.276162+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.SmallResidueRigidity",
+      "source_sha256": "c7e937973c868fb3db98217621439fbad313d980186c49b2893fa1d27524ab9e",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "55ec7bcad10dea8e14c1ec85e7d00f14ed1cd5d6b324cfecaa9f097a52cd7b57",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.InvariantCoordinates": "d52bcafb143e8ad962d6649d2513d2397da79ffff06d4a1a0caac8fcd78c6533",
+        "PaperVerifier.ADComplete.PluckerNonzero": "4197362ce38a32764b8420a20a4c46ca9390cc84f9855c218dd663f56b90ec14",
+        "PaperVerifier.ADComplete.PluckerDescent": "4e24c1f0b6ead0c37018e3671211829cfbbf2b66c802906e6065a34a59fbf077",
+        "PaperVerifier.ADComplete.RationalCoordinates": "d19a3d4a1126df3f32d56b7f277019f627c0cde34a7a8caa0c4ca879e5bc448e",
+        "PaperVerifier.ADComplete.TensorBaseChange": "f9fcc27f6aa4ae1da96ac613fb3dd3f6d6d0ba6ee8836e65cd6da17d7dda0f7d"
+      },
+      "checked_utc": "2026-10-25T14:17:46.392574+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.ConstantFrame",
+      "source_sha256": "3c3727e07ab22e25e6722c34e63ca37732119f93589ff18e8a617be20aa648b9",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "876d33e798948c7c9c66c0f9987d6387e9d975a883d492063313067f48c7955f",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PluckerDescent": "4e24c1f0b6ead0c37018e3671211829cfbbf2b66c802906e6065a34a59fbf077",
+        "PaperVerifier.ADComplete.RationalLineNormalization": "a1ec6027d9c0543824b3fb580b3b730f64c95560b5105d128c8c984686c39d45",
+        "PaperVerifier.ADComplete.DifferentialKrylov": "e40aa531519f7a2541673df7906b7f5b492c1a81115bd4a5929daf23558bfd61"
+      },
+      "checked_utc": "2026-10-25T14:17:32.840285+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.ScalarExtension",
+      "source_sha256": "17648a34d4f32d8b2bb93000f098cd554e66a8c007d53737b319a97f948cecd3",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "b7223b1ea673fc3b669e0167f412ada21a75d99c50ea88bd2702fb994c113af8",
+      "local_import_olean_sha256": {},
+      "checked_utc": "2026-10-25T14:16:33.641656+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.ProbePolynomial",
+      "source_sha256": "13576a0623b662140e3adcff287f9e987e80c03e29b9047e34e186251e48fe9e",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "f4c785b0d6554118f6f6a304fd627c879e9f4a5df87542847b3d6a1710a213e5",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.Spanning": "3a44ba12ae104bfc5adfa7a3bf49905ab404aabe95ed2ebf0920775c983dd7d9",
+        "PaperVerifier.ADComplete.PolynomialLine": "5479003878800fb2d5482338b7ebeba942b4b531438e943378e53c60a8520d08",
+        "PaperVerifier.ADComplete.RationalLineNormalization": "a1ec6027d9c0543824b3fb580b3b730f64c95560b5105d128c8c984686c39d45",
+        "PaperVerifier.ADComplete.DifferentialKrylov": "e40aa531519f7a2541673df7906b7f5b492c1a81115bd4a5929daf23558bfd61"
+      },
+      "checked_utc": "2026-10-25T14:17:37.887689+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.ProbeKrylov",
+      "source_sha256": "afa5700011ab421fa3ea049dab823f2fc8f6640cf859f5cbd94c02d43c98c2f6",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "10fdd97480d2bc8a10d600d19d9f0ae5bc273d0631163569e924e6bfbe28f4c6",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.ProbePolynomial": "f4c785b0d6554118f6f6a304fd627c879e9f4a5df87542847b3d6a1710a213e5"
+      },
+      "checked_utc": "2026-10-25T14:17:56.307883+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.UniformProbes",
+      "source_sha256": "68977944298f8fe10f4564bfe4ce035f222c34a4ee2d14651ac905ddc7ddc365",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "64eebc355b0ec36a279a12b29596c1415c40c93fd0aa9b3e642d4fff955eed0a",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.SmallResidueRigidity": "55ec7bcad10dea8e14c1ec85e7d00f14ed1cd5d6b324cfecaa9f097a52cd7b57",
+        "PaperVerifier.ADComplete.ConstantFrame": "876d33e798948c7c9c66c0f9987d6387e9d975a883d492063313067f48c7955f",
+        "PaperVerifier.ADComplete.ScalarExtension": "b7223b1ea673fc3b669e0167f412ada21a75d99c50ea88bd2702fb994c113af8",
+        "PaperVerifier.ADComplete.ProbeKrylov": "10fdd97480d2bc8a10d600d19d9f0ae5bc273d0631163569e924e6bfbe28f4c6"
+      },
+      "checked_utc": "2026-10-25T14:18:15.420246+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.UniformProbeBounds",
+      "source_sha256": "521130c5c28a4db524b30e06249f287572d37b16a0b7180326af70e936d0d554",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "96b496a3da90c7e15a183f012b6a2234696f744a1c532d1215229b756570cf54",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.UniformProbes": "64eebc355b0ec36a279a12b29596c1415c40c93fd0aa9b3e642d4fff955eed0a"
+      },
+      "checked_utc": "2026-10-25T14:18:33.453232+00:00"
+    },
+    {
+      "module": "PaperVerifier.PrincipalMomentAudit.Transport",
+      "source_sha256": "3560e6b2591050becfd6274c3c1c469500e994ebe0d95d5bba363441e1d6c343",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "4642743cee3b9e2055a84f89efc5829b11a4a30f8d4e46d3c07e30614675654e",
+      "local_import_olean_sha256": {},
+      "checked_utc": "2026-10-25T14:16:52.117022+00:00"
+    },
+    {
+      "module": "PaperVerifier.PrincipalMomentAudit.Basic",
+      "source_sha256": "91a68b1f13d6cfe00f8a1f158e3e38957a0179235b5f0f28bd1a9c6a40fa73e8",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "b72181fd25170a4b54b570a76804359b2e0d2664bbec1533bf26abe87a3df231",
+      "local_import_olean_sha256": {},
+      "checked_utc": "2026-10-25T14:17:02.830543+00:00"
+    },
+    {
+      "module": "PaperVerifier.PrincipalMomentAudit.ForestPruning",
+      "source_sha256": "03c32328b4d2a88243ba210a7ed17fe8df197f5fcd3ba25eaea0df7b4abec86a",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "c8949972c5a8ab559f1610c116589abb4d721cb28111088edc7d75c59deb8aaf",
+      "local_import_olean_sha256": {
+        "PaperVerifier.PrincipalMomentAudit.Basic": "b72181fd25170a4b54b570a76804359b2e0d2664bbec1533bf26abe87a3df231"
+      },
+      "checked_utc": "2026-10-25T14:17:14.516228+00:00"
+    },
+    {
+      "module": "PaperVerifier.PrincipalMomentAudit.PruningExpressions",
+      "source_sha256": "cfc2559fab0bf7ab8956a2586d9e331cce67bc969da21030194c35a4040e03bd",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "9533eb25c9d841ccea4ad0c41765c7b948101e09bbe371af2345d3c957ca05b8",
+      "local_import_olean_sha256": {
+        "PaperVerifier.PrincipalMomentAudit.Transport": "4642743cee3b9e2055a84f89efc5829b11a4a30f8d4e46d3c07e30614675654e"
+      },
+      "checked_utc": "2026-10-25T14:17:50.484282+00:00"
+    },
+    {
+      "module": "PaperVerifier.PrincipalMomentAudit.SelectorEvaluation",
+      "source_sha256": "b0cfbae3a2e7c18f425ddeca3405067d12b89f3ca294ca774902996474028bc5",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "8ec4209ec55978a8f3bfe15ed3c52da7cd808b045b9537de1188acc220649451",
+      "local_import_olean_sha256": {
+        "PaperVerifier.PrincipalMomentAudit.Transport": "4642743cee3b9e2055a84f89efc5829b11a4a30f8d4e46d3c07e30614675654e",
+        "PaperVerifier.PrincipalMomentAudit.ForestPruning": "c8949972c5a8ab559f1610c116589abb4d721cb28111088edc7d75c59deb8aaf",
+        "PaperVerifier.PrincipalMomentAudit.PruningExpressions": "9533eb25c9d841ccea4ad0c41765c7b948101e09bbe371af2345d3c957ca05b8"
+      },
+      "checked_utc": "2026-10-25T14:18:10.859359+00:00"
+    },
+    {
+      "module": "PaperVerifier.PrincipalMomentAudit.Quotient",
+      "source_sha256": "e3e508e1c65090b0d795446c766d9e306c276bb9ff1df224cd15bcf7bfeddce4",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "e260d7aef0f6ec05fa9bd3741ed1bfd4aba542bbb923fdd89160e16c8310026d",
+      "local_import_olean_sha256": {
+        "PaperVerifier.PrincipalMomentAudit.Transport": "4642743cee3b9e2055a84f89efc5829b11a4a30f8d4e46d3c07e30614675654e"
+      },
+      "checked_utc": "2026-10-25T14:18:04.697563+00:00"
+    },
+    {
+      "module": "PaperVerifier.PrincipalMomentAudit.OrbitQuotient",
+      "source_sha256": "617d23cd6c83172079fcc9a8773036dd6fc0fab76e020d9094041bb3999f8c12",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "5c28e0f58f9fc1a7ad22c765266e313aa04d7adb4fd1887cae051271a33d0ba5",
+      "local_import_olean_sha256": {
+        "PaperVerifier.PrincipalMomentAudit.GraphSemantics": "4bafac5fe22a221f699a2b2320284a89dcecc9922d76fd39f850767e46dd603a"
+      },
+      "checked_utc": "2026-10-25T14:18:23.696822+00:00"
+    },
+    {
+      "module": "PaperVerifier.PrincipalMomentAudit.IntrinsicRecovery",
+      "source_sha256": "db6023112e5027880694949eb4e999fee005b6d02ae474303b984de3ab8bc16f",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "8d725152c58b26d4a71c6791fe44d397d84d230b45b66996b27fa0c52ba84503",
+      "local_import_olean_sha256": {
+        "PaperVerifier.PrincipalMomentAudit.SelectorEvaluation": "8ec4209ec55978a8f3bfe15ed3c52da7cd808b045b9537de1188acc220649451",
+        "PaperVerifier.PrincipalMomentAudit.Quotient": "e260d7aef0f6ec05fa9bd3741ed1bfd4aba542bbb923fdd89160e16c8310026d",
+        "PaperVerifier.PrincipalMomentAudit.OrbitQuotient": "5c28e0f58f9fc1a7ad22c765266e313aa04d7adb4fd1887cae051271a33d0ba5"
+      },
+      "checked_utc": "2026-10-25T14:18:41.720370+00:00"
+    },
+    {
+      "module": "PaperVerifier.PrincipalMomentAudit.PrincipalExpressions",
+      "source_sha256": "2026ad596925ad277c4f256086e0c51cb796744ba646704bdefb4b46028d4d10",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "93edb8847106ddc2225fea3112a611193ae111fd8571308bd95855de5aec45b6",
+      "local_import_olean_sha256": {
+        "PaperVerifier.PrincipalMomentAudit.GraphSemantics": "4bafac5fe22a221f699a2b2320284a89dcecc9922d76fd39f850767e46dd603a",
+        "PaperVerifier.PrincipalMomentAudit.OrbitQuotient": "5c28e0f58f9fc1a7ad22c765266e313aa04d7adb4fd1887cae051271a33d0ba5",
+        "PaperVerifier.PrincipalMomentAudit.SelectorEvaluation": "8ec4209ec55978a8f3bfe15ed3c52da7cd808b045b9537de1188acc220649451"
+      },
+      "checked_utc": "2026-10-25T14:18:47.707668+00:00"
+    },
+    {
+      "module": "PaperVerifier.PrincipalMomentAudit.SharedVectorFamily",
+      "source_sha256": "93cd8923909ce556a68d54eff21e42d9eff0cda9de96884dcccc348f9a33b48e",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "305cea0e71a04a7c42a192ae1ebde8934bec1c6b8519f3d62cf63fb7686d05a3",
+      "local_import_olean_sha256": {
+        "PaperVerifier.PrincipalMomentAudit.IntrinsicRecovery": "8d725152c58b26d4a71c6791fe44d397d84d230b45b66996b27fa0c52ba84503",
+        "PaperVerifier.PrincipalMomentAudit.PrincipalExpressions": "93edb8847106ddc2225fea3112a611193ae111fd8571308bd95855de5aec45b6"
+      },
+      "checked_utc": "2026-10-25T14:19:06.213695+00:00"
+    },
+    {
+      "module": "PaperVerifier.PrincipalMomentAudit.LeafGrafting",
+      "source_sha256": "8ae88885dde3f42f0a1777df4a6c276da6a636ace600b0078f4e5c0d13f0ee77",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "8fdae18d0da53229675066b0eeb024e6f9616c7339c57d113c5dfe2e88be5497",
+      "local_import_olean_sha256": {},
+      "checked_utc": "2026-10-25T14:18:29.302192+00:00"
+    },
+    {
+      "module": "PaperVerifier.PrincipalMomentAudit.PruningLift",
+      "source_sha256": "92f8a219f05f3b8e54b224ff254c5ef37fc987dccb9d1225e673138fbe4a54b3",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "8ddea5fc8659ba53e991982e4384cf2306c6d7423a18a072d090c283b2b8d0fb",
+      "local_import_olean_sha256": {
+        "PaperVerifier.PrincipalMomentAudit.LeafGrafting": "8fdae18d0da53229675066b0eeb024e6f9616c7339c57d113c5dfe2e88be5497",
+        "PaperVerifier.PrincipalMomentAudit.ForestPruning": "c8949972c5a8ab559f1610c116589abb4d721cb28111088edc7d75c59deb8aaf"
+      },
+      "checked_utc": "2026-10-25T14:18:51.394270+00:00"
+    },
+    {
+      "module": "PaperVerifier.PrincipalMomentAudit.RootedOrbit",
+      "source_sha256": "80904be34e37bd262cd8366a5769b7a32225a040e73fcf5418ff48492b89863b",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "089414644b2fc4ac482b23a51658527ea7671234c12771c173ced39d61a432d2",
+      "local_import_olean_sha256": {},
+      "checked_utc": "2026-10-25T14:18:59.541207+00:00"
+    },
+    {
+      "module": "PaperVerifier.PrincipalMomentAudit.TerminalOrbits",
+      "source_sha256": "0cf496227ec921d79806635ee889181078a01466165117c6934be9e32ba742dd",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "d8d1843946a123a1b359d854a1fb4d3940e41e7586ba5c839fc77113ce232be7",
+      "local_import_olean_sha256": {
+        "PaperVerifier.PrincipalMomentAudit.RootedOrbit": "089414644b2fc4ac482b23a51658527ea7671234c12771c173ced39d61a432d2",
+        "PaperVerifier.PrincipalMomentAudit.PruningLift": "8ddea5fc8659ba53e991982e4384cf2306c6d7423a18a072d090c283b2b8d0fb"
+      },
+      "checked_utc": "2026-10-25T14:19:17.480503+00:00"
+    },
+    {
+      "module": "PaperVerifier.PrincipalMomentAudit.TreeReconstruction",
+      "source_sha256": "fc721adad9f9a8f5ab955998b55c4de11ae4907618ea2e69e0d8f317a32d241d",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "b1b5f7982f4be978dc1ab3037a9f02e8fc8421f47ed94bfa8f34f572ee86f0c7",
+      "local_import_olean_sha256": {},
+      "checked_utc": "2026-10-25T14:19:09.550711+00:00"
+    },
+    {
+      "module": "PaperVerifier.PrincipalMomentAudit.PointedSupport",
+      "source_sha256": "ce5fc8c7c126ba4a694fcee126e0b5dfeba26fbafc3052ae0fb81ae72fc22ee2",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "46839d9bdb478d5e784b1e20076170f49c95e18e393e346d3816574245dce331",
+      "local_import_olean_sha256": {
+        "PaperVerifier.PrincipalMomentAudit.TreeReconstruction": "b1b5f7982f4be978dc1ab3037a9f02e8fc8421f47ed94bfa8f34f572ee86f0c7"
+      },
+      "checked_utc": "2026-10-25T14:19:27.157890+00:00"
+    },
+    {
+      "module": "PaperVerifier.PrincipalMomentAudit.PointedGrafting",
+      "source_sha256": "894a7839c74145e0c326b733ac4927f3d453bf76dd2b5bb37934a7b64078a9c7",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "b25d8f329e1cf54b29ea2ba0973721e231b26ccea298893edf2f55c0b6e8c8d1",
+      "local_import_olean_sha256": {
+        "PaperVerifier.PrincipalMomentAudit.LeafGrafting": "8fdae18d0da53229675066b0eeb024e6f9616c7339c57d113c5dfe2e88be5497",
+        "PaperVerifier.PrincipalMomentAudit.PointedSupport": "46839d9bdb478d5e784b1e20076170f49c95e18e393e346d3816574245dce331"
+      },
+      "checked_utc": "2026-10-25T14:19:45.519332+00:00"
+    },
+    {
+      "module": "PaperVerifier.PrincipalMomentAudit.PruningOrbits",
+      "source_sha256": "a7a33e2a2a547739690341bc084acbd98d79b508dfe0674b9aa0be6d94792035",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "36651af1e3330d566ebbf9e36dd9a072fefe65c114bb79603380d452e2ad8824",
+      "local_import_olean_sha256": {
+        "PaperVerifier.PrincipalMomentAudit.PruningLift": "8ddea5fc8659ba53e991982e4384cf2306c6d7423a18a072d090c283b2b8d0fb",
+        "PaperVerifier.PrincipalMomentAudit.TerminalOrbits": "d8d1843946a123a1b359d854a1fb4d3940e41e7586ba5c839fc77113ce232be7",
+        "PaperVerifier.PrincipalMomentAudit.PointedGrafting": "b25d8f329e1cf54b29ea2ba0973721e231b26ccea298893edf2f55c0b6e8c8d1"
+      },
+      "checked_utc": "2026-10-25T14:20:03.570529+00:00"
+    },
+    {
+      "module": "PaperVerifier.PrincipalMomentAudit.StageGeometry",
+      "source_sha256": "87abedfba11205800c0fa3d17fe23986859526e0932f0d10994cd0f278050e4e",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "2b7002960446184cbd2f224698c9312195414ed36a5e02edf078bd63f2419638",
+      "local_import_olean_sha256": {
+        "PaperVerifier.PrincipalMomentAudit.ForestPruning": "c8949972c5a8ab559f1610c116589abb4d721cb28111088edc7d75c59deb8aaf"
+      },
+      "checked_utc": "2026-10-25T14:19:17.202213+00:00"
+    },
+    {
+      "module": "PaperVerifier.PrincipalMomentAudit.StageCounts",
+      "source_sha256": "c7edbf730bdf52d75aae1b3dd427dbdae9b662e71d2a84f03e63b0855ece5eb9",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "17a8d12855db9ac09ab90234c6691c020330de8cea1b7d80b5e869f0d57732de",
+      "local_import_olean_sha256": {
+        "PaperVerifier.PrincipalMomentAudit.StageGeometry": "2b7002960446184cbd2f224698c9312195414ed36a5e02edf078bd63f2419638"
+      },
+      "checked_utc": "2026-10-25T14:19:28.326277+00:00"
+    },
+    {
+      "module": "PaperVerifier.PrincipalMomentAudit.StageOrbitLifting",
+      "source_sha256": "83fafe8f393b6dd4c986475f1c271afed52f8581acb335a2fe3e7e3e347772db",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "45e2057e86e506e9f5a9d7c443eb60e5045035850435020385152f0ce8c5efdf",
+      "local_import_olean_sha256": {
+        "PaperVerifier.PrincipalMomentAudit.PruningOrbits": "36651af1e3330d566ebbf9e36dd9a072fefe65c114bb79603380d452e2ad8824",
+        "PaperVerifier.PrincipalMomentAudit.StageCounts": "17a8d12855db9ac09ab90234c6691c020330de8cea1b7d80b5e869f0d57732de",
+        "PaperVerifier.PrincipalMomentAudit.SelectorEvaluation": "8ec4209ec55978a8f3bfe15ed3c52da7cd808b045b9537de1188acc220649451"
+      },
+      "checked_utc": "2026-10-25T14:20:21.314428+00:00"
+    },
+    {
+      "module": "PaperVerifier.PrincipalMomentAudit.PeeledOrbitGeometry",
+      "source_sha256": "ad55b567410066d51007872abf94a53b0c0a4b03484b364b3607ed99d4df017f",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "10323afbbf7fc58d858410f149639b4c4782fddc2283da952fadf48bb2c11482",
+      "local_import_olean_sha256": {
+        "PaperVerifier.PrincipalMomentAudit.StageOrbitLifting": "45e2057e86e506e9f5a9d7c443eb60e5045035850435020385152f0ce8c5efdf",
+        "PaperVerifier.PrincipalMomentAudit.SharedVectorFamily": "305cea0e71a04a7c42a192ae1ebde8934bec1c6b8519f3d62cf63fb7686d05a3"
+      },
+      "checked_utc": "2026-10-25T14:20:38.900226+00:00"
+    },
+    {
+      "module": "PaperVerifier.PrincipalMomentAudit.TreeRigidity",
+      "source_sha256": "a32a58216ea36c1d516ca8341a5d8b5434644b4914caca71100f97b95ceb62cc",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "de36f54868ac0a2aa0b097be2665dee4a78dffe60c945b86b2739622212f5825",
+      "local_import_olean_sha256": {
+        "PaperVerifier.PrincipalMomentAudit.TreeReconstruction": "b1b5f7982f4be978dc1ab3037a9f02e8fc8421f47ed94bfa8f34f572ee86f0c7",
+        "PaperVerifier.PrincipalMomentAudit.ForestPruning": "c8949972c5a8ab559f1610c116589abb4d721cb28111088edc7d75c59deb8aaf",
+        "PaperVerifier.PrincipalMomentAudit.LeafGrafting": "8fdae18d0da53229675066b0eeb024e6f9616c7339c57d113c5dfe2e88be5497"
+      },
+      "checked_utc": "2026-10-25T14:19:35.489844+00:00"
+    },
+    {
+      "module": "PaperVerifier.PrincipalMomentAudit.WeightedQuotientRigidity",
+      "source_sha256": "55d3e501769f12472b002ee1371a4fd4c3b32fc6453010d353005829d1e9cdce",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "5d41a6a18ea5c590a7e90eebc34dd5cbc1c607cd5675cb97a61bc6eb7630e721",
+      "local_import_olean_sha256": {
+        "PaperVerifier.PrincipalMomentAudit.OrbitQuotient": "5c28e0f58f9fc1a7ad22c765266e313aa04d7adb4fd1887cae051271a33d0ba5",
+        "PaperVerifier.PrincipalMomentAudit.TreeRigidity": "de36f54868ac0a2aa0b097be2665dee4a78dffe60c945b86b2739622212f5825"
+      },
+      "checked_utc": "2026-10-25T14:19:53.304497+00:00"
+    },
+    {
+      "module": "PaperVerifier.PrincipalMomentAudit.SharedFamilyMomentRigidity",
+      "source_sha256": "9308c990b0f3a90162b4d7833b350e4c9fe5447336c699d7f8b0d436edf19a94",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "8dee4679057aa7fb2159deaf3be1511c183667e68ef5679e1309329c9c0b28d3",
+      "local_import_olean_sha256": {
+        "PaperVerifier.PrincipalMomentAudit.PrincipalExpressions": "93edb8847106ddc2225fea3112a611193ae111fd8571308bd95855de5aec45b6",
+        "PaperVerifier.PrincipalMomentAudit.WeightedQuotientRigidity": "5d41a6a18ea5c590a7e90eebc34dd5cbc1c607cd5675cb97a61bc6eb7630e721"
+      },
+      "checked_utc": "2026-10-25T14:20:12.300072+00:00"
+    },
+    {
+      "module": "PaperVerifier.PrincipalMomentAudit.FinalOrbitGeometry",
+      "source_sha256": "a3c32f6fad671ad3a9546e0c3664bd932919ce888d537c8818a1dcfd6e767f7b",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "ad795340ff80ffc04ee6e9ce441716da8524c17ad88dbb0afec5fbe812e7ddcc",
+      "local_import_olean_sha256": {
+        "PaperVerifier.PrincipalMomentAudit.SharedVectorFamily": "305cea0e71a04a7c42a192ae1ebde8934bec1c6b8519f3d62cf63fb7686d05a3",
+        "PaperVerifier.PrincipalMomentAudit.StageOrbitLifting": "45e2057e86e506e9f5a9d7c443eb60e5045035850435020385152f0ce8c5efdf",
+        "PaperVerifier.PrincipalMomentAudit.PeeledOrbitGeometry": "10323afbbf7fc58d858410f149639b4c4782fddc2283da952fadf48bb2c11482",
+        "PaperVerifier.PrincipalMomentAudit.SharedFamilyMomentRigidity": "8dee4679057aa7fb2159deaf3be1511c183667e68ef5679e1309329c9c0b28d3"
+      },
+      "checked_utc": "2026-10-25T14:20:56.491876+00:00"
+    },
+    {
+      "module": "PaperVerifier.PrincipalMomentAudit.OrbitRepresentation",
+      "source_sha256": "78d0207e1eadec11e88395a7b09fbb4e7266269ba41ff1c93d4f14bf14a4d5dd",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "7470ca9141ecf5b9c145f7c340c1cd1b2dbc7e034609c14e67bdaa782812c16d",
+      "local_import_olean_sha256": {
+        "PaperVerifier.PrincipalMomentAudit.OrbitQuotient": "5c28e0f58f9fc1a7ad22c765266e313aa04d7adb4fd1887cae051271a33d0ba5",
+        "PaperVerifier.PrincipalMomentAudit.SelectorEvaluation": "8ec4209ec55978a8f3bfe15ed3c52da7cd808b045b9537de1188acc220649451"
+      },
+      "checked_utc": "2026-10-25T14:19:46.979208+00:00"
+    },
+    {
+      "module": "PaperVerifier.PrincipalMomentAudit.StageQuotientCounts",
+      "source_sha256": "7c4c84b13f9abc216651388259cd9835664ee58165a778bc46ae8a9f7d18c73c",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "37b766030a5a87dab2261b5561f313dfb7efe971bb45fc9453dee94efa16277a",
+      "local_import_olean_sha256": {
+        "PaperVerifier.PrincipalMomentAudit.PeeledOrbitGeometry": "10323afbbf7fc58d858410f149639b4c4782fddc2283da952fadf48bb2c11482",
+        "PaperVerifier.PrincipalMomentAudit.OrbitRepresentation": "7470ca9141ecf5b9c145f7c340c1cd1b2dbc7e034609c14e67bdaa782812c16d",
+        "PaperVerifier.PrincipalMomentAudit.Quotient": "e260d7aef0f6ec05fa9bd3741ed1bfd4aba542bbb923fdd89160e16c8310026d"
+      },
+      "checked_utc": "2026-10-25T14:21:07.015675+00:00"
+    },
+    {
+      "module": "PaperVerifier.PrincipalMomentAudit.PointedTransport",
+      "source_sha256": "515126c200434a12698edfab42b38435d9d8201e9e6fd638560d4315a272bc5b",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "d852efde010993eb2427a52774a56fbd974a0d9b8b059f587602e7e620974d63",
+      "local_import_olean_sha256": {
+        "PaperVerifier.PrincipalMomentAudit.GNS": "8bf0d947df6d6a8f21d4c4f93887b3d686561b933ddccd0c7907b9805344eeae"
+      },
+      "checked_utc": "2026-10-25T14:19:56.050514+00:00"
+    },
+    {
+      "module": "PaperVerifier.PrincipalMomentAudit.SharedCoordinateFamily",
+      "source_sha256": "ae7b761ba009da07e0b51f6f0f58f6320e87466fe7bf448585018baf041b588d",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "809a89ed0ddb94a20f9e30a815a2bdc40679a4980388c15ec6991bd54dd574b0",
+      "local_import_olean_sha256": {
+        "PaperVerifier.PrincipalMomentAudit.FinalOrbitGeometry": "ad795340ff80ffc04ee6e9ce441716da8524c17ad88dbb0afec5fbe812e7ddcc",
+        "PaperVerifier.PrincipalMomentAudit.OrbitRepresentation": "7470ca9141ecf5b9c145f7c340c1cd1b2dbc7e034609c14e67bdaa782812c16d",
+        "PaperVerifier.PrincipalMomentAudit.StageQuotientCounts": "37b766030a5a87dab2261b5561f313dfb7efe971bb45fc9453dee94efa16277a",
+        "PaperVerifier.PrincipalMomentAudit.PointedTransport": "d852efde010993eb2427a52774a56fbd974a0d9b8b059f587602e7e620974d63"
+      },
+      "checked_utc": "2026-10-25T14:21:25.549791+00:00"
+    },
+    {
+      "module": "PaperVerifier.PrincipalMomentAudit.WrittenProof",
+      "source_sha256": "3e394197b60011058f9c90aa3b86a501547755e8a8da08f7aab1efae65960078",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "92fcc70b27c221f180b72b2106c94241ebde68b3669fb0397ef2c7bb76865d84",
+      "local_import_olean_sha256": {
+        "PaperVerifier.PrincipalMomentAudit.SharedCoordinateFamily": "809a89ed0ddb94a20f9e30a815a2bdc40679a4980388c15ec6991bd54dd574b0",
+        "PaperVerifier.PrincipalMomentAudit.WeightedQuotientRigidity": "5d41a6a18ea5c590a7e90eebc34dd5cbc1c607cd5675cb97a61bc6eb7630e721"
+      },
+      "checked_utc": "2026-10-25T14:21:43.790918+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.FinalTreeSeparation",
+      "source_sha256": "fdb93d8538327936714961f5f1efb7f1b4cb47d472eb850e41c2a17a13969c4f",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "e71ee567d77b17b41043d26ac88fde11df473f68864d7c23618e1f0cf9899c51",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.TraceMomentBridge": "d82494cf1c4ad5453a6d46d15bfa8f0706b971096106c3e93258cd4412e86d55",
+        "PaperVerifier.ADComplete.GraphDegreeBand": "bfad21ee2da11a2cb7c8899971c3d45a239a8b5d70336991c431902e530f941c",
+        "PaperVerifier.ADComplete.UniformProbeBounds": "96b496a3da90c7e15a183f012b6a2234696f744a1c532d1215229b756570cf54",
+        "PaperVerifier.PrincipalMomentAudit.WrittenProof": "92fcc70b27c221f180b72b2106c94241ebde68b3669fb0397ef2c7bb76865d84"
+      },
+      "checked_utc": "2026-10-25T14:22:01.740886+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.SpectralBands",
+      "source_sha256": "bced0ff6755d0ba7d1af0cc781808cc5c79f3ef2e59769d6fa497dc390e30920",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "3b1e6b40ed9dfcbab16b6b455fb852c1d21b29ff1b12436a33dcecab5dcf63fc",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.Rigidity": "a281b4cca7b255fd012c30db6223f71707fbc03c3c2c327f7e696ab54b06ab74"
+      },
+      "checked_utc": "2026-10-25T14:20:14.582992+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.SpectralUniformProbes",
+      "source_sha256": "59d902313d54a0eba16c81f4d21d96ef98aa92bf56a0449fc64353eaa5d98a67",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "1c24020a30b3b54e728a7fae54677f04059e6a9997f96979b61589add70ef354",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.SpectralBands": "3b1e6b40ed9dfcbab16b6b455fb852c1d21b29ff1b12436a33dcecab5dcf63fc",
+        "PaperVerifier.ADComplete.UniformProbeBounds": "96b496a3da90c7e15a183f012b6a2234696f744a1c532d1215229b756570cf54"
+      },
+      "checked_utc": "2026-10-25T14:20:33.361810+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.DifferentialRank",
+      "source_sha256": "39e69ab9bee8d9df0e1516d3e1ae0c69f937b7eb0060c5a39457e0ffd8a1410e",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "8e5857e769364ed20ca6241136e08da106f65a2c39bdfe3bc4d23c7c50620339",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.DifferentialKrylov": "e40aa531519f7a2541673df7906b7f5b492c1a81115bd4a5929daf23558bfd61"
+      },
+      "checked_utc": "2026-10-25T14:20:30.155461+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.RankSensitiveProbes",
+      "source_sha256": "4ad8ea44717b7c0b388e1c45ce48bfaeee199500511c3596aade4d5bf8ca16b8",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "f24c6f99c7f34711541a8af6c7a5b08071b1496f1bd58e5e7852d6cc3c0fcbd8",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.SmallResidueRigidity": "55ec7bcad10dea8e14c1ec85e7d00f14ed1cd5d6b324cfecaa9f097a52cd7b57",
+        "PaperVerifier.ADComplete.ConstantFrame": "876d33e798948c7c9c66c0f9987d6387e9d975a883d492063313067f48c7955f",
+        "PaperVerifier.ADComplete.ScalarExtension": "b7223b1ea673fc3b669e0167f412ada21a75d99c50ea88bd2702fb994c113af8",
+        "PaperVerifier.ADComplete.ProbeKrylov": "10fdd97480d2bc8a10d600d19d9f0ae5bc273d0631163569e924e6bfbe28f4c6",
+        "PaperVerifier.ADComplete.DifferentialRank": "8e5857e769364ed20ca6241136e08da106f65a2c39bdfe3bc4d23c7c50620339"
+      },
+      "checked_utc": "2026-10-25T14:20:48.660616+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.SpectralRankSensitiveProbes",
+      "source_sha256": "3c69995f9cfa4e9643ec7a5cd804988c108cb38bbaaa38925ad0254b1a515937",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "c8ff885a2e240a3d7d2c1bdb8d1bb662a4f932016673249738363ffcf98b60e0",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.SpectralBands": "3b1e6b40ed9dfcbab16b6b455fb852c1d21b29ff1b12436a33dcecab5dcf63fc",
+        "PaperVerifier.ADComplete.RankSensitiveProbes": "f24c6f99c7f34711541a8af6c7a5b08071b1496f1bd58e5e7852d6cc3c0fcbd8"
+      },
+      "checked_utc": "2026-10-25T14:21:10.379000+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.SpectralRigidity",
+      "source_sha256": "1cf25fac3b6507842227b26f809f84c3b791e019529d0bd48eae4e0a893c141a",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "130f4aace3867adcd5b4953b0f366b5226c483ce2c54254000f6005ed87cc1f1",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.SmallResidueRigidity": "55ec7bcad10dea8e14c1ec85e7d00f14ed1cd5d6b324cfecaa9f097a52cd7b57",
+        "PaperVerifier.ADComplete.SpectralBands": "3b1e6b40ed9dfcbab16b6b455fb852c1d21b29ff1b12436a33dcecab5dcf63fc",
+        "PaperVerifier.ADComplete.ConstantFrame": "876d33e798948c7c9c66c0f9987d6387e9d975a883d492063313067f48c7955f"
+      },
+      "checked_utc": "2026-10-25T14:20:51.314399+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.ProbeDegreeLowerBound",
+      "source_sha256": "9790f0face053109561308c6294eb3b3c32899755920311a0fb7e6af1749cb33",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "7fac499dfc0556bc9924662845026ec4075c6226d6b68b184493a37792b4f00d",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.Spanning": "3a44ba12ae104bfc5adfa7a3bf49905ab404aabe95ed2ebf0920775c983dd7d9",
+        "PaperVerifier.CircuitAudit.Degrees": "dc6ee93f186dd428528d657bef878a53169f2147cb1bb6b21678a8b1d1707a4a"
+      },
+      "checked_utc": "2026-10-25T14:21:14.588362+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.RealPolynomialDegreeLowerBound",
+      "source_sha256": "ee66164cdf5df8dbe3274daf211137ff2a3c3969d2c36923402100834112a825",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "b1a663bc952b25f8655e7236bf8450c97fb02757dd9f149f94b3f3957e1b00f4",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.ProbeDegreeLowerBound": "7fac499dfc0556bc9924662845026ec4075c6226d6b68b184493a37792b4f00d"
+      },
+      "checked_utc": "2026-10-25T14:21:32.575816+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.RealDegreeWitness",
+      "source_sha256": "b3a2eb8226403afac8bae4626ecc41fd75ae3665270455511175b587546de5a3",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "22c191e39d65bbd29a9b8c217b32e4b17a492a4c6fb815668268132b7bf5075b",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.RealPolynomialDegreeLowerBound": "b1a663bc952b25f8655e7236bf8450c97fb02757dd9f149f94b3f3957e1b00f4"
+      },
+      "checked_utc": "2026-10-25T14:21:50.488066+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.InstructionHeights",
+      "source_sha256": "2d9019863128c059f4fdff779098faedaff5b9369944489c6f1d332ba5089715",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "decd674ca9be440d00e5a44f45f070aa515fff305e900fb23be2aa23eefd3c80",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.InstructionSyntaxBridge": "cebbdb5b79f029ac8a3b9149418d366da3b68dbbcc41c4f3a1295e8d3b304dbf"
+      },
+      "checked_utc": "2026-10-25T14:21:28.605075+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.InstructionDistanceHeights",
+      "source_sha256": "7c0de474efcaeb8e9a32cc968c5b137593d2d2c38eb8c9c109bcaf19f5e742b2",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "0063c7374db39f9832ca811a6d17442ef3d02dc80fca347d9923ba385f58b95d",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.InstructionHeights": "decd674ca9be440d00e5a44f45f070aa515fff305e900fb23be2aa23eefd3c80"
+      },
+      "checked_utc": "2026-10-25T14:21:46.908508+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.InstructionCompressionHeights",
+      "source_sha256": "0ede8e3c608df98c29f56245215f846e77dc3af42cb89f5ed06294eb5c49a6ac",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "783d1bbec0b97a315f1b470aaa9272c7dc2dcd1314c3527c986d8f28fd054fb0",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.InstructionDistanceHeights": "0063c7374db39f9832ca811a6d17442ef3d02dc80fca347d9923ba385f58b95d"
+      },
+      "checked_utc": "2026-10-25T14:22:05.867961+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.InstructionNormBridge",
+      "source_sha256": "c48b2e157bc9a179dd192d790704712fccfa0f3773086e5524629e03686e5214",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "8bd364c81038d057dcb7ae8452912c4e1d88fd1eae1e16a1e1f199df9a8d4c54",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.InstructionHeights": "decd674ca9be440d00e5a44f45f070aa515fff305e900fb23be2aa23eefd3c80",
+        "PaperVerifier.ADComplete.IntegerBounds": "5b44ca97acbc60d88d330a63ade46c27a3355f4ce8811263adb9917926925dc1"
+      },
+      "checked_utc": "2026-10-25T14:22:08.847127+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.InstructionResources",
+      "source_sha256": "42d06e3f584bce9146f338bf576d0bcd052c2b4600abafeb7d0ebb9539a39d6d",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "c10b75f27875a55dc5945ec0e3ae2293509c9f37d65b6f1e754ccc27c0a171f7",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.InstructionCompressionHeights": "783d1bbec0b97a315f1b470aaa9272c7dc2dcd1314c3527c986d8f28fd054fb0",
+        "PaperVerifier.ADComplete.InstructionNormBridge": "8bd364c81038d057dcb7ae8452912c4e1d88fd1eae1e16a1e1f199df9a8d4c54",
+        "PaperVerifier.ADComplete.IntegerBitBounds": "debbef3192ef9affb399bbe743793b397dfea2442fe6572b2c1a7bcf26a7e009"
+      },
+      "checked_utc": "2026-10-25T14:22:28.310427+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.InstructionSharpBits",
+      "source_sha256": "509f8cdc677ccb01bc39117891cc67aa0c91dd0220dab2df7f90a2fadb218bac",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "8d6eaafd71d7b83c161f300ab937be0e6f16d7bc27a26cab1176e50941d476f9",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.InstructionResources": "c10b75f27875a55dc5945ec0e3ae2293509c9f37d65b6f1e754ccc27c0a171f7"
+      },
+      "checked_utc": "2026-10-25T14:22:47.120502+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.InstructionPolynomial",
+      "source_sha256": "6af9c64cf2f7b89630d8250b44df42a875ac65371d3209d293ee2111ed3eef05",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "128725fa311409f489faeaefa4afb2f5f9e47ab67f9f5edd74f16653d15a4bca",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.InstructionSharpBits": "8d6eaafd71d7b83c161f300ab937be0e6f16d7bc27a26cab1176e50941d476f9"
+      },
+      "checked_utc": "2026-10-25T14:23:05.026965+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.MainResourceEndpoints",
+      "source_sha256": "1617731ae4193dd6f061857208d573b18d9cc574a82e005c62c9213278c682ae",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "1784f7cbd0c48106ea5bba52cfa5257e92a8d643f7e89f2c25adadf38755affc",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.InstructionSharpBits": "8d6eaafd71d7b83c161f300ab937be0e6f16d7bc27a26cab1176e50941d476f9",
+        "PaperVerifier.ADComplete.CompiledReadout": "90455b5a8d0408dac1febb925533c5762c4f0c51c81569fd035d0fd1444a5d69"
+      },
+      "checked_utc": "2026-10-25T14:23:07.386264+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PolynomialFrameIsometry",
+      "source_sha256": "f81ed85d0b426fa21d2cab431ab431329847ce12787382e67b6c94df57cc13f2",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "0e95bee1ab6d57831650e53b67e97e4e5b5eb87bf192ee16c5e338c07b145614",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.GramTables": "ce414ff88d792abc5f01ad5e5fd5bda7970e510a599e55916593f05657fdc000"
+      },
+      "checked_utc": "2026-10-25T14:22:10.832265+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.FixedPointedTables",
+      "source_sha256": "03097ccae76bd788364bcaf64f682e2bfaee2202b20f216c367eaca08957f7e7",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "bd99b0085e98e8547bd0133d07c76748addcad7cc49961f45332f430100822ad",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PolynomialFrameIsometry": "0e95bee1ab6d57831650e53b67e97e4e5b5eb87bf192ee16c5e338c07b145614",
+        "PaperVerifier.ADComplete.FrameSemantics": "e1fff509701a5a87e66c1ef4de7c80881568bedf4ee86a396eaca5b492eaea62",
+        "PaperVerifier.ADComplete.SpectralUniformProbes": "1c24020a30b3b54e728a7fae54677f04059e6a9997f96979b61589add70ef354"
+      },
+      "checked_utc": "2026-10-25T14:22:31.004179+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PointedCoordinateDegree",
+      "source_sha256": "a4b8d94926fc408bf4f71b0542db6c2c5d93415808278f86c8b0b5b88b316ba3",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "b2faf1e9558f1362ddee79faed21341654665a026eddf55b16dfb46508bc63c5",
+      "local_import_olean_sha256": {
+        "PaperVerifier.CircuitAudit.Degrees": "dc6ee93f186dd428528d657bef878a53169f2147cb1bb6b21678a8b1d1707a4a"
+      },
+      "checked_utc": "2026-10-25T14:22:23.916094+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PointedPolynomialCoordinates",
+      "source_sha256": "80d0f7692ff895d98209c4c2df125fbbcc1b7945dbc90878f3f87e56869c7b4e",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "e4664f39c206207a24c9d175be2f7f084ce96441d9764e820ed73cbf25701ba8",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PointedCoordinateDegree": "b2faf1e9558f1362ddee79faed21341654665a026eddf55b16dfb46508bc63c5",
+        "PaperVerifier.ADComplete.FixedPointedTables": "bd99b0085e98e8547bd0133d07c76748addcad7cc49961f45332f430100822ad"
+      },
+      "checked_utc": "2026-10-25T14:22:49.308120+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDHomogeneousLift",
+      "source_sha256": "e1e69c45245d28f3193278db5bed537fec40f4b696590c3e536ba40d8c1668bb",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "d4f80e17e231fcc1aa6de73b26915f213aa44b22d9cb3a078127eb445001cbbe",
+      "local_import_olean_sha256": {},
+      "checked_utc": "2026-10-25T14:22:42.425130+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDBirdEntry",
+      "source_sha256": "ad22da6259dabc5ddfdf7403c1eaf8616d65a04ed4d6d888f92759ee994c908a",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "ef46efc3284df260975aaa4d256835b6618e39f2eb1157def68cd147e6384778",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDHomogeneousLift": "d4f80e17e231fcc1aa6de73b26915f213aa44b22d9cb3a078127eb445001cbbe",
+        "PaperVerifier.ADComplete.InstructionCompressionDegrees": "342814333a444d509c24278d74d14717d642f1cdc7c3c3b82830d3ea3014e395"
+      },
+      "checked_utc": "2026-10-25T14:23:00.452747+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDBirdCompiler",
+      "source_sha256": "6ed0db34d8e2d27f4afb5345af66689db5bd6ad02dc58680177ed84dd552c8ba",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "d4c19b2855fb3c9c8328958dd6dbf88cd467a594ee7af69bb55bb3c4798614b6",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDBirdEntry": "ef46efc3284df260975aaa4d256835b6618e39f2eb1157def68cd147e6384778"
+      },
+      "checked_utc": "2026-10-25T14:23:18.500135+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.BirdCertificate",
+      "source_sha256": "7880778afa8d44ca1d038028fe5c5532e9a6f074c27d74bae10767c85ec39acb",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "8c5ac434508dbac3e299e9cfbbf28181cb51846c6d85d04eaa96e49be8e51c5e",
+      "local_import_olean_sha256": {},
+      "checked_utc": "2026-10-25T14:23:24.340066+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDBirdDeterminant",
+      "source_sha256": "b1bcb86c7b892fa0a7510c52122d6ff0ccf85c7d16256967ae54f2b5bbae8902",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "82789db86de91c0f5c43e739e10966555de37128f373700f3050c920dedf109e",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDBirdCompiler": "d4c19b2855fb3c9c8328958dd6dbf88cd467a594ee7af69bb55bb3c4798614b6",
+        "PaperVerifier.ADComplete.BirdCertificate": "8c5ac434508dbac3e299e9cfbbf28181cb51846c6d85d04eaa96e49be8e51c5e"
+      },
+      "checked_utc": "2026-10-25T14:23:42.659932+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDBirdSafety",
+      "source_sha256": "1e4a00543999a3841231dc49880d74c2a9a49e543aee2128cfb5e5a3c658f31b",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "df7991386524b21fee02acd69da8a9bf7808837e06df7a5abce0197afe7c89f4",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDBirdCompiler": "d4c19b2855fb3c9c8328958dd6dbf88cd467a594ee7af69bb55bb3c4798614b6"
+      },
+      "checked_utc": "2026-10-25T14:23:36.197618+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDBirdDegrees",
+      "source_sha256": "19f64a3c0bd794a6cc5792a51947f7d46f2bded4ed8e92ca490942ec8176d818",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "e1839769bf63e74e6e53fc47aac657c8ded1aa10052556612cdb38e7675a28b9",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDBirdCompiler": "d4c19b2855fb3c9c8328958dd6dbf88cd467a594ee7af69bb55bb3c4798614b6"
+      },
+      "checked_utc": "2026-10-25T14:23:43.838774+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDGramEntry",
+      "source_sha256": "5e06519da29b8b0ca3033fa9415772205107b67fa3406b8b446ccf77f48d229a",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "566f6532142915201299f9761dc79838d2e96b8acb448c05df9599356b3e42ee",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDBirdDeterminant": "82789db86de91c0f5c43e739e10966555de37128f373700f3050c920dedf109e",
+        "PaperVerifier.ADComplete.PSDBirdSafety": "df7991386524b21fee02acd69da8a9bf7808837e06df7a5abce0197afe7c89f4",
+        "PaperVerifier.ADComplete.PSDBirdDegrees": "e1839769bf63e74e6e53fc47aac657c8ded1aa10052556612cdb38e7675a28b9"
+      },
+      "checked_utc": "2026-10-25T14:24:01.678513+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDGramCompiler",
+      "source_sha256": "4f0edabaab8592e8005caa23ffa0b653d978dca661dc0de41fbf6e3108b2ac8a",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "02b1a010bd4e7b3526daf01b7162623e39d27058038d5191287e0246e9af02db",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDGramEntry": "566f6532142915201299f9761dc79838d2e96b8acb448c05df9599356b3e42ee"
+      },
+      "checked_utc": "2026-10-25T14:24:19.713447+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDResidualCompiler",
+      "source_sha256": "ea9208b826e477b9a615b578eb654211397fa7730b2a2876da08a7125514f57b",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "808db2f18fe7b24c70a6629cd44d3c5acca9a2b87951541a9ef191a7b1e500b9",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDGramCompiler": "02b1a010bd4e7b3526daf01b7162623e39d27058038d5191287e0246e9af02db"
+      },
+      "checked_utc": "2026-10-25T14:24:37.679236+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDFoldCompiler",
+      "source_sha256": "8d1a9c4e8fbd6f82c8afc307ce103bc218d33113180ff5974085e8833fce8083",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "1414cb743ebe547c295ff8c0ef153085f046a8144849ca9555a0f3b42ea21ae1",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDResidualCompiler": "808db2f18fe7b24c70a6629cd44d3c5acca9a2b87951541a9ef191a7b1e500b9"
+      },
+      "checked_utc": "2026-10-25T14:24:55.611962+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDMinorsCompiler",
+      "source_sha256": "0807706c96ff56235d717ca4ca94d0e91aff0de5e44d452392c2fb0f02321e60",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "51a068b0cec58f84f248b4dd7fd48043804bafc9a056c92781e2fc8d24ee7fdc",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDGramCompiler": "02b1a010bd4e7b3526daf01b7162623e39d27058038d5191287e0246e9af02db"
+      },
+      "checked_utc": "2026-10-25T14:24:39.715193+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDFoldedScaling",
+      "source_sha256": "5d1f691feb969f60d1562e1c1747df54f7e13cae288c07ea5fd50d55cc50903b",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "3d38348bf17e018b902fbb6582894358fa7723d6e70d2b309584092711113608",
+      "local_import_olean_sha256": {},
+      "checked_utc": "2026-10-25T14:23:25.706483+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDFoldedLine",
+      "source_sha256": "380ce1fd85368033c513fb92e99fab9ca456dc1e68fc775eb4551d2e512fffd2",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "8629092de1d32059f79a97fa355dddbacdbfd626e267ee7e1f0cdaf14babcae7",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDFoldedScaling": "3d38348bf17e018b902fbb6582894358fa7723d6e70d2b309584092711113608",
+        "PaperVerifier.ADComplete.PolynomialPrimitivity": "256c2b2ca8255024d38be7ee5bb01612ca0bf749c8637f1915fdba1769de01e9"
+      },
+      "checked_utc": "2026-10-25T14:23:54.185702+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDFoldedKrylov",
+      "source_sha256": "559091c66a7226e6669ac65122c2eaca894a6bd9f2bc377954f7d61fb4520304",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "61ad81d09d1b26e49bdd0dd338313924f209521ba430759262dafc1e1c3281a4",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.DifferentialKrylov": "e40aa531519f7a2541673df7906b7f5b492c1a81115bd4a5929daf23558bfd61"
+      },
+      "checked_utc": "2026-10-25T14:24:00.632709+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDFoldedSubspace",
+      "source_sha256": "94cdd328e6982a496e66014f2f7ab688a1ce48b8b33036f57016227ab5305c37",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "1c57fe5f6203808908d6df677870bcdb1807b96543f441d91ca0ca11b432c495",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDFoldedLine": "8629092de1d32059f79a97fa355dddbacdbfd626e267ee7e1f0cdaf14babcae7",
+        "PaperVerifier.ADComplete.PSDFoldedKrylov": "61ad81d09d1b26e49bdd0dd338313924f209521ba430759262dafc1e1c3281a4",
+        "PaperVerifier.ADComplete.InvariantCoordinates": "d52bcafb143e8ad962d6649d2513d2397da79ffff06d4a1a0caac8fcd78c6533",
+        "PaperVerifier.ADComplete.PluckerNonzero": "4197362ce38a32764b8420a20a4c46ca9390cc84f9855c218dd663f56b90ec14",
+        "PaperVerifier.ADComplete.PluckerDescent": "4e24c1f0b6ead0c37018e3671211829cfbbf2b66c802906e6065a34a59fbf077",
+        "PaperVerifier.ADComplete.RationalCoordinates": "d19a3d4a1126df3f32d56b7f277019f627c0cde34a7a8caa0c4ca879e5bc448e"
+      },
+      "checked_utc": "2026-10-25T14:24:21.864266+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDFoldedPrefix",
+      "source_sha256": "a3607939fff73b51af7e0d4316fbd9c5ec5e31116997e4ebf371c8a9a16f2852",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "ef064bb3e9eeb44efc43abd32786ce0f740661da642a8b129c7fa7900c9091a0",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDFoldedKrylov": "61ad81d09d1b26e49bdd0dd338313924f209521ba430759262dafc1e1c3281a4"
+      },
+      "checked_utc": "2026-10-25T14:24:29.869961+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDSpecialization",
+      "source_sha256": "91a528f6e4b16b241ec24676c15aa6bcfef04c62bcad71f86ee333cc340831d2",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "442ef9e91d5969ea8df928a59524793cfe85ce9f04a819f9554b1cfb268c2766",
+      "local_import_olean_sha256": {},
+      "checked_utc": "2026-10-25T14:24:12.111377+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDPolynomialHeight",
+      "source_sha256": "f4b8ce96313b948640091044169e7bb42ed1407e31cb6590dd380b4f2fb9f54f",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "c49f97f8ffcac321eb0e0cc5dff121c1c52317c44686d594c7e542b37396f659",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDSpecialization": "442ef9e91d5969ea8df928a59524793cfe85ce9f04a819f9554b1cfb268c2766"
+      },
+      "checked_utc": "2026-10-25T14:24:47.574615+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDFoldedFrame",
+      "source_sha256": "4f345e86779cfd0a83de90a6980af7aa9d0d708a640b48dacfbfba8631f0ad7f",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "590b40ffc776a2c8819cc5cc4ec65a9f2207a3332a62f850e6e8592ff6313fd7",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDFoldedSubspace": "1c57fe5f6203808908d6df677870bcdb1807b96543f441d91ca0ca11b432c495",
+        "PaperVerifier.ADComplete.PSDFoldedPrefix": "ef064bb3e9eeb44efc43abd32786ce0f740661da642a8b129c7fa7900c9091a0",
+        "PaperVerifier.ADComplete.PSDPolynomialHeight": "c49f97f8ffcac321eb0e0cc5dff121c1c52317c44686d594c7e542b37396f659",
+        "PaperVerifier.ADComplete.ConstantFrame": "876d33e798948c7c9c66c0f9987d6387e9d975a883d492063313067f48c7955f",
+        "PaperVerifier.ADComplete.ScalarExtension": "b7223b1ea673fc3b669e0167f412ada21a75d99c50ea88bd2702fb994c113af8"
+      },
+      "checked_utc": "2026-10-25T14:25:05.582932+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDFactoryDefinition",
+      "source_sha256": "5e9c4d40e9673c215669cd0d81318ba51fbc131998a6a75846bca79ebbfdf99b",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "85925b6c041737554ae7bf04bf1dce9d972ab934064e6d79402220571c34b00a",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDFoldCompiler": "1414cb743ebe547c295ff8c0ef153085f046a8144849ca9555a0f3b42ea21ae1",
+        "PaperVerifier.ADComplete.PSDMinorsCompiler": "51a068b0cec58f84f248b4dd7fd48043804bafc9a056c92781e2fc8d24ee7fdc",
+        "PaperVerifier.ADComplete.PSDFoldedFrame": "590b40ffc776a2c8819cc5cc4ec65a9f2207a3332a62f850e6e8592ff6313fd7",
+        "PaperVerifier.ADComplete.IntegerBounds": "5b44ca97acbc60d88d330a63ade46c27a3355f4ce8811263adb9917926925dc1"
+      },
+      "checked_utc": "2026-10-25T14:25:22.995727+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDFactoryDegrees",
+      "source_sha256": "a691966b9475625b2b1ce933f49b57db730472f7f306a77b8baabc619178a104",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "c91a80e7e0a99e37416c7cdfb9cfa1305a7ff160ee639a3d3c604cc8ff887396",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDFactoryDefinition": "85925b6c041737554ae7bf04bf1dce9d972ab934064e6d79402220571c34b00a",
+        "PaperVerifier.ADComplete.InstructionDistanceDegrees": "4296ba5db71e4d968c7d9bfb5ce51367beeb38be652825dfbc7b234f4f9e564d"
+      },
+      "checked_utc": "2026-10-25T14:25:40.533668+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDFrameSemantics",
+      "source_sha256": "4adde0bb3147ceae92b363a8243a9c015d728ca10a09a117eece23754b407994",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "2a516c6ff499ff2268a1f0c8d7e53b2ee933946f95edf428ad9e54a76c7efd3c",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDFactoryDegrees": "c91a80e7e0a99e37416c7cdfb9cfa1305a7ff160ee639a3d3c604cc8ff887396"
+      },
+      "checked_utc": "2026-10-25T14:25:57.946575+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDFactoryValues",
+      "source_sha256": "3af06543d9f030c7beede3fbbbc474a076d82782ea2aa9c6f1f934b526455faf",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "bd957b811f13b1f485b14b580ac51592d643f5601caa5a2d89683aecce134c4f",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDFactoryDegrees": "c91a80e7e0a99e37416c7cdfb9cfa1305a7ff160ee639a3d3c604cc8ff887396"
+      },
+      "checked_utc": "2026-10-25T14:26:08.232747+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDResidualScanClosed",
+      "source_sha256": "58e72cd249d8972ef25b4593d04a6382c802ca1ac664133b53570867d35943df",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "0cb2da28722a3cd615ff5ce54143bd686fb26b3c0eef76d16e0814a3a0a1dd07",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDFactoryValues": "bd957b811f13b1f485b14b580ac51592d643f5601caa5a2d89683aecce134c4f"
+      },
+      "checked_utc": "2026-10-25T14:26:26.035410+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDScalarExtension",
+      "source_sha256": "275690ea7e308eb431f482f4822f237460b1fac7c2f713ddddc49a0e58074e8d",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "98effdc719ba7ed5a16eb8be3582a99cd42fb2ca3b298b1394695d7063061d05",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDFoldedScaling": "3d38348bf17e018b902fbb6582894358fa7723d6e70d2b309584092711113608",
+        "PaperVerifier.ADComplete.PSDFoldedKrylov": "61ad81d09d1b26e49bdd0dd338313924f209521ba430759262dafc1e1c3281a4",
+        "PaperVerifier.ADComplete.ScalarExtension": "b7223b1ea673fc3b669e0167f412ada21a75d99c50ea88bd2702fb994c113af8"
+      },
+      "checked_utc": "2026-10-25T14:24:57.991791+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDFoldedRank",
+      "source_sha256": "e0274edc0c3c47ef469a025c86b0c9e4f238c7d19e48ef2728da2f87c3a3ed5f",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "7bcc4e93226b3b8ed6ecfd69182952f92935c4d71613366e4a339ef388c3358a",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDFoldedSubspace": "1c57fe5f6203808908d6df677870bcdb1807b96543f441d91ca0ca11b432c495",
+        "PaperVerifier.ADComplete.PSDFoldedPrefix": "ef064bb3e9eeb44efc43abd32786ce0f740661da642a8b129c7fa7900c9091a0",
+        "PaperVerifier.ADComplete.PSDScalarExtension": "98effdc719ba7ed5a16eb8be3582a99cd42fb2ca3b298b1394695d7063061d05",
+        "PaperVerifier.ADComplete.ConstantFrame": "876d33e798948c7c9c66c0f9987d6387e9d975a883d492063313067f48c7955f"
+      },
+      "checked_utc": "2026-10-25T14:25:16.377577+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDFoldedInteger",
+      "source_sha256": "d2604812778a00889306f2139cfb1499db03c61c09a61b82b1fc213c17c46f49",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "f09e4ea6b6e8b09087973b154707b9be637e96a2d722162ceee8008605b076e2",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDFoldedFrame": "590b40ffc776a2c8819cc5cc4ec65a9f2207a3332a62f850e6e8592ff6313fd7",
+        "PaperVerifier.ADComplete.PSDFoldedRank": "7bcc4e93226b3b8ed6ecfd69182952f92935c4d71613366e4a339ef388c3358a"
+      },
+      "checked_utc": "2026-10-25T14:25:34.398181+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDResidual",
+      "source_sha256": "3a15cdf6267557bbed718a0d2f0b2695f0b29f5aa5229eb5770745c2d7a577ad",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "39223c33ae3fd6f06780dadcb670251f9f6bfcd56a963b1a8f4611c137c8e91d",
+      "local_import_olean_sha256": {},
+      "checked_utc": "2026-10-25T14:25:14.015936+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDCyclic",
+      "source_sha256": "7542276fb8e2a74ea4276c84bf912588b9e06fac38d1745e79e33d578d92207d",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "b07d76e5698353c69126717b29c07a9b9ffb0e783b08428d542e1c91b81a3a38",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDResidual": "39223c33ae3fd6f06780dadcb670251f9f6bfcd56a963b1a8f4611c137c8e91d",
+        "PaperVerifier.ADComplete.DifferentialKrylov": "e40aa531519f7a2541673df7906b7f5b492c1a81115bd4a5929daf23558bfd61"
+      },
+      "checked_utc": "2026-10-25T14:25:31.930739+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDFoldedSpecialization",
+      "source_sha256": "4be2d95164e2fbc0ab198040e2ee32c71c106bb20ab4a8bf1b58a30967e66531",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "2eaeb383603952e5baca8f0f1aa41e5721f4e22cab3e0858c79728962f94860c",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDFoldedInteger": "f09e4ea6b6e8b09087973b154707b9be637e96a2d722162ceee8008605b076e2",
+        "PaperVerifier.ADComplete.PSDCyclic": "b07d76e5698353c69126717b29c07a9b9ffb0e783b08428d542e1c91b81a3a38"
+      },
+      "checked_utc": "2026-10-25T14:25:52.327490+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDFoldedBound",
+      "source_sha256": "93203952eb992eb326700428a43a59739372823c300a340ac35faa0fc906d5ce",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "7cf68b3ca7de335d7d222d639dfbaf003546274496a7464ffdcf375df5bbb733",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDFoldedFrame": "590b40ffc776a2c8819cc5cc4ec65a9f2207a3332a62f850e6e8592ff6313fd7"
+      },
+      "checked_utc": "2026-10-25T14:25:50.281754+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDFoldedFixed",
+      "source_sha256": "750e1fbd6e9e19c63196c1c6261b397a17209745980ca1a4db1ce5eebe55ad60",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "d16c81626e03de4b5ee04b1bd92d744b53a987c4ebb8ff48ff7f53fa89620b1e",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDFoldedSpecialization": "2eaeb383603952e5baca8f0f1aa41e5721f4e22cab3e0858c79728962f94860c",
+        "PaperVerifier.ADComplete.PSDFoldedBound": "7cf68b3ca7de335d7d222d639dfbaf003546274496a7464ffdcf375df5bbb733"
+      },
+      "checked_utc": "2026-10-25T14:26:10.324205+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDCyclicAction",
+      "source_sha256": "e8373965ba72777d5b3f67062ae6babe4b6b27df9018a5e6acb3ba41611b1e65",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "50da128ad93e1ee15ad17e26fdd4229dfe5365c649807923a83eb2989024743b",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDCyclic": "b07d76e5698353c69126717b29c07a9b9ffb0e783b08428d542e1c91b81a3a38"
+      },
+      "checked_utc": "2026-10-25T14:26:15.463729+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDCyclicPowers",
+      "source_sha256": "de1a633886e43fc606e33122ba285cf3fe5e377eeb1aab519a0dc4848cffe581",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "5147c62878b313a60f976d506ec00f9ad30dfae5cb379f5bf6b4be3f2765ef57",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDCyclicAction": "50da128ad93e1ee15ad17e26fdd4229dfe5365c649807923a83eb2989024743b"
+      },
+      "checked_utc": "2026-10-25T14:26:33.184978+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDResidualPrefix",
+      "source_sha256": "5954ccd8d8899d0ca5f568a4daa4fac374b0cc4b1844654796737039dd3086af",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "d3c8e94061e3c627e67932755875702500c7677e8ec108888466f0399ddf9875",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDResidual": "39223c33ae3fd6f06780dadcb670251f9f6bfcd56a963b1a8f4611c137c8e91d",
+        "PaperVerifier.ADComplete.PSDCyclicAction": "50da128ad93e1ee15ad17e26fdd4229dfe5365c649807923a83eb2989024743b"
+      },
+      "checked_utc": "2026-10-25T14:26:44.208822+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDResidualIndependence",
+      "source_sha256": "e582e890581d40f5547e59f343ef9a72191365662ee28027248fdf2fbd09abce",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "3c0a7fa515e3a2bdb2a958205d4ee73630d829abb86c8c391654ab8279af776b",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDResidualPrefix": "d3c8e94061e3c627e67932755875702500c7677e8ec108888466f0399ddf9875"
+      },
+      "checked_utc": "2026-10-25T14:27:02.181348+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDRescaling",
+      "source_sha256": "98b6e488a053bea99eca5dae61b8bdb8d0fc50aab561fcfed89e87b573039376",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "ee547f8c4376f3c65a95a15b1f8cf79074d00280365d80d28423f621b7083953",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDCyclicPowers": "5147c62878b313a60f976d506ec00f9ad30dfae5cb379f5bf6b4be3f2765ef57",
+        "PaperVerifier.ADComplete.PSDResidualIndependence": "3c0a7fa515e3a2bdb2a958205d4ee73630d829abb86c8c391654ab8279af776b"
+      },
+      "checked_utc": "2026-10-25T14:27:20.438049+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDRepresentative",
+      "source_sha256": "07c5c196b4d6e5151410d871422040d437435eb6ababeac58b48c5653f0db89f",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "716c8bc375cd3c18606bd3e3e23044313a3a2998e522d0a3dd0f080382b3d7fd",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDRescaling": "ee547f8c4376f3c65a95a15b1f8cf79074d00280365d80d28423f621b7083953"
+      },
+      "checked_utc": "2026-10-25T14:27:38.463119+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDFoldedRepresentative",
+      "source_sha256": "ca6c5aada37604e1df55e472311c91855b2bf3edc0c3cd44b703cb630673e72e",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "03a0fb99cb99acb5b0670602e8c0308f1204043cbcd39845e8a1fe13597119fd",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDFoldedFixed": "d16c81626e03de4b5ee04b1bd92d744b53a987c4ebb8ff48ff7f53fa89620b1e",
+        "PaperVerifier.ADComplete.PSDRepresentative": "716c8bc375cd3c18606bd3e3e23044313a3a2998e522d0a3dd0f080382b3d7fd"
+      },
+      "checked_utc": "2026-10-25T14:27:56.286772+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDCramerBridge",
+      "source_sha256": "c0731a8bd5f11cfde910bf63165667e71b9847b6286f15a10b170cc65740bb2d",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "dea867b2b82000c523c46a0ca1084f0ac841f444f404556b9ac8a9b78bf92c4d",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDResidualScanClosed": "0cb2da28722a3cd615ff5ce54143bd686fb26b3c0eef76d16e0814a3a0a1dd07",
+        "PaperVerifier.ADComplete.PSDFoldedRepresentative": "03a0fb99cb99acb5b0670602e8c0308f1204043cbcd39845e8a1fe13597119fd"
+      },
+      "checked_utc": "2026-10-25T14:28:14.449807+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDSOSBridge",
+      "source_sha256": "f5e824d8f19c4955531348dcc19722675ca7ee31dfdb0b2f52aa0d3877235014",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "d1a789898ac8fb87f9791fae521e4439a3c5bbff4035bd82b7363b1a76395cf4",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDCramerBridge": "dea867b2b82000c523c46a0ca1084f0ac841f444f404556b9ac8a9b78bf92c4d"
+      },
+      "checked_utc": "2026-10-25T14:28:32.424895+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDFoldedLiteral",
+      "source_sha256": "abadbd097b30c783ac2e34a43ef547233ee73576cca891fd6b8ec79f99582678",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "0547186e956e58ac792d3ae9edb98748bd6708c51ab501df59c87463f3262e46",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDFoldedFixed": "d16c81626e03de4b5ee04b1bd92d744b53a987c4ebb8ff48ff7f53fa89620b1e",
+        "PaperVerifier.ADComplete.PSDFoldCompiler": "1414cb743ebe547c295ff8c0ef153085f046a8144849ca9555a0f3b42ea21ae1",
+        "PaperVerifier.CircuitAudit.WrittenPolynomialBridge": "71f4b83a896bdffd320a9aa706dce4600bb91f50ad2916eab0ffb249050c96db"
+      },
+      "checked_utc": "2026-10-25T14:26:28.232573+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDCompiledValue",
+      "source_sha256": "d3904be9190cfbfc47804e3ff89a0c192e1dc3c1ca7dc358c3b6c4e5e02396a7",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "cb07152d74ed5a9c42416b877d18f6990ca9bab32f6ed100f335ede8aff8caad",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDFrameSemantics": "2a516c6ff499ff2268a1f0c8d7e53b2ee933946f95edf428ad9e54a76c7efd3c",
+        "PaperVerifier.ADComplete.PSDSOSBridge": "d1a789898ac8fb87f9791fae521e4439a3c5bbff4035bd82b7363b1a76395cf4",
+        "PaperVerifier.ADComplete.PSDFoldedLiteral": "0547186e956e58ac792d3ae9edb98748bd6708c51ab501df59c87463f3262e46",
+        "PaperVerifier.ADComplete.MatrixSemantics": "76f00d83a0be3b9c7d5d4fa6c02aec76bf64d8d08aa6166c4f7722d47c1c655a"
+      },
+      "checked_utc": "2026-10-25T14:28:50.222340+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDGraphFrame",
+      "source_sha256": "bf0a8fc85cc8d8acc429a6ec53c629cf6f1976bf594874892269df863bbead1d",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "c96b1a34f8cd755ad3be6e2de7e6d32c0cc2c5f885a8737fc2f6b6619cfce2e8",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDFoldedLiteral": "0547186e956e58ac792d3ae9edb98748bd6708c51ab501df59c87463f3262e46",
+        "PaperVerifier.ADComplete.PSDFoldedRepresentative": "03a0fb99cb99acb5b0670602e8c0308f1204043cbcd39845e8a1fe13597119fd",
+        "PaperVerifier.ADComplete.FinalTreeSeparation": "e71ee567d77b17b41043d26ac88fde11df473f68864d7c23618e1f0cf9899c51"
+      },
+      "checked_utc": "2026-10-25T14:28:17.701591+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDPairStar",
+      "source_sha256": "f48044fb6b5c8e685bfd20c1e1fd61a6ea5fb6cf6f214d80839d37cdcc450d60",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "5d80b588f64c215486fd2c4a33c68e6271b8f49ff3adff799710a18cbcf5923f",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDFactoryDefinition": "85925b6c041737554ae7bf04bf1dce9d972ab934064e6d79402220571c34b00a"
+      },
+      "checked_utc": "2026-10-25T14:26:46.431026+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDFactoryStar",
+      "source_sha256": "2c604913babcecb1539d580edd8b52c1c7907827437ba6eb8b65aff5dfa12ee2",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "6b722b49113b968ddbdd366f16072b577e8ce7e845b6456ad5403d42d109d852",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDPairStar": "5d80b588f64c215486fd2c4a33c68e6271b8f49ff3adff799710a18cbcf5923f",
+        "PaperVerifier.ADComplete.PSDFactoryDegrees": "c91a80e7e0a99e37416c7cdfb9cfa1305a7ff160ee639a3d3c604cc8ff887396",
+        "PaperVerifier.ADComplete.InstructionPolynomial": "128725fa311409f489faeaefa4afb2f5f9e47ab67f9f5edd74f16653d15a4bca"
+      },
+      "checked_utc": "2026-10-25T14:27:04.426113+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDFactorySOS",
+      "source_sha256": "b2863012ac0183414ebfaeb6cbdc6d182cb2354fbb393799de8f6047f4ca1116",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "af02c2631adf36fbc82c6a27871064de1b6f22213545983d77c0d5f8caff9e68",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDFactoryStar": "6b722b49113b968ddbdd366f16072b577e8ce7e845b6456ad5403d42d109d852"
+      },
+      "checked_utc": "2026-10-25T14:27:22.864311+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDTreeRepresentative",
+      "source_sha256": "d40821c3444dc1398ae79c7b7ed39f358a217d88ccf99280b258c179fe0d864e",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "fd8e9c14d69a10cce9747d72fd5e9f95d280d6e259b5fbadf06be430b583c41b",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDCompiledValue": "cb07152d74ed5a9c42416b877d18f6990ca9bab32f6ed100f335ede8aff8caad",
+        "PaperVerifier.ADComplete.PSDGraphFrame": "c96b1a34f8cd755ad3be6e2de7e6d32c0cc2c5f885a8737fc2f6b6619cfce2e8",
+        "PaperVerifier.ADComplete.PSDFactorySOS": "af02c2631adf36fbc82c6a27871064de1b6f22213545983d77c0d5f8caff9e68"
+      },
+      "checked_utc": "2026-10-25T14:29:08.108098+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDBirdHeights",
+      "source_sha256": "aa026477ebdf46094c37b6479c21bb9c9836e6817783ee122c481ceb1ca9b201",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "01909fa25e443cfad43d2d3adc5ef5d241bd10b1696d162ecd484c9cdd7d40fb",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDBirdCompiler": "d4c19b2855fb3c9c8328958dd6dbf88cd467a594ee7af69bb55bb3c4798614b6",
+        "PaperVerifier.ADComplete.InstructionCompressionHeights": "783d1bbec0b97a315f1b470aaa9272c7dc2dcd1314c3527c986d8f28fd054fb0"
+      },
+      "checked_utc": "2026-10-25T14:26:51.297676+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDOperationHeights",
+      "source_sha256": "69e856e3e328ede7ebde7932b46ea4671031421edaca15c6d88aa8106fb13324",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "2e4fa81313c74bbd1098c987a8900d78fd6ef56743d8c8777f98c61a360c8cf0",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDBirdHeights": "01909fa25e443cfad43d2d3adc5ef5d241bd10b1696d162ecd484c9cdd7d40fb",
+        "PaperVerifier.ADComplete.PSDFactoryDegrees": "c91a80e7e0a99e37416c7cdfb9cfa1305a7ff160ee639a3d3c604cc8ff887396"
+      },
+      "checked_utc": "2026-10-25T14:27:09.074384+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDFactoryCounts",
+      "source_sha256": "5ad16e2cddd1eb5065ffc230d4a3d3e4d53bf6ae76040a79256fe9aae610e8b9",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "2285e4b32aee2e39029b2ac1e5bd95cfc0dbcbf5d80998e43834e6fc82df218c",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDFactoryDegrees": "c91a80e7e0a99e37416c7cdfb9cfa1305a7ff160ee639a3d3c604cc8ff887396"
+      },
+      "checked_utc": "2026-10-25T14:27:30.935267+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDFactoryHeights",
+      "source_sha256": "c2df03b24c09e0e1dbb9791c895569483696cfb1bdd195c4985709b048cf34d6",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "7074357c6b71707769f0bf1e9ddfa9133414a3e89d776ba79f41607beefea3e2",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDOperationHeights": "2e4fa81313c74bbd1098c987a8900d78fd6ef56743d8c8777f98c61a360c8cf0",
+        "PaperVerifier.ADComplete.PSDFactoryCounts": "2285e4b32aee2e39029b2ac1e5bd95cfc0dbcbf5d80998e43834e6fc82df218c"
+      },
+      "checked_utc": "2026-10-25T14:27:49.939168+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDFoldedBitBounds",
+      "source_sha256": "7e2c73224d0d0f98c5c17e67635f35bf48d28bbdaf80d2fd3c3d1e5a0dce146b",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "98e4b861325b562b2e0ff5132d18a9eaf875b6f1b6bc0f5bd395097b4fe08b26",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDFactoryDefinition": "85925b6c041737554ae7bf04bf1dce9d972ab934064e6d79402220571c34b00a",
+        "PaperVerifier.ADComplete.IntegerBitBounds": "debbef3192ef9affb399bbe743793b397dfea2442fe6572b2c1a7bcf26a7e009"
+      },
+      "checked_utc": "2026-10-25T14:27:41.110649+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDFactoryConstants",
+      "source_sha256": "320836d571ac58ab01fd6a67de5e575f110edd8a70c326f1a79ce564360c3bfc",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "6535bd41eb959542a2c684e71c87b799dcc186453e879a614bb21f3f2eafeb7b",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDFactoryHeights": "7074357c6b71707769f0bf1e9ddfa9133414a3e89d776ba79f41607beefea3e2",
+        "PaperVerifier.ADComplete.PSDFoldedBitBounds": "98e4b861325b562b2e0ff5132d18a9eaf875b6f1b6bc0f5bd395097b4fe08b26",
+        "PaperVerifier.ADComplete.InstructionResources": "c10b75f27875a55dc5945ec0e3ae2293509c9f37d65b6f1e754ccc27c0a171f7"
+      },
+      "checked_utc": "2026-10-25T14:28:07.761147+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PSDFactoryResources",
+      "source_sha256": "4032e9578fa2ff9f1806aae4f3e5bd393138b00be3b3f49f53d921bfe8fd1bd2",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "1367df2f27ec37686977d4e521cd681995d011d60388f01de0c0350892f626f1",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.PSDFactoryConstants": "6535bd41eb959542a2c684e71c87b799dcc186453e879a614bb21f3f2eafeb7b"
+      },
+      "checked_utc": "2026-10-25T14:28:25.842948+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.SpiderGraph",
+      "source_sha256": "1a52a19300044874dc6296fb776e9ed37017fe7804750700e1341361cabbd9d5",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "b993435ecc79d432c1c418d8a351d2dc9a373ddda08ac7d28f3504a4497bcd8a",
+      "local_import_olean_sha256": {},
+      "checked_utc": "2026-10-25T14:27:59.361803+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.SpiderDegrees",
+      "source_sha256": "a8485667705c0a5199e4a1f2cd524d4428c14c79bc730077ab4edd717c1eff68",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "9a8a73e0d7d92c714b1a47c818757debc9ff772310f899dfc0f5c4b3aaa233db",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.SpiderGraph": "b993435ecc79d432c1c418d8a351d2dc9a373ddda08ac7d28f3504a4497bcd8a"
+      },
+      "checked_utc": "2026-10-25T14:28:35.662502+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.SpiderDistances",
+      "source_sha256": "9f9957cc2771139efdb33feb5d49feae2f3be825e22df82ee7cce24b24de96f8",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "ca000a11c2627dbf32476f8c1263d65f9eee02c4745bed4b9e77b2aa6190750a",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.SpiderDegrees": "9a8a73e0d7d92c714b1a47c818757debc9ff772310f899dfc0f5c4b3aaa233db"
+      },
+      "checked_utc": "2026-10-25T14:28:53.395766+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.ADClosedWalks",
+      "source_sha256": "a0c88747ebea8e76abc697d347eabbc3d39ebad33ad3427cc4d83199852a8784",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "9e69bf31cf4a2686057c346f6d03041cd22a7771655cd92e154ecfe8e379c63b",
+      "local_import_olean_sha256": {},
+      "checked_utc": "2026-10-25T14:28:44.892795+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.SpiderGeometry",
+      "source_sha256": "79a78fe3393883d72cfe163b349871242635524fc7c0556a01c0e444330c66e5",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "46c31e8e4728a51eff9fc543e012fa53811621521c6cb88b9250537a649741ae",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.SpiderDistances": "ca000a11c2627dbf32476f8c1263d65f9eee02c4745bed4b9e77b2aa6190750a",
+        "PaperVerifier.ADComplete.ADClosedWalks": "9e69bf31cf4a2686057c346f6d03041cd22a7771655cd92e154ecfe8e379c63b"
+      },
+      "checked_utc": "2026-10-25T14:29:11.504542+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.SpiderArmWalks",
+      "source_sha256": "5f5b8a0ec362ed08c73fee1642a049cc1e2381f31ef384a9a40dc17097150f93",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "128f9949f5b9557cfebce286d958bca047af205c230785b08e70fc1e52c52370",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.SpiderGeometry": "46c31e8e4728a51eff9fc543e012fa53811621521c6cb88b9250537a649741ae"
+      },
+      "checked_utc": "2026-10-25T14:29:29.495867+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.ClosedChainEquiv",
+      "source_sha256": "247d064353da1415ac0f30410a9c4bc7e05b9e2689b9e81444055629c3652498",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "f52de772dea341a5e2f552af6940a0c7a537730a382f4dff61e47bc19b6b66d5",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.ADClosedWalks": "9e69bf31cf4a2686057c346f6d03041cd22a7771655cd92e154ecfe8e379c63b"
+      },
+      "checked_utc": "2026-10-25T14:29:02.772246+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.FlatWordPaths",
+      "source_sha256": "c1147a39240c0a3925396c9bec9c789fe8374c06fa13332929d07c35eedb0ffe",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "39e2c03222369cab94249ff843dbfa3039b4cc066440deb269707e0eff879b2e",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.ClosedChainEquiv": "f52de772dea341a5e2f552af6940a0c7a537730a382f4dff61e47bc19b6b66d5"
+      },
+      "checked_utc": "2026-10-25T14:29:20.619938+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.SpiderCenterChains",
+      "source_sha256": "34df65189e1705599c7b9ed764b4ebbf0c2275a4abbd694092b2d15b606710e6",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "9445d898f161bb00a54bc4b62cae4c6ca8545684eedc05a44500a2c348cbcc9b",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.SpiderArmWalks": "128f9949f5b9557cfebce286d958bca047af205c230785b08e70fc1e52c52370",
+        "PaperVerifier.ADComplete.FlatWordPaths": "39e2c03222369cab94249ff843dbfa3039b4cc066440deb269707e0eff879b2e"
+      },
+      "checked_utc": "2026-10-25T14:29:47.492914+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.SpiderArmChains",
+      "source_sha256": "4a68a5c221c64474f3ed628736377e3bc66c712488f85ad5cb695c05e1e93e2f",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "0fe75dcccf7960707ea2f75127cbe0ccd322f007d33d9b842842773888715180",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.SpiderArmWalks": "128f9949f5b9557cfebce286d958bca047af205c230785b08e70fc1e52c52370",
+        "PaperVerifier.ADComplete.FlatWordPaths": "39e2c03222369cab94249ff843dbfa3039b4cc066440deb269707e0eff879b2e"
+      },
+      "checked_utc": "2026-10-25T14:29:56.350059+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.NormalizedArmTuples",
+      "source_sha256": "238f58e7451b7ada39b0ce519815238494059ad6bf595dd6e4e96a71fae4352d",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "1d65b843ce8af1d44227ed4cedafd87fe7dd2b0b4c84e12a1cd24302e9c40717",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.SpiderArmChains": "0fe75dcccf7960707ea2f75127cbe0ccd322f007d33d9b842842773888715180"
+      },
+      "checked_utc": "2026-10-25T14:30:14.583725+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.SpiderWordNormalization",
+      "source_sha256": "b52755e82bfaefdfe5dd84c6269d79f4355f931311cb8a275cef5fe5e889a63b",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "ea2e7ea6f21edd354091f238170d799855315627c5147147395cd19d6c78736c",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.NormalizedArmTuples": "1d65b843ce8af1d44227ed4cedafd87fe7dd2b0b4c84e12a1cd24302e9c40717"
+      },
+      "checked_utc": "2026-10-25T14:30:31.816056+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.SpiderPlacements",
+      "source_sha256": "e124468406dd91f4a6c68cf85a620667e7c8bd26365f73700be0da71f32f7823",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "418cdc508c8982997d65001764a20bcd320ed212e015a84dd4729b0d82ba44b1",
+      "local_import_olean_sha256": {},
+      "checked_utc": "2026-10-25T14:29:26.793905+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.SpiderArmWeights",
+      "source_sha256": "89fa0dd59d9eeee01f3e5eaf7ff5e2ef7b3b8888525e6a270bb0ae98652b2bce",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "ccd446acc0f50d08077fd76579d9da8072ecdb33ff9dae66fc50f6004ee48986",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.SpiderWordNormalization": "ea2e7ea6f21edd354091f238170d799855315627c5147147395cd19d6c78736c",
+        "PaperVerifier.ADComplete.SpiderPlacements": "418cdc508c8982997d65001764a20bcd320ed212e015a84dd4729b0d82ba44b1"
+      },
+      "checked_utc": "2026-10-25T14:30:48.721780+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.SpiderTraceWords",
+      "source_sha256": "6ec96ab6193a05a75d2965bb9e009a49402ce79f634e2181ddf30d3ad2fa402a",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "61833646ec98eda8a1440f4275a4fb1b6d50731a51ecc0c4ef6417d42ea8907a",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.SpiderCenterChains": "9445d898f161bb00a54bc4b62cae4c6ca8545684eedc05a44500a2c348cbcc9b",
+        "PaperVerifier.ADComplete.SpiderArmWeights": "ccd446acc0f50d08077fd76579d9da8072ecdb33ff9dae66fc50f6004ee48986"
+      },
+      "checked_utc": "2026-10-25T14:31:05.233716+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.SpiderRealPolynomialLowerBound",
+      "source_sha256": "6a98f8e4c53a2824270b5e4fbef9b884186e3be3c5d39c02e2ae345784637f71",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "18c9823df520658ab83d8a7ee48c34895ed1b03934b1d9d05f4eb82200afc4df",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.SpiderTraceWords": "61833646ec98eda8a1440f4275a4fb1b6d50731a51ecc0c4ef6417d42ea8907a"
+      },
+      "checked_utc": "2026-10-25T14:31:22.198175+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.FrobeniusCoordinates",
+      "source_sha256": "4588419ba131d39e3895e4335f87ed5777307e13219e4442861d767702459711",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "7f4315d30a1a7feb2209ce4a6c9d6192b0a1b7a9c64434525adfab39353e1ac5",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.UniformProbeBounds": "96b496a3da90c7e15a183f012b6a2234696f744a1c532d1215229b756570cf54",
+        "PaperVerifier.ADComplete.FrameSemantics": "e1fff509701a5a87e66c1ef4de7c80881568bedf4ee86a396eaca5b492eaea62"
+      },
+      "checked_utc": "2026-10-25T14:29:38.506981+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.FrobeniusProbes",
+      "source_sha256": "eb1caaf942a7fa1fb4ab6bd2835a00af466b28084f4027a5345cad5a6ffe6b23",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "1bb845f9db60ab697add7cdc865345cc80ee59a06140b1d01e5e3eb6a2b4f04a",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.FrobeniusCoordinates": "7f4315d30a1a7feb2209ce4a6c9d6192b0a1b7a9c64434525adfab39353e1ac5"
+      },
+      "checked_utc": "2026-10-25T14:30:03.808102+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.FrobeniusTrace",
+      "source_sha256": "8119f1dcc331406aa2daa967a224d29385acad22987e580a5c15d2cc84e9aa85",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "97ef79a4740d750589f806a88c86ac13d96a5003f215b3d4dbed225de459528d",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.FrobeniusProbes": "1bb845f9db60ab697add7cdc865345cc80ee59a06140b1d01e5e3eb6a2b4f04a",
+        "PaperVerifier.ADComplete.GramTables": "ce414ff88d792abc5f01ad5e5fd5bda7970e510a599e55916593f05657fdc000"
+      },
+      "checked_utc": "2026-10-25T14:30:22.381217+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.FrobeniusGraphProbes",
+      "source_sha256": "d51ab12b4226cdb4025ad3dc81007688b7c9f0bf24133a88a57fa99c18f1e736",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "3ce544a7ea829aed4ec986dd8d5db7215bba92543a7e56ccd0b8c8d2a143239b",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.FrobeniusTrace": "97ef79a4740d750589f806a88c86ac13d96a5003f215b3d4dbed225de459528d",
+        "PaperVerifier.ADComplete.GraphDegreeBand": "bfad21ee2da11a2cb7c8899971c3d45a239a8b5d70336991c431902e530f941c"
+      },
+      "checked_utc": "2026-10-25T14:30:39.837269+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.FrobeniusTables",
+      "source_sha256": "db471f962842e8377236e96977d4e93b54a4031c8ad303bc74cff336fce252a3",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "b4fa1aa672f781c8bdca30734d40476d2775a3c897e1887410a88ac3e3e4b806",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.FrobeniusGraphProbes": "3ce544a7ea829aed4ec986dd8d5db7215bba92543a7e56ccd0b8c8d2a143239b"
+      },
+      "checked_utc": "2026-10-25T14:30:57.213937+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.FrobeniusTreeReconstruction",
+      "source_sha256": "fbccc5a53b76e79c682cf619c1d4e686d13d657ee9bec90f4386012a1f6cf002",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "b794e832ebf310e576acccf68cea90e27207c0ba679bf368b3263213f8b73107",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.FrobeniusTables": "b4fa1aa672f781c8bdca30734d40476d2775a3c897e1887410a88ac3e3e4b806",
+        "PaperVerifier.ADComplete.MatrixSemantics": "76f00d83a0be3b9c7d5d4fa6c02aec76bf64d8d08aa6166c4f7722d47c1c655a",
+        "PaperVerifier.PrincipalMomentAudit.WrittenProof": "92fcc70b27c221f180b72b2106c94241ebde68b3669fb0397ef2c7bb76865d84"
+      },
+      "checked_utc": "2026-10-25T14:31:14.072082+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.FrobeniusTreeTables",
+      "source_sha256": "603e6c46d7b73f21548d43a4f9f5ebf4c6658eae6476ad5b466d804667e348ae",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "96875968693c552cf269b806be35ba987be67f0469fab1c705149a1abc49a51d",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.FrobeniusTreeReconstruction": "b794e832ebf310e576acccf68cea90e27207c0ba679bf368b3263213f8b73107"
+      },
+      "checked_utc": "2026-10-25T14:31:31.834509+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.FullRepresentationCompiler",
+      "source_sha256": "69f73641b136ad4afa6033e558b5a382e40fe608d5fdf3e62c6ecc5518eb8ae0",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "f84bd531faffbdcb310d1ae9cf12ba01b15c439dbb062a66b65fcb36757d73ce",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.InstructionCompressionDegrees": "342814333a444d509c24278d74d14717d642f1cdc7c3c3b82830d3ea3014e395",
+        "PaperVerifier.ADComplete.InstructionResources": "c10b75f27875a55dc5945ec0e3ae2293509c9f37d65b6f1e754ccc27c0a171f7",
+        "PaperVerifier.ADComplete.CompiledReadout": "90455b5a8d0408dac1febb925533c5762c4f0c51c81569fd035d0fd1444a5d69"
+      },
+      "checked_utc": "2026-10-25T14:29:45.287286+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.FullTraceReadout",
+      "source_sha256": "dad8293a50d9bc1bc29fe6cfdb16532c156fe6d96ad14f02ff2e178cfdc8e006",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "04f308214eeba6aa7197a643a8706f5a6187d8f51a01acbef25d6345003883fd",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.FullRepresentationCompiler": "f84bd531faffbdcb310d1ae9cf12ba01b15c439dbb062a66b65fcb36757d73ce",
+        "PaperVerifier.ADComplete.FrobeniusTreeReconstruction": "b794e832ebf310e576acccf68cea90e27207c0ba679bf368b3263213f8b73107"
+      },
+      "checked_utc": "2026-10-25T14:31:32.844019+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.FullTraceTrees",
+      "source_sha256": "3431cc5c9e92029c91d994af0a75925950fbeb2232fc37b035d87f3b73e4d45c",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "41e3836f0276b1bbd6ade10df66fc273ded77684a20663bc4f0af1288ff104f0",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.FullTraceReadout": "04f308214eeba6aa7197a643a8706f5a6187d8f51a01acbef25d6345003883fd",
+        "PaperVerifier.ADComplete.FrobeniusTreeTables": "96875968693c552cf269b806be35ba987be67f0469fab1c705149a1abc49a51d"
+      },
+      "checked_utc": "2026-10-25T14:31:50.458446+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.FullRepresentationResources",
+      "source_sha256": "6f09f5160c9ab007926b35ebbd9c8131dafce15c1759735e0f80e32734a40279",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "d5fb1d8ef7941f7d2c021e9127e1d411717f38cbdff476e0866035fbc56b267a",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.FullRepresentationCompiler": "f84bd531faffbdcb310d1ae9cf12ba01b15c439dbb062a66b65fcb36757d73ce",
+        "PaperVerifier.ADComplete.InstructionPolynomial": "128725fa311409f489faeaefa4afb2f5f9e47ab67f9f5edd74f16653d15a4bca"
+      },
+      "checked_utc": "2026-10-25T14:30:07.069490+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.FullTraceBits",
+      "source_sha256": "4e96f3c416bf7676f1e2d9fea76a74cb1c5ccd9f2e112e28841a00a45f217509",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "e39aa0aa9a7b838421c817d7d5037e471cea9c64968c01ce63c2df168e5875b9",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.FullRepresentationResources": "d5fb1d8ef7941f7d2c021e9127e1d411717f38cbdff476e0866035fbc56b267a",
+        "PaperVerifier.ADComplete.FullTraceReadout": "04f308214eeba6aa7197a643a8706f5a6187d8f51a01acbef25d6345003883fd"
+      },
+      "checked_utc": "2026-10-25T14:31:50.143807+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.CircuitExports",
+      "source_sha256": "61c8ddee3766e5e5cb1f904f1cd17460b8defd0244b40f8cad23ec1430d64d51",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "33617b34ddfb18e5cd9368ecb8429c29b033914249a25790777fe40e3f1c2387",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.InstructionResources": "c10b75f27875a55dc5945ec0e3ae2293509c9f37d65b6f1e754ccc27c0a171f7",
+        "PaperVerifier.ADComplete.PSDFactoryDefinition": "85925b6c041737554ae7bf04bf1dce9d972ab934064e6d79402220571c34b00a"
+      },
+      "checked_utc": "2026-10-25T14:30:25.935278+00:00"
+    },
+    {
+      "module": "PaperVerifier.ADComplete.PaperAxiomAudit",
+      "source_sha256": "57bcb71dabfb7627dcec47fedada84fb67fb86c9b32641941f785b19db4196de",
+      "source_unchanged": true,
+      "exit_code": 0,
+      "warnings": false,
+      "kernel_check_passed": true,
+      "olean_sha256": "7166e0ab7c3f1a6f190125a57217d9c6805db94e256f9b626933900b8b5fc8dc",
+      "local_import_olean_sha256": {
+        "PaperVerifier.ADComplete.FinalTreeSeparation": "e71ee567d77b17b41043d26ac88fde11df473f68864d7c23618e1f0cf9899c51",
+        "PaperVerifier.ADComplete.SpectralUniformProbes": "1c24020a30b3b54e728a7fae54677f04059e6a9997f96979b61589add70ef354",
+        "PaperVerifier.ADComplete.SpectralRankSensitiveProbes": "c8ff885a2e240a3d7d2c1bdb8d1bb662a4f932016673249738363ffcf98b60e0",
+        "PaperVerifier.ADComplete.SpectralRigidity": "130f4aace3867adcd5b4953b0f366b5226c483ce2c54254000f6005ed87cc1f1",
+        "PaperVerifier.ADComplete.RealDegreeWitness": "22c191e39d65bbd29a9b8c217b32e4b17a492a4c6fb815668268132b7bf5075b",
+        "PaperVerifier.ADComplete.InstructionPolynomial": "128725fa311409f489faeaefa4afb2f5f9e47ab67f9f5edd74f16653d15a4bca",
+        "PaperVerifier.ADComplete.MainResourceEndpoints": "1784f7cbd0c48106ea5bba52cfa5257e92a8d643f7e89f2c25adadf38755affc",
+        "PaperVerifier.ADComplete.FixedPointedTables": "bd99b0085e98e8547bd0133d07c76748addcad7cc49961f45332f430100822ad",
+        "PaperVerifier.ADComplete.PointedPolynomialCoordinates": "e4664f39c206207a24c9d175be2f7f084ce96441d9764e820ed73cbf25701ba8",
+        "PaperVerifier.ADComplete.PSDTreeRepresentative": "fd8e9c14d69a10cce9747d72fd5e9f95d280d6e259b5fbadf06be430b583c41b",
+        "PaperVerifier.ADComplete.PSDFactoryResources": "1367df2f27ec37686977d4e521cd681995d011d60388f01de0c0350892f626f1",
+        "PaperVerifier.ADComplete.PSDFactoryCounts": "2285e4b32aee2e39029b2ac1e5bd95cfc0dbcbf5d80998e43834e6fc82df218c",
+        "PaperVerifier.ADComplete.SpiderRealPolynomialLowerBound": "18c9823df520658ab83d8a7ee48c34895ed1b03934b1d9d05f4eb82200afc4df",
+        "PaperVerifier.ADComplete.FrobeniusTreeTables": "96875968693c552cf269b806be35ba987be67f0469fab1c705149a1abc49a51d",
+        "PaperVerifier.ADComplete.FullTraceTrees": "41e3836f0276b1bbd6ade10df66fc273ded77684a20663bc4f0af1288ff104f0",
+        "PaperVerifier.ADComplete.FullRepresentationResources": "d5fb1d8ef7941f7d2c021e9127e1d411717f38cbdff476e0866035fbc56b267a",
+        "PaperVerifier.ADComplete.FullTraceBits": "e39aa0aa9a7b838421c817d7d5037e471cea9c64968c01ce63c2df168e5875b9",
+        "PaperVerifier.ADComplete.CircuitExports": "33617b34ddfb18e5cd9368ecb8429c29b033914249a25790777fe40e3f1c2387"
+      },
+      "checked_utc": "2026-10-25T14:32:45.559148+00:00"
+    }
+  ],
+  "lean_toolchain": "leanprover/lean4:v4.33.0",
+  "mathlib_manifest_sha256": "2d0b56043e2e567f4f80e405936fbd8bc936db544ac217a6d41554b001589b06",
+  "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "audited_declarations": 4704,
+  "audited_bodies": 4639,
+  "original_olean_hashes_are_provenance_only": true
+}

@@ -86,13 +86,17 @@ s=0 into kappa=s*N^2 is not claimed; the ordinary one-generator Krylov family
 is a separate observation. The elementary fixed-word lower bound in Remark
 1.4 is proved in the paper and is not part of this Lean formalization.
 
-The original tree classification uses the formalized principal-moment
-reconstruction theorem of Lu and Li, Theorem 5.4, through PrincipalMomentAudit.
+The original tree classification depends on Theorem 5.4 of Lu and Li, the
+principal-moment reconstruction theorem, whose complete formal proof is
+contained in the 33 source files of PrincipalMomentAudit.
 The formal full-representation appendix reconstructs via that theorem and the
 all-one polynomial; the written appendix uses McKay and Newton identities.
 The original source-to-statement mapping records these proof dependencies.
 
 The only permitted transitive axioms are propext, Classical.choice, and
-Quot.sound. Project-local axioms and sorryAx are rejected. Finite exact tests
-supplement these universal proofs and do not substitute for them or prove
-universal equality between separately implemented emitters.
+Quot.sound. Project-local axioms and sorryAx are rejected. Every declaration
+of every module is replayed through the Lean kernel by leanchecker, and the
+recorded audit also replays the complete import closure, including Lean core
+and mathlib, from an empty environment. Finite exact tests supplement these
+universal proofs and do not substitute for them or prove universal equality
+between separately implemented emitters.

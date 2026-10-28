@@ -13,5 +13,5 @@ manifest = {"schema": 1, "root_module": "CombinedAudit", "files": {
     p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
     for p in sorted(files)}}
 (ROOT / "audit_manifest.json").write_text(
-    json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+    json.dumps(manifest, indent=2) + "\n", encoding="utf-8", newline="\n")
 print(json.dumps({"frozen_audit_input_files": len(files)}))

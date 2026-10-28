@@ -27,7 +27,7 @@ extension of the same rigidity argument, without a matrix-order enlargement.
 
 ## Recorded integrated audit
 
-The recorded integrated build freshly compiled all 215 modules, with no reused steps or warnings. The combined scan checked 5,390 project declarations and 5,297 bodies, including 685 extension declarations. All 15 required extension endpoints passed.
+The recorded integrated build freshly compiled all 215 modules, with no reused steps or warnings, and replayed every declaration of every module through the Lean kernel with `leanchecker`. It also replayed the complete import closure, including the Lean core library and mathlib, from an empty environment. The combined scan checked 5,390 project declarations and 5,297 bodies, including 685 extension declarations. All 15 required extension endpoints passed.
 
 ## Check the distributed snapshot
 
@@ -40,8 +40,10 @@ python -B lean/run_audit.py --verify-only
 
 The first command verifies the distributed files against the root manifest.
 The second verifies all proof inputs and the complete recorded build evidence,
-including the combined declaration scan, without downloading Lean dependencies.
-Neither command is a new kernel build. Run them before regenerating results.
+including the combined declaration scan, the per-module kernel replays, and
+the recorded replay of the complete import closure, without downloading Lean
+dependencies. It also repeats the source scan described below. Neither
+command is a new kernel build. Run them before regenerating results.
 
 The Lean integrity command can also be used before a first build. In that case
 an empty `verified_audit_reports` list means that no completed evidence was
@@ -81,6 +83,25 @@ Project-local axioms, incomplete proofs, compiler failures, and warnings are
 rejected. The dependency Git revisions and all source, output, and log hashes
 are checked. The extension's 15 required endpoints have explicit type checks.
 
+After compiling each module, the runner replays all of its declarations,
+including private and auxiliary ones, through the Lean kernel with the
+toolchain's `leanchecker`. A successful compilation and the axiom scan cannot
+by themselves detect a declaration that entered the environment without kernel
+checking, for example under `debug.skipKernelTC`; the replay rechecks every
+such declaration. Before building, a source scan admits only the options
+`autoImplicit`, `maxHeartbeats`, and `backward.isDefEq.respectTransparency`.
+It permits `run_cmd` only in the three declaration-audit entry points and
+`#eval` only in the instruction export, and rejects other metaprogramming
+commands, environment-modifying functions, axioms, `sorry`, and
+`native_decide`. The scan is a supplementary safeguard; the kernel replay is
+the decisive check.
+
+With `--fresh-replay`, the runner also replays the complete import closure of
+`CombinedAudit`, including the Lean core library and mathlib, from an empty
+environment, so that their compiled artifacts need not be trusted either. On
+the machine used for the recorded audit this step took about 15 minutes and
+less than 9 GB of memory. The distributed report includes it.
+
 The fresh report and per-module logs are written under `lean/rebuild_logs/`.
 The distributed completed report is under `lean/provenance/integrated_audit/`.
 No historical `.olean` file or private directory is needed. Compiled artifact
@@ -106,7 +127,12 @@ literal and factored recurrences, an independently generated word span, and the
 actual-rank prefix over exact rational arithmetic, including zero seeds, proper
 cyclic spaces, strict dimension bounds, and large scalar spectral shifts.
 
-After a fresh Lean build, use its instruction export log with:
+By default the export checks read the instruction log of the recorded
+integrated build,
+`lean/provenance/integrated_audit/PaperVerifier.ADComplete.CircuitExports.log`.
+They write their outputs with LF line endings, so the recorded hashes do not
+depend on the platform. After a fresh Lean build, use its instruction export
+log with:
 
 ```text
 python -B verification/verify_exports.py --export-log lean/rebuild_logs/PaperVerifier.ADComplete.CircuitExports.log

@@ -63,7 +63,7 @@ def psd_minors(C):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--export-log', type=Path, default=ROOT.parent/'lean'/'provenance'/
-                        'circuit_exports.log')
+                        'integrated_audit'/'PaperVerifier.ADComplete.CircuitExports.log')
     args = parser.parse_args()
     start = time.monotonic()
     raw = args.export_log.read_text(encoding='utf-8')
@@ -78,8 +78,9 @@ def main():
             assert r[key] == emitted[key], (r['N'], key)
     for N in (1, 5):
         circuit.write_circuit(circuit.Builder(N).build(), ROOT/f'p{N}.quadratic.circuit.json.gz')
+    # Fixed LF bytes keep reference_sha256 independent of the platform.
     (ROOT/'lean_circuit_reference.jsonl').write_text(
-        ''.join(json.dumps(r, separators=(',', ':'))+'\n' for r in rows), encoding='utf-8')
+        ''.join(json.dumps(r, separators=(',', ':'))+'\n' for r in rows), encoding='utf-8', newline='\n')
     records = []
     for r in psd:
         N = r['N']
@@ -127,7 +128,7 @@ def main():
                   ('verify_exports.py', 'verify_current.py', 'quadratic_ad_circuit.py', 'ad_circuit.py')},
               'reference_sha256': digest(ROOT/'lean_circuit_reference.jsonl'),
               'sympy_version': sp.__version__, 'elapsed_seconds': round(time.monotonic()-start, 3)}
-    (ROOT/'export_checks.json').write_text(json.dumps(report, indent=2)+'\n', encoding='utf-8')
+    (ROOT/'export_checks.json').write_text(json.dumps(report, indent=2)+'\n', encoding='utf-8', newline='\n')
     print(json.dumps({'passed': True, 'linear_cases': len(linear),
                       'psd_trees': len(records), 'psd_pairs': len(generic),
                       'seconds': report['elapsed_seconds']}), flush=True)

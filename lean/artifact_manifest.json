@@ -217,10 +217,10 @@
     "PaperVerifier/PrincipalMomentAudit/TreeRigidity.lean": "a32a58216ea36c1d516ca8341a5d8b5434644b4914caca71100f97b95ceb62cc",
     "PaperVerifier/PrincipalMomentAudit/WeightedQuotientRigidity.lean": "55d3e501769f12472b002ee1371a4fd4c3b32fc6453010d353005829d1e9cdce",
     "PaperVerifier/PrincipalMomentAudit/WrittenProof.lean": "3e394197b60011058f9c90aa3b86a501547755e8a8da08f7aab1efae65960078",
-    "README.md": "e724cb47e62d4aa53744942367ac81487b05ae59800ed8e0847812bd327c79c2",
-    "audit_manifest.json": "bd07ec3fd1fa1391772a698c034f509c1a70336754e7adcb28c5b8795a1e2b34",
-    "formalization_scope.txt": "5a90286accdbe3f0f00274ac2af7f3b23c56d30e02cf89d55dca07746739ac85",
-    "freeze_audit_manifest.py": "b2652ca10feea4aead34367e37fa9e02c56bd8ff889274231e857049fc5c1d3d",
+    "README.md": "69e146f1e72620770616fd332e669f8f903970244d93cf28cbb6cbad31d50830",
+    "audit_manifest.json": "af2634adc341506badf95a064aacbe951891cfe3bd8905e53cef85211da79d22",
+    "formalization_scope.txt": "7e33bf3f7c78c584b6ccaecc75dec4837723965686df5fcf9fe83baa18c53940",
+    "freeze_audit_manifest.py": "3e9369b0196a278193191ed28c355162620398d75c948fe3f516f221a1075f23",
     "lake-manifest.json": "2d0b56043e2e567f4f80e405936fbd8bc936db544ac217a6d41554b001589b06",
     "lakefile.toml": "68d5555890a5ab5c6ec5b36cd2cd26c0cd8d504b4cdcaf106395d6066547627f",
     "lean-toolchain": "302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b",
@@ -443,11 +443,11 @@
     "provenance/integrated_audit/PaperVerifier.PrincipalMomentAudit.TreeRigidity.log": "a596b44ea59668313f103ea61ca7840a6671902ae423bd86eb618dc190a3ec99",
     "provenance/integrated_audit/PaperVerifier.PrincipalMomentAudit.WeightedQuotientRigidity.log": "f9c32844b6981a1c44c232f07b64f072118fc5d4836b6ac89ea86c08dfdeacd4",
     "provenance/integrated_audit/PaperVerifier.PrincipalMomentAudit.WrittenProof.log": "33231dcf2c402bcfeb3c7d6d3da8f0faeb11c9ac6ffcfce52ed1d504dfb2865b",
-    "provenance/integrated_audit/rebuild_report.json": "b54ceefdd21a34afa28c824333c932bbbb573b1298ba29fee3bfd2bd0f4a8efa",
+    "provenance/integrated_audit/rebuild_report.json": "e209f567555cd80556f5c6a33a0c18f5d5af56f23fc1f61555b55b1876bf9bcc",
     "provenance/rebuild_20261025/axiom_audit.log": "80188340fa765cb17460e0adf7178ed9c8f5385dc6a66e670f9ee26fdd27b8a2",
     "provenance/rebuild_20261025/circuit_exports.log": "780742ced3def442c1c792c973ca31f33cc5c37064e9dfd9120133603d79479e",
     "provenance/rebuild_20261025/rebuild_report.json": "510c0ff44fc4e88ed9750627f9f0c042037e962a5872ab52cb2e59c0deb8b354",
-    "run_audit.py": "6e9eb2bf3ce8ef8b79883bfae5498ce6cc80d32117d1010ecf29dd8d41233053",
+    "run_audit.py": "8daad3ffde2a47ed81db5cb8b4f958395e14f10dd9cf6a3e77f0219496b61cf9",
     "source-to-statement.tsv": "9736713dfdad568acaee8440a5d45e66cab0596e184087e7227855a9b4a12752"
   }
 }

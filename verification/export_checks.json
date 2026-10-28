@@ -219,12 +219,12 @@
   ],
   "export_log_sha256": "780742ced3def442c1c792c973ca31f33cc5c37064e9dfd9120133603d79479e",
   "source_sha256": {
-    "verify_exports.py": "aaf376ff2a3e1e21976cf71de8d8070e3bf6cd10da3efff3d6f973981c7e4a13",
+    "verify_exports.py": "0a2ee62bf58281ca7d08120ff0008decbdbd02fd4831f07cf3883913f0528335",
     "verify_current.py": "d042333e5d52997f2fb0fdccc3dbccd979a387d9e40d9eaee392f9ee119ebb32",
     "quadratic_ad_circuit.py": "67dff3288efa1fa3874108919f84757941a58de3a551771ad96bf349a70a5234",
     "ad_circuit.py": "66163a5c4fd7781212fc2b233dcb0219bbe7d425c64db27c7ffba758c274f2f7"
   },
-  "reference_sha256": "12d32386fe32c4b80eee10af584a3910d2ab0ccf068c9544cb661d400cec999c",
+  "reference_sha256": "780742ced3def442c1c792c973ca31f33cc5c37064e9dfd9120133603d79479e",
   "sympy_version": "1.14.0",
-  "elapsed_seconds": 0.297
+  "elapsed_seconds": 0.185
 }
